@@ -72,7 +72,7 @@
 		CLRR 	29H 			//001A 	0129
 
 		//;1.C: 146: EX_INT_RisingEdge();
-		LCALL 	6C2H 			//001B 	36C2
+		LCALL 	6BFH 			//001B 	36BF
 		ORG		001CH
 
 		//;1.C: 147: }else if((FLAGs&0x01) == 0x01){
@@ -330,7 +330,7 @@
 		CLRR 	26H 			//00C5 	0126
 
 		//;1.C: 189: led1_debug();
-		LCALL 	6BFH 			//00C6 	36BF
+		LCALL 	6C2H 			//00C6 	36C2
 
 		//;1.C: 190: PA7 = ~PA7;
 		LDWI 	80H 			//00C7 	2A80
@@ -412,7 +412,7 @@
 		CLRR 	26H 			//00FD 	0126
 
 		//;1.C: 200: led1_debug();
-		LCALL 	6BFH 			//00FE 	36BF
+		LCALL 	6C2H 			//00FE 	36C2
 
 		//;1.C: 201: PA6 = ~PA6;
 		LDWI 	40H 			//00FF 	2A40
@@ -494,7 +494,7 @@
 		CLRR 	26H 			//0135 	0126
 
 		//;1.C: 211: led1_debug();
-		LCALL 	6BFH 			//0136 	36BF
+		LCALL 	6C2H 			//0136 	36C2
 
 		//;1.C: 212: PA5 = ~PA5;
 		LDWI 	20H 			//0137 	2A20
@@ -1567,7 +1567,7 @@
 		XORWR 	5H,1 			//03B9 	0485
 
 		//;1.C: 768: led1_debug();
-		LCALL 	6BFH 			//03BA 	36BF
+		LCALL 	6C2H 			//03BA 	36C2
 
 		//;1.C: 769: break;
 		LJUMP 	3D4H 			//03BB 	3BD4
@@ -2849,16 +2849,11 @@
 		BCR 	74H,0 			//06BD 	1074
 		RET		 					//06BE 	0004
 
-		//;1.C: 407: PC0 = ~PC0;
-		LDWI 	1H 			//06BF 	2A01
-		XORWR 	7H,1 			//06C0 	0487
-		RET		 					//06C1 	0004
-
 		//;1.C: 419: INTEDG =1;
-		BSR 	1H,6 			//06C2 	1B01
+		BSR 	1H,6 			//06BF 	1B01
 
 		//;1.C: 420: FLAGs |= 0x01;
-		BSR 	74H,0 			//06C3 	1874
-		ORG		06C4H
-		RET		 					//06C4 	0004
+		BSR 	74H,0 			//06C0 	1874
+		RET		 					//06C1 	0004
+		RET		 					//06C2 	0004
 			END

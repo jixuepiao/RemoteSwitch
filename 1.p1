@@ -2650,9 +2650,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;1.C: 405: void led1_debug(void){
 [e :U _led1_debug ]
 [f ]
-[; ;1.C: 407: PC0 = ~PC0;
-"407
-[e = _PC0 ! _PC0 ]
 [; ;1.C: 409: }
 "409
 [e :UE 148 ]

@@ -12,7 +12,7 @@
 //Variable definition
 //===========================================================
 
-#define LED1_Debug_ON
+//#define LED1_Debug_ON
 
 #define 	unchar     	unsigned char 
 #define 	unint       	unsigned int

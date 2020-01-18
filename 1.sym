@@ -16,7 +16,7 @@ _VR0 8C0 0 ABS
 _SR1 CF7 0 ABS
 _VR1 8C1 0 ABS
 _VR2 8C2 0 ABS
-__S0 6C5 0 ABS
+__S0 6C3 0 ABS
 _VR3 8C3 0 ABS
 __S1 B7 0 ABS
 __S2 0 0 ABS
@@ -137,7 +137,7 @@ clear_ram 699 0 CODE
 __Hram 0 0 ABS
 __Lram 0 0 ABS
 ?_main 76 0 COMMON
-__end_of_led1_debug 6C2 0 CODE
+__end_of_led1_debug 6C3 0 CODE
 __end_of_ISR 224 0 CODE
 __Hfunctab 0 0 CODE
 __Lfunctab 0 0 CODE
@@ -178,36 +178,36 @@ __Lsfr1 0 0 ABS
 _OPTION 81 0 ABS
 _MC1OUT 8DF 0 ABS
 _MC2OUT 8DE 0 ABS
-__ptext700 6A8 0 CODE
+__ptext700 66C 0 CODE
 ??___lbmod 77 0 COMMON
-__ptext710 5B7 0 CODE
-__ptext701 66C 0 CODE
+__ptext710 6BB 0 CODE
+__ptext701 68D 0 CODE
 ??_WDT_INITIAL AB 0 BANK1
 ??_INT_INITIAL AB 0 BANK1
-__ptext711 6BB 0 CODE
+__ptext711 5F7 0 CODE
 ?i1_EX_INT_FallingEdge 76 0 COMMON
 __end_of_EEPROM_Read 537 0 CODE
-__ptext702 68D 0 CODE
+__ptext702 6AE 0 CODE
 ?_IAPWrite 76 0 COMMON
-__ptext712 5F7 0 CODE
-__ptext703 6AE 0 CODE
-__ptext713 62C 0 CODE
+__ptext712 62C 0 CODE
+__ptext703 613 0 CODE
+__ptext713 659 0 CODE
 __Hcode 0 0 ABS
 __Lcode 0 0 ABS
-__ptext704 613 0 CODE
+__ptext704 6B3 0 CODE
 __size_of___lbmod 0 0 ABS
 _Indata A8 0 BANK1
 __end_of_IAPRead 6AE 0 CODE
-__ptext714 659 0 CODE
-__ptext705 6B3 0 CODE
+__ptext714 3EB 0 CODE
+__ptext705 10 0 CODE
 ??_main B3 0 BANK1
 __HcstackBANK0 0 0 ABS
 __LcstackBANK0 0 0 ABS
 __size_of_OSC_INIT 0 0 ABS
-__ptext715 3EB 0 CODE
+__ptext715 6C2 0 CODE
 __pcstackBANK0 5D 0 BANK0
 saved_w 7E 0 ABS
-__ptext706 10 0 CODE
+__ptext706 264 0 CODE
 _remotekey_slice 2C 0 BANK0
 __Hinit F 0 CODE
 __Linit F 0 CODE
@@ -221,17 +221,17 @@ __ptext716 6BF 0 CODE
 i1_EX_INT_FallingEdge 6BB 0 CODE
 __Htext 0 0 ABS
 __Ltext 0 0 ABS
-__ptext707 264 0 CODE
-__ptext717 6C2 0 CODE
+__ptext707 537 0 CODE
+__ptext717 0 0 CODE
 _WDT_INITIAL 6AE 0 CODE
 _INT_INITIAL 6A1 0 CODE
 ___wmul@multiplier 76 0 COMMON
-__ptext708 537 0 CODE
+__ptext708 577 0 CODE
 __size_of_WDT_INITIAL 0 0 ABS
 end_of_initialization 68B 0 CODE
 __size_of_EX_INT_FallingEdge 0 0 ABS
-__ptext718 0 0 CODE
-__ptext709 577 0 CODE
+__ptext709 5B7 0 CODE
+__ptext695 0 0 CODE
 __size_of_ISR 0 0 ABS
 _CM1CON0 119 0 ABS
 _CM2CON0 11A 0 ABS
@@ -241,15 +241,15 @@ __LnvBANK0 0 0 ABS
 _CM2CON1 11B 0 ABS
 __pnvBANK0 67 0 BANK0
 ___wmul@multiplicand 78 0 COMMON
-__ptext696 0 0 CODE
+__ptext696 4F5 0 CODE
 __size_of_led1_debug 0 0 ABS
 __HnvBANK1 0 0 ABS
 __LnvBANK1 0 0 ABS
 __pnvBANK1 B3 0 BANK1
-__ptext697 4F5 0 CODE
-__ptext698 4A6 0 CODE
+__ptext697 4A6 0 CODE
+__ptext698 6A1 0 CODE
 __end_of_OSC_INIT 62C 0 CODE
-__ptext699 6A1 0 CODE
+__ptext699 6A8 0 CODE
 __size_of_KEY 0 0 ABS
 _Ctrl_remotekey A0 0 BANK1
 __Hstrings 0 0 ABS
@@ -288,7 +288,7 @@ __end_ofi1_EX_INT_FallingEdge 6BF 0 CODE
 ??_EEPROM_Read B3 0 BANK1
 ??_IAPWrite 77 0 COMMON
 ?_EX_INT_FallingEdge 76 0 COMMON
-_led1_debug 6BF 0 CODE
+_led1_debug 6C2 0 CODE
 _IAPRead 6A8 0 CODE
 _EE_Buff B6 0 BANK1
 EEPROM_ReadWord@data AD 0 BANK1
@@ -330,7 +330,7 @@ _Match_remotekey 70 0 COMMON
 __HbssCOMMON 0 0 ABS
 __LbssCOMMON 0 0 ABS
 __pbssCOMMON 70 0 COMMON
-_EX_INT_RisingEdge 6C2 0 CODE
+_EX_INT_RisingEdge 6BF 0 CODE
 ?_EEPROM_Read 76 0 COMMON
 _match_slice 28 0 BANK0
 __Hend_init 10 0 CODE
@@ -361,7 +361,7 @@ _OSC_INIT 613 0 CODE
 intlevel5 0 0 CODE
 __end_of_KEYSCAN 4A6 0 CODE
 __size_of_CH3_EEPROM_Write 0 0 ABS
-__end_of_EX_INT_RisingEdge 6C5 0 CODE
+__end_of_EX_INT_RisingEdge 6C2 0 CODE
 ?_TIMER0_INITIAL 76 0 COMMON
 __end_of_WDT_INITIAL 6B3 0 CODE
 ?_TIMER2_INITIAL 76 0 COMMON
@@ -393,7 +393,7 @@ bssCOMMON 70 7B COMMON 70
 bssBANK1 A0 B6 BANK1 A0
 bssBANK0 20 69 BANK0 20
 swtext1 D6E D75 CONST D6E
-text711 D76 D89 CODE D76
+text710 D76 D85 CODE D76
 %locals
 startup.obj
 startup.as
@@ -871,8 +871,7 @@ f:\program files (x86)\fmd\fmdide\data\sources\wmul.c
 669 4A3 0 CODE
 670 4A4 0 CODE
 673 4A5 0 CODE
-407 6BF 0 CODE
-409 6C1 0 CODE
-419 6C2 0 CODE
-420 6C3 0 CODE
-421 6C4 0 CODE
+409 6C2 0 CODE
+419 6BF 0 CODE
+420 6C0 0 CODE
+421 6C1 0 CODE

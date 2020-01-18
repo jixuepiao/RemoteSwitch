@@ -1315,8 +1315,7 @@ PC0 = 1;
 }
 void led1_debug(void){
 
-PC0 = ~PC0;
-
+# 409
 }
 void INT_INITIAL(void){
 TRISA2 =1;

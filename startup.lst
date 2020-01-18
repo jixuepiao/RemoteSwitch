@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PIC Macro Assembler V9.83 build 10920 
-                                                                                                           Thu Jan 16 18:22:32 2020
+                                                                                                           Sat Jan 18 12:03:40 2020
 
 
      1                           
@@ -76,7 +76,7 @@ HI-TECH Software PIC Macro Assembler V9.83 build 10920
 
 
 HI-TECH Software PICC Macro Assembler V9.83 build 10920 
-Symbol Table                                                                                               Thu Jan 16 18:22:32 2020
+Symbol Table                                                                                               Sat Jan 18 12:03:40 2020
 
                _main 0645                 _exit 000F                 start 000F  start_initialization 067E  
            intlevel0 0000             intlevel1 0000             intlevel2 0000             intlevel3 0000  

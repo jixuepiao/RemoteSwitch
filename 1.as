@@ -91,9 +91,9 @@ pclath	equ	10
 	global	_CH2_remotekey
 	global	_CH3_remotekey
 	global	_ANSEL
-psect	text696,local,class=CODE,delta=2
-global __ptext696
-__ptext696:
+psect	text695,local,class=CODE,delta=2
+global __ptext695
+__ptext695:
 _ANSEL	set	286
 	DABS	1,286,1	;_ANSEL
 
@@ -1008,7 +1008,7 @@ _main:
 ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
 	line	790
 	
-l3735:	
+l3755:	
 ;1.C: 790: OSC_INIT();
 	fcall	_OSC_INIT
 	line	791
@@ -1019,82 +1019,82 @@ l3735:
 	fcall	_TIMER2_INITIAL
 	line	793
 	
-l3737:	
+l3757:	
 ;1.C: 793: INT_INITIAL();
 	fcall	_INT_INITIAL
 	line	794
 	
-l3739:	
+l3759:	
 ;1.C: 794: EEPROM_Read();
 	fcall	_EEPROM_Read
 	line	795
 	
-l3741:	
+l3761:	
 ;1.C: 795: WDT_INITIAL();
 	fcall	_WDT_INITIAL
 	line	796
 	
-l3743:	
+l3763:	
 ;1.C: 796: PC0 = 1;
 	bsf	(56/8),(56)&7
 	line	797
 	
-l3745:	
+l3765:	
 ;1.C: 797: PA7 = 1;
 	bsf	(47/8),(47)&7
 	line	798
 	
-l3747:	
+l3767:	
 ;1.C: 798: PA6 = 1;
 	bsf	(46/8),(46)&7
 	line	799
 	
-l3749:	
+l3769:	
 ;1.C: 799: PA5 = 1;
 	bsf	(45/8),(45)&7
 	line	801
 	
-l3751:	
+l3771:	
 ;1.C: 801: PA3 = 0;
 	bcf	(43/8),(43)&7
 	line	802
 	
-l3753:	
+l3773:	
 ;1.C: 802: FLAGs &= ~0x08;
 	bcf	(_FLAGs)+(3/8),(3)&7
 	line	803
 	
-l3755:	
+l3775:	
 ;1.C: 803: EX_INT_FallingEdge();
 	fcall	_EX_INT_FallingEdge
 	line	804
 	
-l3757:	
+l3777:	
 ;1.C: 804: INTE =1;
 	bsf	(92/8),(92)&7
 	line	806
 	
-l3759:	
+l3779:	
 ;1.C: 806: TMR2ON =1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(146/8),(146)&7
 	line	808
 	
-l3761:	
+l3781:	
 ;1.C: 808: PEIE = 1;
 	bsf	(94/8),(94)&7
 	line	809
 	
-l3763:	
+l3783:	
 ;1.C: 809: GIE = 1;
 	bsf	(95/8),(95)&7
 	line	811
 	
-l3765:	
+l3785:	
 # 811 "1.C"
 clrwdt ;#
 psect	maintext
-	goto	l3765
+	goto	l3785
 	global	start
 	ljmp	start
 	opt stack 0
@@ -1106,9 +1106,9 @@ GLOBAL	__end_of_main
 
 	signat	_main,90
 	global	_EEPROM_Read
-psect	text697,local,class=CODE,delta=2
-global __ptext697
-__ptext697:
+psect	text696,local,class=CODE,delta=2
+global __ptext696
+__ptext696:
 
 ;; *************** function _EEPROM_Read *****************
 ;; Defined at:
@@ -1140,7 +1140,7 @@ __ptext697:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text697
+psect	text696
 	file	"1.C"
 	line	574
 	global	__size_of_EEPROM_Read
@@ -1151,7 +1151,7 @@ _EEPROM_Read:
 ; Regs used in _EEPROM_Read: [wreg-fsr0h+status,2+status,0+pclath+cstack]
 	line	575
 	
-l3727:	
+l3747:	
 ;1.C: 575: EEPROM_ReadWord(&CH1_remotekey[0],0x00);
 	clrf	(?_EEPROM_ReadWord)^080h
 	movlw	(_CH1_remotekey)&0ffh
@@ -1224,7 +1224,7 @@ l3727:
 	fcall	_EEPROM_ReadWord
 	line	587
 	
-l3729:	
+l3749:	
 ;1.C: 587: CH1_remotekey_Latest = CH1_remotekey_num = IAPRead(0x30);
 	movlw	(030h)
 	fcall	_IAPRead
@@ -1234,7 +1234,7 @@ l3729:
 	movwf	(_CH1_remotekey_Latest)^080h
 	line	588
 	
-l3731:	
+l3751:	
 ;1.C: 588: CH2_remotekey_Latest = CH2_remotekey_num = IAPRead(0x31);
 	movlw	(031h)
 	fcall	_IAPRead
@@ -1244,7 +1244,7 @@ l3731:
 	movwf	(_CH2_remotekey_Latest)^080h
 	line	589
 	
-l3733:	
+l3753:	
 ;1.C: 589: CH3_remotekey_Latest = CH3_remotekey_num = IAPRead(0x32);
 	movlw	(032h)
 	fcall	_IAPRead
@@ -1263,9 +1263,9 @@ GLOBAL	__end_of_EEPROM_Read
 
 	signat	_EEPROM_Read,88
 	global	_EEPROM_ReadWord
-psect	text698,local,class=CODE,delta=2
-global __ptext698
-__ptext698:
+psect	text697,local,class=CODE,delta=2
+global __ptext697
+__ptext697:
 
 ;; *************** function _EEPROM_ReadWord *****************
 ;; Defined at:
@@ -1299,7 +1299,7 @@ __ptext698:
 ;;		_EEPROM_Read
 ;; This function uses a non-reentrant model
 ;;
-psect	text698
+psect	text697
 	file	"1.C"
 	line	563
 	global	__size_of_EEPROM_ReadWord
@@ -1312,7 +1312,7 @@ _EEPROM_ReadWord:
 	movwf	(EEPROM_ReadWord@buff)^080h
 	line	564
 	
-l3713:	
+l3733:	
 ;1.C: 564: *buff = 0;
 	movf	(EEPROM_ReadWord@buff)^080h,w
 	movwf	fsr0
@@ -1326,7 +1326,7 @@ l3713:
 	clrf	indf
 	line	565
 	
-l3715:	
+l3735:	
 ;1.C: 565: EE_Buff = IAPRead(data+2);
 	movf	(EEPROM_ReadWord@data)^080h,w
 	addlw	02h
@@ -1334,7 +1334,7 @@ l3715:
 	movwf	(_EE_Buff)^080h
 	line	566
 	
-l3717:	
+l3737:	
 ;1.C: 566: *buff |= EE_Buff;
 	movf	(_EE_Buff)^080h,w
 	movwf	(??_EEPROM_ReadWord+0)^080h+0
@@ -1356,7 +1356,7 @@ l3717:
 	iorwf	indf,f
 	line	567
 	
-l3719:	
+l3739:	
 ;1.C: 567: *buff = *buff<<8;
 	movf	(EEPROM_ReadWord@buff)^080h,w
 	movwf	fsr0
@@ -1393,7 +1393,7 @@ l3719:
 	movwf	indf
 	line	568
 	
-l3721:	
+l3741:	
 ;1.C: 568: EE_Buff = IAPRead(data+1);
 	incf	(EEPROM_ReadWord@data)^080h,w
 	fcall	_IAPRead
@@ -1455,14 +1455,14 @@ l3721:
 	movwf	indf
 	line	571
 	
-l3723:	
+l3743:	
 ;1.C: 571: EE_Buff = IAPRead(data);
 	movf	(EEPROM_ReadWord@data)^080h,w
 	fcall	_IAPRead
 	movwf	(_EE_Buff)^080h
 	line	572
 	
-l3725:	
+l3745:	
 ;1.C: 572: *buff |= EE_Buff;
 	movf	(_EE_Buff)^080h,w
 	movwf	(??_EEPROM_ReadWord+0)^080h+0
@@ -1493,9 +1493,9 @@ GLOBAL	__end_of_EEPROM_ReadWord
 
 	signat	_EEPROM_ReadWord,8312
 	global	_INT_INITIAL
-psect	text699,local,class=CODE,delta=2
-global __ptext699
-__ptext699:
+psect	text698,local,class=CODE,delta=2
+global __ptext698
+__ptext698:
 
 ;; *************** function _INT_INITIAL *****************
 ;; Defined at:
@@ -1526,7 +1526,7 @@ __ptext699:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text699
+psect	text698
 	file	"1.C"
 	line	410
 	global	__size_of_INT_INITIAL
@@ -1537,7 +1537,7 @@ _INT_INITIAL:
 ; Regs used in _INT_INITIAL: [status,2+status,0+pclath+cstack]
 	line	411
 	
-l3705:	
+l3725:	
 ;1.C: 411: TRISA2 =1;
 	bsf	status, 5	;RP0=1, select bank1
 	bsf	(1066/8)^080h,(1066)&7
@@ -1546,17 +1546,17 @@ l3705:
 	bcf	(1202/8)^080h,(1202)&7
 	line	413
 	
-l3707:	
+l3727:	
 ;1.C: 413: EX_INT_FallingEdge();
 	fcall	_EX_INT_FallingEdge
 	line	414
 	
-l3709:	
+l3729:	
 ;1.C: 414: INTF =0;
 	bcf	(89/8),(89)&7
 	line	416
 	
-l3711:	
+l3731:	
 ;1.C: 416: INTE =0;
 	bcf	(92/8),(92)&7
 	line	417
@@ -1570,9 +1570,9 @@ GLOBAL	__end_of_INT_INITIAL
 
 	signat	_INT_INITIAL,88
 	global	_IAPRead
-psect	text700,local,class=CODE,delta=2
-global __ptext700
-__ptext700:
+psect	text699,local,class=CODE,delta=2
+global __ptext699
+__ptext699:
 
 ;; *************** function _IAPRead *****************
 ;; Defined at:
@@ -1605,7 +1605,7 @@ __ptext700:
 ;;		_EEPROM_Read
 ;; This function uses a non-reentrant model
 ;;
-psect	text700
+psect	text699
 	file	"1.C"
 	line	488
 	global	__size_of_IAPRead
@@ -1618,14 +1618,14 @@ _IAPRead:
 	line	490
 	movwf	(IAPRead@EEAddr)^080h
 	
-l3699:	
+l3719:	
 ;1.C: 489: unsigned char ReEEPROMread;
 ;1.C: 490: EEADR = EEAddr;
 	movf	(IAPRead@EEAddr)^080h,w
 	movwf	(155)^080h	;volatile
 	line	491
 	
-l3701:	
+l3721:	
 ;1.C: 491: RD = 1;
 	bsf	(1248/8)^080h,(1248)&7
 	line	492
@@ -1646,9 +1646,9 @@ GLOBAL	__end_of_IAPRead
 
 	signat	_IAPRead,4217
 	global	_TIMER2_INITIAL
-psect	text701,local,class=CODE,delta=2
-global __ptext701
-__ptext701:
+psect	text700,local,class=CODE,delta=2
+global __ptext700
+__ptext700:
 
 ;; *************** function _TIMER2_INITIAL *****************
 ;; Defined at:
@@ -1679,7 +1679,7 @@ __ptext701:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text701
+psect	text700
 	file	"1.C"
 	line	464
 	global	__size_of_TIMER2_INITIAL
@@ -1690,19 +1690,19 @@ _TIMER2_INITIAL:
 ; Regs used in _TIMER2_INITIAL: [wreg+status,2]
 	line	465
 	
-l3683:	
+l3703:	
 ;1.C: 465: T2CON0 = 0B00000001;
 	movlw	(01h)
 	movwf	(18)	;volatile
 	line	471
 	
-l3685:	
+l3705:	
 ;1.C: 471: T2CON1 = 0B00000000;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(158)^080h	;volatile
 	line	476
 	
-l3687:	
+l3707:	
 ;1.C: 476: TMR2H = (53)/256;
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(19)	;volatile
@@ -1712,31 +1712,31 @@ l3687:
 	movwf	(17)	;volatile
 	line	480
 	
-l3689:	
+l3709:	
 ;1.C: 480: PR2H = (53)/256;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(146)^080h	;volatile
 	line	481
 	
-l3691:	
+l3711:	
 ;1.C: 481: PR2L = (53)%256;
 	movlw	(035h)
 	movwf	(145)^080h	;volatile
 	line	483
 	
-l3693:	
+l3713:	
 ;1.C: 483: TMR2IF = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(97/8),(97)&7
 	line	484
 	
-l3695:	
+l3715:	
 ;1.C: 484: TMR2IE = 1;
 	bsf	status, 5	;RP0=1, select bank1
 	bsf	(1121/8)^080h,(1121)&7
 	line	486
 	
-l3697:	
+l3717:	
 ;1.C: 486: TMR2ON =0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(146/8),(146)&7
@@ -1751,9 +1751,9 @@ GLOBAL	__end_of_TIMER2_INITIAL
 
 	signat	_TIMER2_INITIAL,88
 	global	_TIMER0_INITIAL
-psect	text702,local,class=CODE,delta=2
-global __ptext702
-__ptext702:
+psect	text701,local,class=CODE,delta=2
+global __ptext701
+__ptext701:
 
 ;; *************** function _TIMER0_INITIAL *****************
 ;; Defined at:
@@ -1784,7 +1784,7 @@ __ptext702:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text702
+psect	text701
 	file	"1.C"
 	line	454
 	global	__size_of_TIMER0_INITIAL
@@ -1795,7 +1795,7 @@ _TIMER0_INITIAL:
 ; Regs used in _TIMER0_INITIAL: [wreg+status,2+status,0]
 	line	455
 	
-l3673:	
+l3693:	
 ;1.C: 455: T0CS = 0;
 	bcf	(1037/8)^080h,(1037)&7
 	line	456
@@ -1803,7 +1803,7 @@ l3673:
 	bcf	(1035/8)^080h,(1035)&7
 	line	457
 	
-l3675:	
+l3695:	
 ;1.C: 457: OPTION &= 0xF8;
 	movlw	(0F8h)
 	andwf	(129)^080h,f	;volatile
@@ -1813,19 +1813,19 @@ l3675:
 	iorwf	(129)^080h,f	;volatile
 	line	460
 	
-l3677:	
+l3697:	
 ;1.C: 460: TMR0 = 5;
 	movlw	(05h)
 	bcf	status, 5	;RP0=0, select bank0
 	movwf	(1)	;volatile
 	line	461
 	
-l3679:	
+l3699:	
 ;1.C: 461: T0IE = 1;
 	bsf	(93/8),(93)&7
 	line	462
 	
-l3681:	
+l3701:	
 ;1.C: 462: T0IF = 0;
 	bcf	(90/8),(90)&7
 	line	463
@@ -1839,9 +1839,9 @@ GLOBAL	__end_of_TIMER0_INITIAL
 
 	signat	_TIMER0_INITIAL,88
 	global	_WDT_INITIAL
-psect	text703,local,class=CODE,delta=2
-global __ptext703
-__ptext703:
+psect	text702,local,class=CODE,delta=2
+global __ptext702
+__ptext702:
 
 ;; *************** function _WDT_INITIAL *****************
 ;; Defined at:
@@ -1872,7 +1872,7 @@ __ptext703:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text703
+psect	text702
 	file	"1.C"
 	line	449
 	global	__size_of_WDT_INITIAL
@@ -1883,13 +1883,13 @@ _WDT_INITIAL:
 ; Regs used in _WDT_INITIAL: [wreg]
 	line	450
 	
-l3669:	
+l3689:	
 # 450 "1.C"
 clrwdt ;#
-psect	text703
+psect	text702
 	line	451
 	
-l3671:	
+l3691:	
 ;1.C: 451: WDTCON = 0B00010110;
 	movlw	(016h)
 	bcf	status, 5	;RP0=0, select bank0
@@ -1905,9 +1905,9 @@ GLOBAL	__end_of_WDT_INITIAL
 
 	signat	_WDT_INITIAL,88
 	global	_OSC_INIT
-psect	text704,local,class=CODE,delta=2
-global __ptext704
-__ptext704:
+psect	text703,local,class=CODE,delta=2
+global __ptext703
+__ptext703:
 
 ;; *************** function _OSC_INIT *****************
 ;; Defined at:
@@ -1938,7 +1938,7 @@ __ptext704:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text704
+psect	text703
 	file	"1.C"
 	line	426
 	global	__size_of_OSC_INIT
@@ -1949,19 +1949,19 @@ _OSC_INIT:
 ; Regs used in _OSC_INIT: [wreg+status,2]
 	line	427
 	
-l3647:	
+l3667:	
 ;1.C: 427: OSCCON = 0B01100001;
 	movlw	(061h)
 	bsf	status, 5	;RP0=1, select bank1
 	movwf	(143)^080h	;volatile
 	line	432
 	
-l3649:	
+l3669:	
 ;1.C: 432: INTCON = 0;
 	clrf	(11)	;volatile
 	line	434
 	
-l3651:	
+l3671:	
 ;1.C: 434: PORTA = 0B00000000;
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(5)	;volatile
@@ -1972,24 +1972,24 @@ l3651:
 	movwf	(133)^080h	;volatile
 	line	436
 	
-l3653:	
+l3673:	
 ;1.C: 436: WPUA = 0B00000000;
 	clrf	(149)^080h	;volatile
 	line	437
 	
-l3655:	
+l3675:	
 ;1.C: 437: PSRCA = 0B11111111;
 	movlw	(0FFh)
 	movwf	(136)^080h	;volatile
 	line	438
 	
-l3657:	
+l3677:	
 ;1.C: 438: PSINKA = 0B11111111;
 	movlw	(0FFh)
 	movwf	(151)^080h	;volatile
 	line	440
 	
-l3659:	
+l3679:	
 ;1.C: 440: PORTC = 0B00000000;
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(7)	;volatile
@@ -2000,24 +2000,24 @@ l3659:
 	movwf	(135)^080h	;volatile
 	line	442
 	
-l3661:	
+l3681:	
 ;1.C: 442: WPUC = 0B00000000;
 	clrf	(147)^080h	;volatile
 	line	443
 	
-l3663:	
+l3683:	
 ;1.C: 443: PSRCC = 0B11111111;
 	movlw	(0FFh)
 	movwf	(148)^080h	;volatile
 	line	444
 	
-l3665:	
+l3685:	
 ;1.C: 444: PSINKC = 0B11111111;
 	movlw	(0FFh)
 	movwf	(159)^080h	;volatile
 	line	446
 	
-l3667:	
+l3687:	
 ;1.C: 446: OPTION = 0B00001000;
 	movlw	(08h)
 	movwf	(129)^080h	;volatile
@@ -2032,9 +2032,9 @@ GLOBAL	__end_of_OSC_INIT
 
 	signat	_OSC_INIT,88
 	global	_EX_INT_FallingEdge
-psect	text705,local,class=CODE,delta=2
-global __ptext705
-__ptext705:
+psect	text704,local,class=CODE,delta=2
+global __ptext704
+__ptext704:
 
 ;; *************** function _EX_INT_FallingEdge *****************
 ;; Defined at:
@@ -2066,7 +2066,7 @@ __ptext705:
 ;;		_main
 ;; This function uses a non-reentrant model
 ;;
-psect	text705
+psect	text704
 	file	"1.C"
 	line	422
 	global	__size_of_EX_INT_FallingEdge
@@ -2077,7 +2077,7 @@ _EX_INT_FallingEdge:
 ; Regs used in _EX_INT_FallingEdge: []
 	line	423
 	
-l3645:	
+l3665:	
 ;1.C: 423: INTEDG =0;
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	(1038/8)^080h,(1038)&7
@@ -2095,9 +2095,9 @@ GLOBAL	__end_of_EX_INT_FallingEdge
 
 	signat	_EX_INT_FallingEdge,88
 	global	_ISR
-psect	text706,local,class=CODE,delta=2
-global __ptext706
-__ptext706:
+psect	text705,local,class=CODE,delta=2
+global __ptext705
+__ptext705:
 
 ;; *************** function _ISR *****************
 ;; Defined at:
@@ -2134,7 +2134,7 @@ __ptext706:
 ;;		Interrupt level 1
 ;; This function uses a non-reentrant model
 ;;
-psect	text706
+psect	text705
 	file	"1.C"
 	line	138
 	global	__size_of_ISR
@@ -2161,28 +2161,28 @@ interrupt_function:
 	movf	btemp+1,w
 	movwf	(??_ISR+9)
 	ljmp	_ISR
-psect	text706
+psect	text705
 	line	140
 	
-i1l2901:	
+i1l2923:	
 ;1.C: 140: if(INTE && INTF){
 	btfss	(92/8),(92)&7
 	goto	u134_21
 	goto	u134_20
 u134_21:
-	goto	i1l3047
+	goto	i1l3069
 u134_20:
 	
-i1l2903:	
+i1l2925:	
 	btfss	(89/8),(89)&7
 	goto	u135_21
 	goto	u135_20
 u135_21:
-	goto	i1l3047
+	goto	i1l3069
 u135_20:
 	line	141
 	
-i1l2905:	
+i1l2927:	
 ;1.C: 141: INTF = 0;
 	bcf	(89/8),(89)&7
 	line	142
@@ -2201,35 +2201,35 @@ u136_21:
 u136_20:
 	line	145
 	
-i1l2907:	
+i1l2929:	
 ;1.C: 145: Indata = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_Indata)^080h
 	clrf	(_Indata+1)^080h
 	line	146
 	
-i1l2909:	
+i1l2931:	
 ;1.C: 146: EX_INT_RisingEdge();
 	fcall	_EX_INT_RisingEdge
 	line	147
 ;1.C: 147: }else if((FLAGs&0x01) == 0x01){
-	goto	i1l3043
+	goto	i1l3065
 	
 i1l854:	
 	btfss	(_FLAGs),(0)&7
 	goto	u137_21
 	goto	u137_20
 u137_21:
-	goto	i1l3043
+	goto	i1l3065
 u137_20:
 	line	148
 	
-i1l2911:	
+i1l2933:	
 ;1.C: 148: EX_INT_FallingEdge();
 	fcall	i1_EX_INT_FallingEdge
 	line	149
 	
-i1l2913:	
+i1l2935:	
 ;1.C: 149: buff = Indata*53;
 	movf	(_Indata+1)^080h,w
 	movwf	(?___wmul+1)
@@ -2246,14 +2246,14 @@ i1l2913:
 	movwf	(_buff)
 	line	150
 	
-i1l2915:	
+i1l2937:	
 ;1.C: 150: Indata = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_Indata)^080h
 	clrf	(_Indata+1)^080h
 	line	155
 	
-i1l2917:	
+i1l2939:	
 ;1.C: 152: if( ((FLAGs&0x10) == 0) &&
 ;1.C: 153: ((FLAGs&0x20) == 0) &&
 ;1.C: 154: ((FLAGs&0x40) == 0)
@@ -2262,37 +2262,37 @@ i1l2917:
 	goto	u138_21
 	goto	u138_20
 u138_21:
-	goto	i1l3043
+	goto	i1l3065
 u138_20:
 	
-i1l2919:	
+i1l2941:	
 	btfsc	(_FLAGs),(5)&7
 	goto	u139_21
 	goto	u139_20
 u139_21:
-	goto	i1l3043
+	goto	i1l3065
 u139_20:
 	
-i1l2921:	
+i1l2943:	
 	btfsc	(_FLAGs),(6)&7
 	goto	u140_21
 	goto	u140_20
 u140_21:
-	goto	i1l3043
+	goto	i1l3065
 u140_20:
 	line	156
 	
-i1l2923:	
+i1l2945:	
 ;1.C: 156: if((FLAGs&0x08) == 0x08){
 	btfss	(_FLAGs),(3)&7
 	goto	u141_21
 	goto	u141_20
 u141_21:
-	goto	i1l3023
+	goto	i1l3045
 u141_20:
 	line	157
 	
-i1l2925:	
+i1l2947:	
 ;1.C: 157: if(num < 24){
 	movlw	(018h)
 	bcf	status, 5	;RP0=0, select bank0
@@ -2301,11 +2301,11 @@ i1l2925:
 	goto	u142_21
 	goto	u142_20
 u142_21:
-	goto	i1l2941
+	goto	i1l2963
 u142_20:
 	line	158
 	
-i1l2927:	
+i1l2949:	
 ;1.C: 158: if((buff>200)&&(buff<450)){
 	movlw	high(0C9h)
 	subwf	(_buff+1),w
@@ -2316,10 +2316,10 @@ i1l2927:
 	goto	u143_21
 	goto	u143_20
 u143_21:
-	goto	i1l2935
+	goto	i1l2957
 u143_20:
 	
-i1l2929:	
+i1l2951:	
 	movlw	high(01C2h)
 	subwf	(_buff+1),w
 	movlw	low(01C2h)
@@ -2329,11 +2329,11 @@ i1l2929:
 	goto	u144_21
 	goto	u144_20
 u144_21:
-	goto	i1l2935
+	goto	i1l2957
 u144_20:
 	line	159
 	
-i1l2931:	
+i1l2953:	
 ;1.C: 159: remotekey = remotekey<<1;
 	clrc
 	bsf	status, 5	;RP0=1, select bank1
@@ -2343,12 +2343,12 @@ i1l2931:
 	rlf	(_remotekey+3)^080h,f
 	line	160
 	
-i1l2933:	
+i1l2955:	
 ;1.C: 160: remotekey |= 0x00000001;
 	bsf	(_remotekey)^080h+(0/8),(0)&7
 	line	162
 	
-i1l2935:	
+i1l2957:	
 ;1.C: 161: }
 ;1.C: 162: if((buff>700)&&(buff<1200)){
 	movlw	high(02BDh)
@@ -2364,7 +2364,7 @@ u145_21:
 	goto	i1l861
 u145_20:
 	
-i1l2937:	
+i1l2959:	
 	movlw	high(04B0h)
 	subwf	(_buff+1),w
 	movlw	low(04B0h)
@@ -2378,7 +2378,7 @@ u146_21:
 u146_20:
 	line	163
 	
-i1l2939:	
+i1l2961:	
 ;1.C: 163: remotekey = remotekey<<1;
 	clrc
 	bsf	status, 5	;RP0=1, select bank1
@@ -2396,7 +2396,7 @@ i1l861:
 	incf	(_num),f
 	line	168
 	
-i1l2941:	
+i1l2963:	
 ;1.C: 166: }
 ;1.C: 168: if(num >= 24){
 	movlw	(018h)
@@ -2405,11 +2405,11 @@ i1l2941:
 	goto	u147_21
 	goto	u147_20
 u147_21:
-	goto	i1l3023
+	goto	i1l3045
 u147_20:
 	line	170
 	
-i1l2943:	
+i1l2965:	
 ;1.C: 170: if(remotekey>0){
 	bsf	status, 5	;RP0=1, select bank1
 	movf	(_remotekey+3)^080h,w
@@ -2424,7 +2424,7 @@ u148_21:
 u148_20:
 	line	171
 	
-i1l2945:	
+i1l2967:	
 ;1.C: 171: if(Match_remotekey == remotekey){
 	movf	(_remotekey+3)^080h,w
 	xorwf	(_Match_remotekey+3),w
@@ -2445,22 +2445,22 @@ u149_25:
 	goto	u149_21
 	goto	u149_20
 u149_21:
-	goto	i1l2951
+	goto	i1l2973
 u149_20:
 	line	172
 	
-i1l2947:	
+i1l2969:	
 ;1.C: 172: remotekey_Receive_num++;
 	bcf	status, 5	;RP0=0, select bank0
 	incf	(_remotekey_Receive_num),f
 	line	173
 	
-i1l2949:	
+i1l2971:	
 ;1.C: 173: match_slice = 0;
 	clrf	(_match_slice)
 	line	175
 	
-i1l2951:	
+i1l2973:	
 ;1.C: 174: }
 ;1.C: 175: if(remotekey_Receive_num == 0) Match_remotekey = remotekey;
 	bcf	status, 5	;RP0=0, select bank0
@@ -2472,7 +2472,7 @@ u150_21:
 	goto	i1l863
 u150_20:
 	
-i1l2953:	
+i1l2975:	
 	bsf	status, 5	;RP0=1, select bank1
 	movf	(_remotekey+3)^080h,w
 	movwf	(_Match_remotekey+3)
@@ -2501,7 +2501,7 @@ i1l863:
 
 	line	183
 	
-i1l2955:	
+i1l2977:	
 ;1.C: 180: if( ((PRESSED&0x10) == 0) &&
 ;1.C: 181: ((PRESSED&0x20) == 0) &&
 ;1.C: 182: ((PRESSED&0x40) == 0)
@@ -2513,7 +2513,7 @@ u151_21:
 	goto	i1l866
 u151_20:
 	
-i1l2957:	
+i1l2979:	
 	btfsc	(_PRESSED),(5)&7
 	goto	u152_21
 	goto	u152_20
@@ -2521,7 +2521,7 @@ u152_21:
 	goto	i1l866
 u152_20:
 	
-i1l2959:	
+i1l2981:	
 	btfsc	(_PRESSED),(6)&7
 	goto	u153_21
 	goto	u153_20
@@ -2530,7 +2530,7 @@ u153_21:
 u153_20:
 	line	184
 	
-i1l2961:	
+i1l2983:	
 ;1.C: 184: if((FLAGs&0x10) == 0){
 	btfsc	(_FLAGs),(4)&7
 	goto	u154_21
@@ -2540,15 +2540,15 @@ u154_21:
 u154_20:
 	line	185
 	
-i1l2963:	
+i1l2985:	
 ;1.C: 185: for(buff=0;buff<CH1_remotekey_num;buff++){
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(_buff)
 	clrf	(_buff+1)
-	goto	i1l2979
+	goto	i1l3001
 	line	186
 	
-i1l2965:	
+i1l2987:	
 ;1.C: 186: if(Ctrl_remotekey == CH1_remotekey[buff]){
 	movf	(_buff),w
 	movwf	(??_ISR+0)+0
@@ -2597,45 +2597,45 @@ u155_25:
 	goto	u155_21
 	goto	u155_20
 u155_21:
-	goto	i1l2977
+	goto	i1l2999
 u155_20:
 	line	187
 	
-i1l2967:	
+i1l2989:	
 ;1.C: 187: FLAGs |= 0x10;
 	bsf	(_FLAGs)+(4/8),(4)&7
 	line	188
 	
-i1l2969:	
+i1l2991:	
 ;1.C: 188: Key_dealed_counter = 0;
 	clrf	(_Key_dealed_counter)
 	line	189
 	
-i1l2971:	
+i1l2993:	
 ;1.C: 189: led1_debug();
 	fcall	_led1_debug
 	line	190
 	
-i1l2973:	
+i1l2995:	
 ;1.C: 190: PA7 = ~PA7;
 	movlw	1<<((47)&7)
 	xorwf	((47)/8),f
 	line	191
 	
-i1l2975:	
+i1l2997:	
 ;1.C: 191: CH1_remotekey_Latest = buff;
 	movf	(_buff),w
 	bsf	status, 5	;RP0=1, select bank1
 	movwf	(_CH1_remotekey_Latest)^080h
 	line	185
 	
-i1l2977:	
+i1l2999:	
 	bcf	status, 5	;RP0=0, select bank0
 	incf	(_buff),f
 	skipnz
 	incf	(_buff+1),f
 	
-i1l2979:	
+i1l3001:	
 	movf	(_CH1_remotekey_num),w
 	movwf	(??_ISR+0)+0
 	clrf	(??_ISR+0)+0+1
@@ -2650,7 +2650,7 @@ u156_25:
 	goto	u156_21
 	goto	u156_20
 u156_21:
-	goto	i1l2965
+	goto	i1l2987
 u156_20:
 	line	194
 	
@@ -2668,15 +2668,15 @@ u157_21:
 u157_20:
 	line	196
 	
-i1l2981:	
+i1l3003:	
 ;1.C: 196: for(buff=0;buff<CH2_remotekey_num;buff++){
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(_buff)
 	clrf	(_buff+1)
-	goto	i1l2997
+	goto	i1l3019
 	line	197
 	
-i1l2983:	
+i1l3005:	
 ;1.C: 197: if(Ctrl_remotekey == CH2_remotekey[buff]){
 	movf	(_buff),w
 	movwf	(??_ISR+0)+0
@@ -2725,45 +2725,45 @@ u158_25:
 	goto	u158_21
 	goto	u158_20
 u158_21:
-	goto	i1l2995
+	goto	i1l3017
 u158_20:
 	line	198
 	
-i1l2985:	
+i1l3007:	
 ;1.C: 198: FLAGs |= 0x20;
 	bsf	(_FLAGs)+(5/8),(5)&7
 	line	199
 	
-i1l2987:	
+i1l3009:	
 ;1.C: 199: Key_dealed_counter = 0;
 	clrf	(_Key_dealed_counter)
 	line	200
 	
-i1l2989:	
+i1l3011:	
 ;1.C: 200: led1_debug();
 	fcall	_led1_debug
 	line	201
 	
-i1l2991:	
+i1l3013:	
 ;1.C: 201: PA6 = ~PA6;
 	movlw	1<<((46)&7)
 	xorwf	((46)/8),f
 	line	202
 	
-i1l2993:	
+i1l3015:	
 ;1.C: 202: CH2_remotekey_Latest = buff;
 	movf	(_buff),w
 	bsf	status, 5	;RP0=1, select bank1
 	movwf	(_CH2_remotekey_Latest)^080h
 	line	196
 	
-i1l2995:	
+i1l3017:	
 	bcf	status, 5	;RP0=0, select bank0
 	incf	(_buff),f
 	skipnz
 	incf	(_buff+1),f
 	
-i1l2997:	
+i1l3019:	
 	movf	(_CH2_remotekey_num),w
 	movwf	(??_ISR+0)+0
 	clrf	(??_ISR+0)+0+1
@@ -2778,7 +2778,7 @@ u159_25:
 	goto	u159_21
 	goto	u159_20
 u159_21:
-	goto	i1l2983
+	goto	i1l3005
 u159_20:
 	line	205
 	
@@ -2796,15 +2796,15 @@ u160_21:
 u160_20:
 	line	207
 	
-i1l2999:	
+i1l3021:	
 ;1.C: 207: for(buff=0;buff<CH3_remotekey_num;buff++){
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(_buff)
 	clrf	(_buff+1)
-	goto	i1l3015
+	goto	i1l3037
 	line	208
 	
-i1l3001:	
+i1l3023:	
 ;1.C: 208: if(Ctrl_remotekey == CH3_remotekey[buff]){
 	movf	(_buff),w
 	movwf	(??_ISR+0)+0
@@ -2853,45 +2853,45 @@ u161_25:
 	goto	u161_21
 	goto	u161_20
 u161_21:
-	goto	i1l3013
+	goto	i1l3035
 u161_20:
 	line	209
 	
-i1l3003:	
+i1l3025:	
 ;1.C: 209: FLAGs |= 0x40;
 	bsf	(_FLAGs)+(6/8),(6)&7
 	line	210
 	
-i1l3005:	
+i1l3027:	
 ;1.C: 210: Key_dealed_counter = 0;
 	clrf	(_Key_dealed_counter)
 	line	211
 	
-i1l3007:	
+i1l3029:	
 ;1.C: 211: led1_debug();
 	fcall	_led1_debug
 	line	212
 	
-i1l3009:	
+i1l3031:	
 ;1.C: 212: PA5 = ~PA5;
 	movlw	1<<((45)&7)
 	xorwf	((45)/8),f
 	line	213
 	
-i1l3011:	
+i1l3033:	
 ;1.C: 213: CH3_remotekey_Latest = buff;
 	movf	(_buff),w
 	bsf	status, 5	;RP0=1, select bank1
 	movwf	(_CH3_remotekey_Latest)^080h
 	line	207
 	
-i1l3013:	
+i1l3035:	
 	bcf	status, 5	;RP0=0, select bank0
 	incf	(_buff),f
 	skipnz
 	incf	(_buff+1),f
 	
-i1l3015:	
+i1l3037:	
 	movf	(_CH3_remotekey_num),w
 	movwf	(??_ISR+0)+0
 	clrf	(??_ISR+0)+0+1
@@ -2906,7 +2906,7 @@ u162_25:
 	goto	u162_21
 	goto	u162_20
 u162_21:
-	goto	i1l3001
+	goto	i1l3023
 u162_20:
 	line	217
 	
@@ -2920,7 +2920,7 @@ i1l866:
 	bcf	(_FLAGs)+(3/8),(3)&7
 	line	219
 	
-i1l3017:	
+i1l3039:	
 ;1.C: 219: Indata = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_Indata)^080h
@@ -2931,7 +2931,7 @@ i1l3017:
 	clrf	(_num)
 	line	221
 	
-i1l3019:	
+i1l3041:	
 ;1.C: 221: remotekey = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_remotekey)^080h
@@ -2940,7 +2940,7 @@ i1l3019:
 	clrf	(_remotekey+3)^080h
 	line	222
 	
-i1l3021:	
+i1l3043:	
 ;1.C: 222: Ctrl_remotekey = 0;
 	clrf	(_Ctrl_remotekey)^080h
 	clrf	(_Ctrl_remotekey+1)^080h
@@ -2948,7 +2948,7 @@ i1l3021:
 	clrf	(_Ctrl_remotekey+3)^080h
 	line	225
 	
-i1l3023:	
+i1l3045:	
 ;1.C: 223: }
 ;1.C: 224: }
 ;1.C: 225: if((FLAGs&0x08) == 0){
@@ -2956,11 +2956,11 @@ i1l3023:
 	goto	u163_21
 	goto	u163_20
 u163_21:
-	goto	i1l3043
+	goto	i1l3065
 u163_20:
 	line	226
 	
-i1l3025:	
+i1l3047:	
 ;1.C: 226: if(buff > 7000){
 	movlw	high(01B59h)
 	bcf	status, 5	;RP0=0, select bank0
@@ -2972,21 +2972,21 @@ i1l3025:
 	goto	u164_21
 	goto	u164_20
 u164_21:
-	goto	i1l3043
+	goto	i1l3065
 u164_20:
 	line	227
 	
-i1l3027:	
+i1l3049:	
 ;1.C: 227: FLAGs |= 0x08;
 	bsf	(_FLAGs)+(3/8),(3)&7
 	line	228
 	
-i1l3029:	
+i1l3051:	
 ;1.C: 228: num = 0;
 	clrf	(_num)
 	line	229
 	
-i1l3031:	
+i1l3053:	
 ;1.C: 229: remotekey = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_remotekey)^080h
@@ -2995,7 +2995,7 @@ i1l3031:
 	clrf	(_remotekey+3)^080h
 	line	233
 	
-i1l3033:	
+i1l3055:	
 ;1.C: 230: if( ((FLAGs&0x10) == 0x10) ||
 ;1.C: 231: ((FLAGs&0x20) == 0x20) ||
 ;1.C: 232: ((FLAGs&0x40) == 0x40)
@@ -3004,18 +3004,18 @@ i1l3033:
 	goto	u165_21
 	goto	u165_20
 u165_21:
-	goto	i1l3039
+	goto	i1l3061
 u165_20:
 	
-i1l3035:	
+i1l3057:	
 	btfsc	(_FLAGs),(5)&7
 	goto	u166_21
 	goto	u166_20
 u166_21:
-	goto	i1l3039
+	goto	i1l3061
 u166_20:
 	
-i1l3037:	
+i1l3059:	
 	btfss	(_FLAGs),(6)&7
 	goto	u167_21
 	goto	u167_20
@@ -3024,22 +3024,22 @@ u167_21:
 u167_20:
 	line	234
 	
-i1l3039:	
+i1l3061:	
 ;1.C: 234: remotekey_slice = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	clrf	(_remotekey_slice)
 	line	235
 	
-i1l3041:	
+i1l3063:	
 ;1.C: 235: FLAGs &= ~0x08;
 	bcf	(_FLAGs)+(3/8),(3)&7
-	goto	i1l3043
+	goto	i1l3065
 	line	239
 	
 i1l857:	
 	line	241
 	
-i1l3043:	
+i1l3065:	
 ;1.C: 236: }
 ;1.C: 237: }
 ;1.C: 238: }
@@ -3050,12 +3050,12 @@ i1l3043:
 	bsf	(146/8),(146)&7
 	line	242
 	
-i1l3045:	
+i1l3067:	
 ;1.C: 242: INTE = 1;
 	bsf	(92/8),(92)&7
 	line	246
 	
-i1l3047:	
+i1l3069:	
 ;1.C: 243: }
 ;1.C: 246: if(TMR2IE && TMR2IF){
 	bsf	status, 5	;RP0=1, select bank1
@@ -3063,20 +3063,20 @@ i1l3047:
 	goto	u168_21
 	goto	u168_20
 u168_21:
-	goto	i1l3061
+	goto	i1l3083
 u168_20:
 	
-i1l3049:	
+i1l3071:	
 	bcf	status, 5	;RP0=0, select bank0
 	btfss	(97/8),(97)&7
 	goto	u169_21
 	goto	u169_20
 u169_21:
-	goto	i1l3061
+	goto	i1l3083
 u169_20:
 	line	247
 	
-i1l3051:	
+i1l3073:	
 ;1.C: 247: TMR2IF = 0;
 	bcf	(97/8),(97)&7
 	line	249
@@ -3085,11 +3085,11 @@ i1l3051:
 	goto	u170_21
 	goto	u170_20
 u170_21:
-	goto	i1l3055
+	goto	i1l3077
 u170_20:
 	line	250
 	
-i1l3053:	
+i1l3075:	
 ;1.C: 250: Indata++;
 	bsf	status, 5	;RP0=1, select bank1
 	incf	(_Indata)^080h,f
@@ -3097,7 +3097,7 @@ i1l3053:
 	incf	(_Indata+1)^080h,f
 	line	252
 	
-i1l3055:	
+i1l3077:	
 ;1.C: 251: }
 ;1.C: 252: if(PA2 == 1){
 	bcf	status, 5	;RP0=0, select bank0
@@ -3105,16 +3105,16 @@ i1l3055:
 	goto	u171_21
 	goto	u171_20
 u171_21:
-	goto	i1l3061
+	goto	i1l3083
 u171_20:
 	line	253
 	
-i1l3057:	
+i1l3079:	
 ;1.C: 253: FLAGs |= 0x02;
 	bsf	(_FLAGs)+(1/8),(1)&7
 	line	254
 	
-i1l3059:	
+i1l3081:	
 ;1.C: 254: remotekey_slice = 0;
 	clrf	(_remotekey_slice)
 	line	255
@@ -3122,7 +3122,7 @@ i1l3059:
 	clrf	(_Key_dealed_counter)
 	line	299
 	
-i1l3061:	
+i1l3083:	
 ;1.C: 257: }
 ;1.C: 296: }
 ;1.C: 299: if(T0IE && T0IF){
@@ -3133,7 +3133,7 @@ u172_21:
 	goto	i1l921
 u172_20:
 	
-i1l3063:	
+i1l3085:	
 	btfss	(90/8),(90)&7
 	goto	u173_21
 	goto	u173_20
@@ -3142,18 +3142,18 @@ u173_21:
 u173_20:
 	line	300
 	
-i1l3065:	
+i1l3087:	
 ;1.C: 300: T0IF = 0;
 	bcf	(90/8),(90)&7
 	line	301
 	
-i1l3067:	
+i1l3089:	
 ;1.C: 301: ms16_counter ++;
 	bcf	status, 5	;RP0=0, select bank0
 	incf	(_ms16_counter),f
 	line	307
 	
-i1l3069:	
+i1l3091:	
 ;1.C: 304: if( ((FLAGs&0x10) == 0x10) ||
 ;1.C: 305: ((FLAGs&0x20) == 0x20) ||
 ;1.C: 306: ((FLAGs&0x40) == 0x40)
@@ -3165,7 +3165,7 @@ u174_21:
 	goto	i1l893
 u174_20:
 	
-i1l3071:	
+i1l3093:	
 	btfsc	(_FLAGs),(5)&7
 	goto	u175_21
 	goto	u175_20
@@ -3173,12 +3173,12 @@ u175_21:
 	goto	i1l893
 u175_20:
 	
-i1l3073:	
+i1l3095:	
 	btfss	(_FLAGs),(6)&7
 	goto	u176_21
 	goto	u176_20
 u176_21:
-	goto	i1l3099
+	goto	i1l3121
 u176_20:
 	
 i1l893:	
@@ -3188,27 +3188,27 @@ i1l893:
 	goto	u177_21
 	goto	u177_20
 u177_21:
-	goto	i1l3077
+	goto	i1l3099
 u177_20:
 	
-i1l3075:	
+i1l3097:	
 	incf	(_remotekey_slice),f
 	line	309
 	
-i1l3077:	
+i1l3099:	
 ;1.C: 309: if(PA2 == 1) remotekey_slice = 0;
 	btfss	(42/8),(42)&7
 	goto	u178_21
 	goto	u178_20
 u178_21:
-	goto	i1l3081
+	goto	i1l3103
 u178_20:
 	
-i1l3079:	
+i1l3101:	
 	clrf	(_remotekey_slice)
 	line	310
 	
-i1l3081:	
+i1l3103:	
 ;1.C: 310: if(Key_dealed_counter<255) Key_dealed_counter++;
 	movf	(_Key_dealed_counter),w
 	xorlw	0FFh
@@ -3216,14 +3216,14 @@ i1l3081:
 	goto	u179_21
 	goto	u179_20
 u179_21:
-	goto	i1l3085
+	goto	i1l3107
 u179_20:
 	
-i1l3083:	
+i1l3105:	
 	incf	(_Key_dealed_counter),f
 	line	313
 	
-i1l3085:	
+i1l3107:	
 ;1.C: 311: if( (remotekey_slice>(150/8)) ||
 ;1.C: 312: (Key_dealed_counter > (1024/8))
 ;1.C: 313: ){
@@ -3233,46 +3233,46 @@ i1l3085:
 	goto	u180_21
 	goto	u180_20
 u180_21:
-	goto	i1l3089
+	goto	i1l3111
 u180_20:
 	
-i1l3087:	
+i1l3109:	
 	movlw	(081h)
 	subwf	(_Key_dealed_counter),w
 	skipc
 	goto	u181_21
 	goto	u181_20
 u181_21:
-	goto	i1l3099
+	goto	i1l3121
 u181_20:
 	line	314
 	
-i1l3089:	
+i1l3111:	
 ;1.C: 314: remotekey_slice = 0;
 	clrf	(_remotekey_slice)
 	line	316
 	
-i1l3091:	
+i1l3113:	
 ;1.C: 316: FLAGs &= ~0x02;
 	bcf	(_FLAGs)+(1/8),(1)&7
 	line	317
 	
-i1l3093:	
+i1l3115:	
 ;1.C: 317: FLAGs &= ~0x10;
 	bcf	(_FLAGs)+(4/8),(4)&7
 	line	318
 	
-i1l3095:	
+i1l3117:	
 ;1.C: 318: FLAGs &= ~0x20;
 	bcf	(_FLAGs)+(5/8),(5)&7
 	line	319
 	
-i1l3097:	
+i1l3119:	
 ;1.C: 319: FLAGs &= ~0x40;
 	bcf	(_FLAGs)+(6/8),(6)&7
 	line	327
 	
-i1l3099:	
+i1l3121:	
 ;1.C: 320: }
 ;1.C: 321: }
 ;1.C: 324: if( ((PRESSED&0x10) == 0x10) ||
@@ -3283,32 +3283,32 @@ i1l3099:
 	goto	u182_21
 	goto	u182_20
 u182_21:
-	goto	i1l3105
+	goto	i1l3127
 u182_20:
 	
-i1l3101:	
+i1l3123:	
 	btfsc	(_PRESSED),(5)&7
 	goto	u183_21
 	goto	u183_20
 u183_21:
-	goto	i1l3105
+	goto	i1l3127
 u183_20:
 	
-i1l3103:	
+i1l3125:	
 	btfss	(_PRESSED),(6)&7
 	goto	u184_21
 	goto	u184_20
 u184_21:
-	goto	i1l3111
+	goto	i1l3133
 u184_20:
 	line	328
 	
-i1l3105:	
+i1l3127:	
 ;1.C: 328: match_slice++;
 	incf	(_match_slice),f
 	line	329
 	
-i1l3107:	
+i1l3129:	
 ;1.C: 329: if(match_slice>(150/8)){
 	movlw	(013h)
 	subwf	(_match_slice),w
@@ -3316,11 +3316,11 @@ i1l3107:
 	goto	u185_21
 	goto	u185_20
 u185_21:
-	goto	i1l3111
+	goto	i1l3133
 u185_20:
 	line	330
 	
-i1l3109:	
+i1l3131:	
 ;1.C: 330: match_slice = 0;
 	clrf	(_match_slice)
 	line	331
@@ -3328,7 +3328,7 @@ i1l3109:
 	clrf	(_remotekey_Receive_num)
 	line	336
 	
-i1l3111:	
+i1l3133:	
 ;1.C: 332: }
 ;1.C: 333: }
 ;1.C: 336: if((FLAGs&0x02) == 0){
@@ -3340,7 +3340,7 @@ u186_21:
 u186_20:
 	line	337
 	
-i1l3113:	
+i1l3135:	
 ;1.C: 337: EE_Buff = ms16_counter%10;
 	movlw	(0Ah)
 	movwf	(?___lbmod)
@@ -3350,40 +3350,40 @@ i1l3113:
 	movwf	(_EE_Buff)^080h
 	line	338
 	
-i1l3115:	
+i1l3137:	
 ;1.C: 338: if(EE_Buff == 1){
 	decf	(_EE_Buff)^080h,w
 	skipz
 	goto	u187_21
 	goto	u187_20
 u187_21:
-	goto	i1l3125
+	goto	i1l3147
 u187_20:
 	line	339
 	
-i1l3117:	
+i1l3139:	
 ;1.C: 339: PA3 = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(43/8),(43)&7
 	line	341
 	
-i1l3119:	
+i1l3141:	
 ;1.C: 341: EX_INT_FallingEdge();
 	fcall	i1_EX_INT_FallingEdge
 	line	342
 	
-i1l3121:	
+i1l3143:	
 ;1.C: 342: INTE =1;
 	bsf	(92/8),(92)&7
 	line	343
 	
-i1l3123:	
+i1l3145:	
 ;1.C: 343: TMR2ON =1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(146/8),(146)&7
 	line	345
 	
-i1l3125:	
+i1l3147:	
 ;1.C: 344: }
 ;1.C: 345: if(EE_Buff == 3){
 	bsf	status, 5	;RP0=1, select bank1
@@ -3397,7 +3397,7 @@ u188_21:
 u188_20:
 	line	346
 	
-i1l3127:	
+i1l3149:	
 ;1.C: 346: PA3 = 1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(43/8),(43)&7
@@ -3431,21 +3431,21 @@ i1l907:
 	goto	u189_21
 	goto	u189_20
 u189_21:
-	goto	i1l3133
+	goto	i1l3155
 u189_20:
 	line	358
 	
-i1l3129:	
+i1l3151:	
 ;1.C: 358: KEYSCAN();
 	fcall	_KEYSCAN
 	line	359
 	
-i1l3131:	
+i1l3153:	
 ;1.C: 359: KEY();
 	fcall	_KEY
 	line	364
 	
-i1l3133:	
+i1l3155:	
 ;1.C: 360: }
 ;1.C: 364: if(ms16_counter >= 120){
 	movlw	(078h)
@@ -3458,12 +3458,12 @@ u190_21:
 u190_20:
 	line	365
 	
-i1l3135:	
+i1l3157:	
 ;1.C: 365: ms16_counter = 0;
 	clrf	(_ms16_counter)
 	line	371
 	
-i1l3137:	
+i1l3159:	
 ;1.C: 368: if( ((PRESSED&0x10) == 0x10) ||
 ;1.C: 369: ((PRESSED&0x20) == 0x20) ||
 ;1.C: 370: ((PRESSED&0x40) == 0x40)
@@ -3472,18 +3472,18 @@ i1l3137:
 	goto	u191_21
 	goto	u191_20
 u191_21:
-	goto	i1l3143
+	goto	i1l3165
 u191_20:
 	
-i1l3139:	
+i1l3161:	
 	btfsc	(_PRESSED),(5)&7
 	goto	u192_21
 	goto	u192_20
 u192_21:
-	goto	i1l3143
+	goto	i1l3165
 u192_20:
 	
-i1l3141:	
+i1l3163:	
 	btfss	(_PRESSED),(6)&7
 	goto	u193_21
 	goto	u193_20
@@ -3492,7 +3492,7 @@ u193_21:
 u193_20:
 	line	372
 	
-i1l3143:	
+i1l3165:	
 ;1.C: 372: if(KEY_Match_counter<4){
 	movlw	(04h)
 	subwf	(_KEY_Match_counter),w
@@ -3504,7 +3504,7 @@ u194_21:
 u194_20:
 	line	373
 	
-i1l3145:	
+i1l3167:	
 ;1.C: 373: KEY_Match_counter++;
 	incf	(_KEY_Match_counter),f
 	line	374
@@ -3517,7 +3517,7 @@ i1l913:
 	incf	(_LONGPRESS_OverTime_Counter)^080h,f
 	line	376
 	
-i1l3147:	
+i1l3169:	
 ;1.C: 376: if(LONGPRESS_OverTime_Counter > 15){
 	movlw	(010h)
 	subwf	(_LONGPRESS_OverTime_Counter)^080h,w
@@ -3529,22 +3529,22 @@ u195_21:
 u195_20:
 	line	377
 	
-i1l3149:	
+i1l3171:	
 ;1.C: 377: LONGPRESS_OverTime_Counter = 0;
 	clrf	(_LONGPRESS_OverTime_Counter)^080h
 	line	378
 	
-i1l3151:	
+i1l3173:	
 ;1.C: 378: if((PRESSED&0x10) == 0x10){
 	btfss	(_PRESSED),(4)&7
 	goto	u196_21
 	goto	u196_20
 u196_21:
-	goto	i1l3163
+	goto	i1l3185
 u196_20:
 	line	379
 	
-i1l3153:	
+i1l3175:	
 ;1.C: 379: CH1_remotekey[CH1_remotekey_Latest] = CH1_remotekey[CH1_remotekey_num-1];
 	bcf	status, 5	;RP0=0, select bank0
 	movf	(_CH1_remotekey_num),w
@@ -3611,40 +3611,40 @@ i1l3153:
 	movwf	indf
 	line	381
 	
-i1l3155:	
+i1l3177:	
 ;1.C: 381: if(CH1_remotekey_num>0) CH1_remotekey_num--;
 	movf	(_CH1_remotekey_num),w
 	skipz
 	goto	u197_20
-	goto	i1l3159
+	goto	i1l3181
 u197_20:
 	
-i1l3157:	
+i1l3179:	
 	decf	(_CH1_remotekey_num),f
 	line	382
 	
-i1l3159:	
+i1l3181:	
 ;1.C: 382: PRESSED &= ~0x10;
 	bcf	(_PRESSED)+(4/8),(4)&7
 	line	383
 	
-i1l3161:	
+i1l3183:	
 ;1.C: 383: PA7 = 1;
 	bsf	(47/8),(47)&7
 	line	385
 	
-i1l3163:	
+i1l3185:	
 ;1.C: 384: }
 ;1.C: 385: if((PRESSED&0x20) == 0x20){
 	btfss	(_PRESSED),(5)&7
 	goto	u198_21
 	goto	u198_20
 u198_21:
-	goto	i1l3175
+	goto	i1l3197
 u198_20:
 	line	386
 	
-i1l3165:	
+i1l3187:	
 ;1.C: 386: CH2_remotekey[CH2_remotekey_Latest] = CH2_remotekey[CH2_remotekey_num-1];
 	bcf	status, 5	;RP0=0, select bank0
 	movf	(_CH2_remotekey_num),w
@@ -3711,40 +3711,40 @@ i1l3165:
 	movwf	indf
 	line	388
 	
-i1l3167:	
+i1l3189:	
 ;1.C: 388: if(CH2_remotekey_num>0) CH2_remotekey_num--;
 	movf	(_CH2_remotekey_num),w
 	skipz
 	goto	u199_20
-	goto	i1l3171
+	goto	i1l3193
 u199_20:
 	
-i1l3169:	
+i1l3191:	
 	decf	(_CH2_remotekey_num),f
 	line	389
 	
-i1l3171:	
+i1l3193:	
 ;1.C: 389: PRESSED &= ~0x20;
 	bcf	(_PRESSED)+(5/8),(5)&7
 	line	390
 	
-i1l3173:	
+i1l3195:	
 ;1.C: 390: PA6 = 1;
 	bsf	(46/8),(46)&7
 	line	392
 	
-i1l3175:	
+i1l3197:	
 ;1.C: 391: }
 ;1.C: 392: if((PRESSED&0x40) == 0x40){
 	btfss	(_PRESSED),(6)&7
 	goto	u200_21
 	goto	u200_20
 u200_21:
-	goto	i1l3187
+	goto	i1l3209
 u200_20:
 	line	393
 	
-i1l3177:	
+i1l3199:	
 ;1.C: 393: CH3_remotekey[CH3_remotekey_Latest] = CH3_remotekey[CH3_remotekey_num-1];
 	bcf	status, 5	;RP0=0, select bank0
 	movf	(_CH3_remotekey_num),w
@@ -3811,29 +3811,29 @@ i1l3177:
 	movwf	indf
 	line	395
 	
-i1l3179:	
+i1l3201:	
 ;1.C: 395: if(CH3_remotekey_num>0) CH3_remotekey_num--;
 	movf	(_CH3_remotekey_num),w
 	skipz
 	goto	u201_20
-	goto	i1l3183
+	goto	i1l3205
 u201_20:
 	
-i1l3181:	
+i1l3203:	
 	decf	(_CH3_remotekey_num),f
 	line	396
 	
-i1l3183:	
+i1l3205:	
 ;1.C: 396: PRESSED &= ~0x40;
 	bcf	(_PRESSED)+(6/8),(6)&7
 	line	397
 	
-i1l3185:	
+i1l3207:	
 ;1.C: 397: PA5 = 1;
 	bsf	(45/8),(45)&7
 	line	399
 	
-i1l3187:	
+i1l3209:	
 ;1.C: 398: }
 ;1.C: 399: PC0 = 1;
 	bcf	status, 5	;RP0=0, select bank0
@@ -3864,9 +3864,9 @@ GLOBAL	__end_of_ISR
 
 	signat	_ISR,88
 	global	_KEY
-psect	text707,local,class=CODE,delta=2
-global __ptext707
-__ptext707:
+psect	text706,local,class=CODE,delta=2
+global __ptext706
+__ptext706:
 
 ;; *************** function _KEY *****************
 ;; Defined at:
@@ -3900,7 +3900,7 @@ __ptext707:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text707
+psect	text706
 	file	"1.C"
 	line	674
 	global	__size_of_KEY
@@ -3911,7 +3911,7 @@ _KEY:
 ; Regs used in _KEY: [wreg-fsr0h+status,2+status,0+pclath+cstack]
 	line	678
 	
-i1l3333:	
+i1l3353:	
 ;1.C: 675: if( ((PRESSED&0x10) == 0x10) ||
 ;1.C: 676: ((PRESSED&0x20) == 0x20) ||
 ;1.C: 677: ((PRESSED&0x40) == 0x40)
@@ -3920,28 +3920,28 @@ i1l3333:
 	goto	u225_21
 	goto	u225_20
 u225_21:
-	goto	i1l3445
+	goto	i1l3465
 u225_20:
 	
-i1l3335:	
+i1l3355:	
 	btfsc	(_PRESSED),(5)&7
 	goto	u226_21
 	goto	u226_20
 u226_21:
-	goto	i1l3445
+	goto	i1l3465
 u226_20:
 	
-i1l3337:	
+i1l3357:	
 	btfss	(_PRESSED),(6)&7
 	goto	u227_21
 	goto	u227_20
 u227_21:
 	goto	i1l998
 u227_20:
-	goto	i1l3445
+	goto	i1l3465
 	line	681
 	
-i1l3339:	
+i1l3359:	
 ;1.C: 681: Match_remotekey = 0xFFFFFFFF;
 	movlw	0FFh
 	movwf	(_Match_remotekey+3)
@@ -3971,7 +3971,7 @@ u228_21:
 	goto	i1l1005
 u228_20:
 	
-i1l3341:	
+i1l3361:	
 	bcf	(47/8),(47)&7
 	
 i1l1005:	
@@ -3984,7 +3984,7 @@ u229_21:
 	goto	i1l1006
 u229_20:
 	
-i1l3343:	
+i1l3363:	
 	bcf	(46/8),(46)&7
 	
 i1l1006:	
@@ -3997,7 +3997,7 @@ u230_21:
 	goto	i1l998
 u230_20:
 	
-i1l3345:	
+i1l3365:	
 	bcf	(45/8),(45)&7
 	goto	i1l998
 	line	689
@@ -4016,7 +4016,7 @@ u231_21:
 	goto	i1l1009
 u231_20:
 	
-i1l3347:	
+i1l3367:	
 	bsf	(47/8),(47)&7
 	
 i1l1009:	
@@ -4029,7 +4029,7 @@ u232_21:
 	goto	i1l1010
 u232_20:
 	
-i1l3349:	
+i1l3369:	
 	bsf	(46/8),(46)&7
 	
 i1l1010:	
@@ -4042,7 +4042,7 @@ u233_21:
 	goto	i1l998
 u233_20:
 	
-i1l3351:	
+i1l3371:	
 	bsf	(45/8),(45)&7
 	goto	i1l998
 	line	695
@@ -4055,7 +4055,7 @@ i1l1012:
 	incf	(_KEY_Match_counter),f
 	line	697
 	
-i1l3353:	
+i1l3373:	
 ;1.C: 697: if(remotekey_Receive_num >= 3){
 	movlw	(03h)
 	subwf	(_remotekey_Receive_num),w
@@ -4067,17 +4067,17 @@ u234_21:
 u234_20:
 	line	698
 	
-i1l3355:	
+i1l3375:	
 ;1.C: 698: if((PRESSED&0x10) == 0x10){
 	btfss	(_PRESSED),(4)&7
 	goto	u235_21
 	goto	u235_20
 u235_21:
-	goto	i1l3383
+	goto	i1l3403
 u235_20:
 	line	703
 	
-i1l3357:	
+i1l3377:	
 ;1.C: 699: if( (Match_remotekey != CH1_remotekey[0]) &&
 ;1.C: 700: (Match_remotekey != CH1_remotekey[1]) &&
 ;1.C: 701: (Match_remotekey != CH1_remotekey[2]) &&
@@ -4102,10 +4102,10 @@ u236_25:
 	goto	u236_21
 	goto	u236_20
 u236_21:
-	goto	i1l3373
+	goto	i1l3393
 u236_20:
 	
-i1l3359:	
+i1l3379:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH1_remotekey)+04h,w
 	skipz
@@ -4125,10 +4125,10 @@ u237_25:
 	goto	u237_21
 	goto	u237_20
 u237_21:
-	goto	i1l3373
+	goto	i1l3393
 u237_20:
 	
-i1l3361:	
+i1l3381:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH1_remotekey)+08h,w
 	skipz
@@ -4148,10 +4148,10 @@ u238_25:
 	goto	u238_21
 	goto	u238_20
 u238_21:
-	goto	i1l3373
+	goto	i1l3393
 u238_20:
 	
-i1l3363:	
+i1l3383:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH1_remotekey)+0Ch,w
 	skipz
@@ -4171,11 +4171,11 @@ u239_25:
 	goto	u239_21
 	goto	u239_20
 u239_21:
-	goto	i1l3373
+	goto	i1l3393
 u239_20:
 	line	704
 	
-i1l3365:	
+i1l3385:	
 ;1.C: 704: if(CH1_remotekey_num < 4){
 	movlw	(04h)
 	subwf	(_CH1_remotekey_num),w
@@ -4183,11 +4183,11 @@ i1l3365:
 	goto	u240_21
 	goto	u240_20
 u240_21:
-	goto	i1l3371
+	goto	i1l3391
 u240_20:
 	line	705
 	
-i1l3367:	
+i1l3387:	
 ;1.C: 705: CH1_remotekey[CH1_remotekey_num] = Match_remotekey;
 	movf	(_CH1_remotekey_num),w
 	movwf	(??_KEY+0)+0
@@ -4211,15 +4211,15 @@ i1l3367:
 	movwf	indf
 	line	706
 	
-i1l3369:	
+i1l3389:	
 ;1.C: 706: CH1_remotekey_num++;
 	incf	(_CH1_remotekey_num),f
 	line	707
 ;1.C: 707: }else{
-	goto	i1l3373
+	goto	i1l3393
 	line	708
 	
-i1l3371:	
+i1l3391:	
 ;1.C: 708: CH1_remotekey[CH1_remotekey_Latest] = Match_remotekey;
 	bsf	status, 5	;RP0=1, select bank1
 	movf	(_CH1_remotekey_Latest)^080h,w
@@ -4244,7 +4244,7 @@ i1l3371:
 	movwf	indf
 	line	711
 	
-i1l3373:	
+i1l3393:	
 ;1.C: 709: }
 ;1.C: 710: }
 ;1.C: 711: if(CH1_remotekey_num > 4) CH1_remotekey_num = 4;
@@ -4255,42 +4255,42 @@ i1l3373:
 	goto	u241_21
 	goto	u241_20
 u241_21:
-	goto	i1l3377
+	goto	i1l3397
 u241_20:
 	
-i1l3375:	
+i1l3395:	
 	movlw	(04h)
 	movwf	(_CH1_remotekey_num)
 	line	712
 	
-i1l3377:	
+i1l3397:	
 ;1.C: 712: PRESSED &= ~0x10;
 	bcf	(_PRESSED)+(4/8),(4)&7
 	line	713
 	
-i1l3379:	
+i1l3399:	
 ;1.C: 713: CH1_EEPROM_Write();
 	fcall	_CH1_EEPROM_Write
 	line	714
 	
-i1l3381:	
+i1l3401:	
 ;1.C: 714: PA7 = 1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(47/8),(47)&7
 	line	716
 	
-i1l3383:	
+i1l3403:	
 ;1.C: 715: }
 ;1.C: 716: if((PRESSED&0x20) == 0x20){
 	btfss	(_PRESSED),(5)&7
 	goto	u242_21
 	goto	u242_20
 u242_21:
-	goto	i1l3411
+	goto	i1l3431
 u242_20:
 	line	721
 	
-i1l3385:	
+i1l3405:	
 ;1.C: 717: if( (Match_remotekey != CH2_remotekey[0]) &&
 ;1.C: 718: (Match_remotekey != CH2_remotekey[1]) &&
 ;1.C: 719: (Match_remotekey != CH2_remotekey[2]) &&
@@ -4315,10 +4315,10 @@ u243_25:
 	goto	u243_21
 	goto	u243_20
 u243_21:
-	goto	i1l3401
+	goto	i1l3421
 u243_20:
 	
-i1l3387:	
+i1l3407:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH2_remotekey)+04h,w
 	skipz
@@ -4338,10 +4338,10 @@ u244_25:
 	goto	u244_21
 	goto	u244_20
 u244_21:
-	goto	i1l3401
+	goto	i1l3421
 u244_20:
 	
-i1l3389:	
+i1l3409:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH2_remotekey)+08h,w
 	skipz
@@ -4361,10 +4361,10 @@ u245_25:
 	goto	u245_21
 	goto	u245_20
 u245_21:
-	goto	i1l3401
+	goto	i1l3421
 u245_20:
 	
-i1l3391:	
+i1l3411:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH2_remotekey)+0Ch,w
 	skipz
@@ -4384,11 +4384,11 @@ u246_25:
 	goto	u246_21
 	goto	u246_20
 u246_21:
-	goto	i1l3401
+	goto	i1l3421
 u246_20:
 	line	722
 	
-i1l3393:	
+i1l3413:	
 ;1.C: 722: if(CH2_remotekey_num < 4){
 	movlw	(04h)
 	subwf	(_CH2_remotekey_num),w
@@ -4396,11 +4396,11 @@ i1l3393:
 	goto	u247_21
 	goto	u247_20
 u247_21:
-	goto	i1l3399
+	goto	i1l3419
 u247_20:
 	line	723
 	
-i1l3395:	
+i1l3415:	
 ;1.C: 723: CH2_remotekey[CH2_remotekey_num] = Match_remotekey;
 	movf	(_CH2_remotekey_num),w
 	movwf	(??_KEY+0)+0
@@ -4424,15 +4424,15 @@ i1l3395:
 	movwf	indf
 	line	724
 	
-i1l3397:	
+i1l3417:	
 ;1.C: 724: CH2_remotekey_num++;
 	incf	(_CH2_remotekey_num),f
 	line	725
 ;1.C: 725: }else{
-	goto	i1l3401
+	goto	i1l3421
 	line	726
 	
-i1l3399:	
+i1l3419:	
 ;1.C: 726: CH2_remotekey[CH2_remotekey_Latest] = Match_remotekey;
 	bsf	status, 5	;RP0=1, select bank1
 	movf	(_CH2_remotekey_Latest)^080h,w
@@ -4457,7 +4457,7 @@ i1l3399:
 	movwf	indf
 	line	729
 	
-i1l3401:	
+i1l3421:	
 ;1.C: 727: }
 ;1.C: 728: }
 ;1.C: 729: if(CH2_remotekey_num > 4) CH2_remotekey_num = 4;
@@ -4468,42 +4468,42 @@ i1l3401:
 	goto	u248_21
 	goto	u248_20
 u248_21:
-	goto	i1l3405
+	goto	i1l3425
 u248_20:
 	
-i1l3403:	
+i1l3423:	
 	movlw	(04h)
 	movwf	(_CH2_remotekey_num)
 	line	730
 	
-i1l3405:	
+i1l3425:	
 ;1.C: 730: PRESSED &= ~0x20;
 	bcf	(_PRESSED)+(5/8),(5)&7
 	line	731
 	
-i1l3407:	
+i1l3427:	
 ;1.C: 731: CH2_EEPROM_Write();
 	fcall	_CH2_EEPROM_Write
 	line	732
 	
-i1l3409:	
+i1l3429:	
 ;1.C: 732: PA6 = 1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(46/8),(46)&7
 	line	734
 	
-i1l3411:	
+i1l3431:	
 ;1.C: 733: }
 ;1.C: 734: if((PRESSED&0x40) == 0x40){
 	btfss	(_PRESSED),(6)&7
 	goto	u249_21
 	goto	u249_20
 u249_21:
-	goto	i1l3439
+	goto	i1l3459
 u249_20:
 	line	739
 	
-i1l3413:	
+i1l3433:	
 ;1.C: 735: if( (Match_remotekey != CH3_remotekey[0]) &&
 ;1.C: 736: (Match_remotekey != CH3_remotekey[1]) &&
 ;1.C: 737: (Match_remotekey != CH3_remotekey[2]) &&
@@ -4528,10 +4528,10 @@ u250_25:
 	goto	u250_21
 	goto	u250_20
 u250_21:
-	goto	i1l3429
+	goto	i1l3449
 u250_20:
 	
-i1l3415:	
+i1l3435:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH3_remotekey)+04h,w
 	skipz
@@ -4551,10 +4551,10 @@ u251_25:
 	goto	u251_21
 	goto	u251_20
 u251_21:
-	goto	i1l3429
+	goto	i1l3449
 u251_20:
 	
-i1l3417:	
+i1l3437:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH3_remotekey)+08h,w
 	skipz
@@ -4574,10 +4574,10 @@ u252_25:
 	goto	u252_21
 	goto	u252_20
 u252_21:
-	goto	i1l3429
+	goto	i1l3449
 u252_20:
 	
-i1l3419:	
+i1l3439:	
 	movf	(_Match_remotekey+3),w
 	xorwf	3+(_CH3_remotekey)+0Ch,w
 	skipz
@@ -4597,11 +4597,11 @@ u253_25:
 	goto	u253_21
 	goto	u253_20
 u253_21:
-	goto	i1l3429
+	goto	i1l3449
 u253_20:
 	line	740
 	
-i1l3421:	
+i1l3441:	
 ;1.C: 740: if(CH3_remotekey_num < 4){
 	movlw	(04h)
 	subwf	(_CH3_remotekey_num),w
@@ -4609,11 +4609,11 @@ i1l3421:
 	goto	u254_21
 	goto	u254_20
 u254_21:
-	goto	i1l3427
+	goto	i1l3447
 u254_20:
 	line	741
 	
-i1l3423:	
+i1l3443:	
 ;1.C: 741: CH3_remotekey[CH3_remotekey_num] = Match_remotekey;
 	movf	(_CH3_remotekey_num),w
 	movwf	(??_KEY+0)+0
@@ -4637,15 +4637,15 @@ i1l3423:
 	movwf	indf
 	line	742
 	
-i1l3425:	
+i1l3445:	
 ;1.C: 742: CH3_remotekey_num++;
 	incf	(_CH3_remotekey_num),f
 	line	743
 ;1.C: 743: }else{
-	goto	i1l3429
+	goto	i1l3449
 	line	744
 	
-i1l3427:	
+i1l3447:	
 ;1.C: 744: CH3_remotekey[CH3_remotekey_Latest] = Match_remotekey;
 	bsf	status, 5	;RP0=1, select bank1
 	movf	(_CH3_remotekey_Latest)^080h,w
@@ -4670,7 +4670,7 @@ i1l3427:
 	movwf	indf
 	line	747
 	
-i1l3429:	
+i1l3449:	
 ;1.C: 745: }
 ;1.C: 746: }
 ;1.C: 747: if(CH3_remotekey_num > 4) CH3_remotekey_num = 4;
@@ -4681,43 +4681,43 @@ i1l3429:
 	goto	u255_21
 	goto	u255_20
 u255_21:
-	goto	i1l3433
+	goto	i1l3453
 u255_20:
 	
-i1l3431:	
+i1l3451:	
 	movlw	(04h)
 	movwf	(_CH3_remotekey_num)
 	line	748
 	
-i1l3433:	
+i1l3453:	
 ;1.C: 748: PRESSED &= ~0x40;
 	bcf	(_PRESSED)+(6/8),(6)&7
 	line	749
 	
-i1l3435:	
+i1l3455:	
 ;1.C: 749: CH3_EEPROM_Write();
 	fcall	_CH3_EEPROM_Write
 	line	750
 	
-i1l3437:	
+i1l3457:	
 ;1.C: 750: PA5 = 1;
 	bcf	status, 5	;RP0=0, select bank0
 	bsf	(45/8),(45)&7
 	line	752
 	
-i1l3439:	
+i1l3459:	
 ;1.C: 751: }
 ;1.C: 752: KEY_Match_counter = 0;
 	clrf	(_KEY_Match_counter)
 	line	753
 	
-i1l3441:	
+i1l3461:	
 ;1.C: 753: PC0 = 1;
 	bsf	(56/8),(56)&7
 	goto	i1l998
 	line	679
 	
-i1l3445:	
+i1l3465:	
 	movf	(_KEY_Match_counter),w
 	; Switch size 1, requested type "space"
 ; Number of cases is 4, Range of values is 0 to 3
@@ -4736,20 +4736,20 @@ i1l3445:
 	subwf	fsr,w
 skipnc
 goto i1l998
-movlw high(i1S3807)
+movlw high(i1S3827)
 movwf pclath
-	movlw low(i1S3807)
+	movlw low(i1S3827)
 	addwf fsr,w
 	movwf pc
 psect	swtext1,local,class=CONST,delta=2
 global __pswtext1
 __pswtext1:
-i1S3807:
-	ljmp	i1l3339
+i1S3827:
+	ljmp	i1l3359
 	ljmp	i1l1004
 	ljmp	i1l1008
 	ljmp	i1l1012
-psect	text707
+psect	text706
 
 	line	757
 	
@@ -4767,7 +4767,7 @@ u256_21:
 	goto	i1l1036
 u256_20:
 	
-i1l3447:	
+i1l3467:	
 	btfsc	(_PRESSED),(5)&7
 	goto	u257_21
 	goto	u257_20
@@ -4775,7 +4775,7 @@ u257_21:
 	goto	i1l1036
 u257_20:
 	
-i1l3449:	
+i1l3469:	
 	btfsc	(_PRESSED),(6)&7
 	goto	u258_21
 	goto	u258_20
@@ -4784,7 +4784,7 @@ u258_21:
 u258_20:
 	line	764
 	
-i1l3451:	
+i1l3471:	
 ;1.C: 764: if((PRESSED&0x0F) > 0){
 	movf	(_PRESSED),w
 	andlw	0Fh
@@ -4792,40 +4792,40 @@ i1l3451:
 	goto	u259_21
 	goto	u259_20
 u259_21:
-	goto	i1l3471
+	goto	i1l3491
 u259_20:
-	goto	i1l3469
+	goto	i1l3489
 	line	767
 	
-i1l3455:	
+i1l3475:	
 ;1.C: 767: PA7 = ~PA7;
 	movlw	1<<((47)&7)
 	xorwf	((47)/8),f
 	line	768
 	
-i1l3457:	
+i1l3477:	
 ;1.C: 768: led1_debug();
 	fcall	_led1_debug
 	line	769
 ;1.C: 769: break;
-	goto	i1l3471
+	goto	i1l3491
 	line	771
 	
-i1l3459:	
+i1l3479:	
 ;1.C: 771: PA6 = ~PA6;
 	movlw	1<<((46)&7)
 	xorwf	((46)/8),f
-	goto	i1l3457
+	goto	i1l3477
 	line	775
 	
-i1l3463:	
+i1l3483:	
 ;1.C: 775: PA5 = ~PA5;
 	movlw	1<<((45)&7)
 	xorwf	((45)/8),f
-	goto	i1l3457
+	goto	i1l3477
 	line	765
 	
-i1l3469:	
+i1l3489:	
 	movf	(_PRESSED),w
 	andlw	0Fh
 	movwf	(??_KEY+0)+0
@@ -4847,11 +4847,11 @@ i1l3469:
 	opt asmopt_off
 	xorlw	0^0	; case 0
 	skipnz
-	goto	i1l3809
-	goto	i1l3471
+	goto	i1l3829
+	goto	i1l3491
 	opt asmopt_on
 	
-i1l3809:	
+i1l3829:	
 ; Switch size 1, requested type "space"
 ; Number of cases is 3, Range of values is 1 to 4
 ; switch strategies available:
@@ -4865,19 +4865,19 @@ i1l3809:
 	opt asmopt_off
 	xorlw	1^0	; case 1
 	skipnz
-	goto	i1l3455
+	goto	i1l3475
 	xorlw	2^1	; case 2
 	skipnz
-	goto	i1l3459
+	goto	i1l3479
 	xorlw	4^2	; case 4
 	skipnz
-	goto	i1l3463
-	goto	i1l3471
+	goto	i1l3483
+	goto	i1l3491
 	opt asmopt_on
 
 	line	780
 	
-i1l3471:	
+i1l3491:	
 ;1.C: 779: }
 ;1.C: 780: PRESSED &= 0xF0;
 	movlw	(0F0h)
@@ -4893,9 +4893,9 @@ GLOBAL	__end_of_KEY
 
 	signat	_KEY,88
 	global	_CH3_EEPROM_Write
-psect	text708,local,class=CODE,delta=2
-global __ptext708
-__ptext708:
+psect	text707,local,class=CODE,delta=2
+global __ptext707
+__ptext707:
 
 ;; *************** function _CH3_EEPROM_Write *****************
 ;; Defined at:
@@ -4926,7 +4926,7 @@ __ptext708:
 ;;		_KEY
 ;; This function uses a non-reentrant model
 ;;
-psect	text708
+psect	text707
 	file	"1.C"
 	line	544
 	global	__size_of_CH3_EEPROM_Write
@@ -4937,7 +4937,7 @@ _CH3_EEPROM_Write:
 ; Regs used in _CH3_EEPROM_Write: [wreg+status,2+status,0+pclath+cstack]
 	line	545
 	
-i1l3505:	
+i1l3525:	
 ;1.C: 545: IAPWrite(0x08,((CH3_remotekey[0]&0x000000FF)>>0));
 	movf	(_CH3_remotekey),w
 	movwf	(?_IAPWrite)
@@ -5038,9 +5038,9 @@ GLOBAL	__end_of_CH3_EEPROM_Write
 
 	signat	_CH3_EEPROM_Write,88
 	global	_CH2_EEPROM_Write
-psect	text709,local,class=CODE,delta=2
-global __ptext709
-__ptext709:
+psect	text708,local,class=CODE,delta=2
+global __ptext708
+__ptext708:
 
 ;; *************** function _CH2_EEPROM_Write *****************
 ;; Defined at:
@@ -5071,7 +5071,7 @@ __ptext709:
 ;;		_KEY
 ;; This function uses a non-reentrant model
 ;;
-psect	text709
+psect	text708
 	file	"1.C"
 	line	525
 	global	__size_of_CH2_EEPROM_Write
@@ -5082,7 +5082,7 @@ _CH2_EEPROM_Write:
 ; Regs used in _CH2_EEPROM_Write: [wreg+status,2+status,0+pclath+cstack]
 	line	526
 	
-i1l3503:	
+i1l3523:	
 ;1.C: 526: IAPWrite(0x04,((CH2_remotekey[0]&0x000000FF)>>0));
 	movf	(_CH2_remotekey),w
 	movwf	(?_IAPWrite)
@@ -5183,9 +5183,9 @@ GLOBAL	__end_of_CH2_EEPROM_Write
 
 	signat	_CH2_EEPROM_Write,88
 	global	_CH1_EEPROM_Write
-psect	text710,local,class=CODE,delta=2
-global __ptext710
-__ptext710:
+psect	text709,local,class=CODE,delta=2
+global __ptext709
+__ptext709:
 
 ;; *************** function _CH1_EEPROM_Write *****************
 ;; Defined at:
@@ -5216,7 +5216,7 @@ __ptext710:
 ;;		_KEY
 ;; This function uses a non-reentrant model
 ;;
-psect	text710
+psect	text709
 	file	"1.C"
 	line	506
 	global	__size_of_CH1_EEPROM_Write
@@ -5227,7 +5227,7 @@ _CH1_EEPROM_Write:
 ; Regs used in _CH1_EEPROM_Write: [wreg+status,2+status,0+pclath+cstack]
 	line	507
 	
-i1l3501:	
+i1l3521:	
 ;1.C: 507: IAPWrite(0x00,((CH1_remotekey[0]&0x000000FF)>>0));
 	movf	(_CH1_remotekey),w
 	movwf	(?_IAPWrite)
@@ -5328,9 +5328,9 @@ GLOBAL	__end_of_CH1_EEPROM_Write
 
 	signat	_CH1_EEPROM_Write,88
 	global	i1_EX_INT_FallingEdge
-psect	text711,local,class=CODE,delta=2
-global __ptext711
-__ptext711:
+psect	text710,local,class=CODE,delta=2
+global __ptext710
+__ptext710:
 
 ;; *************** function i1_EX_INT_FallingEdge *****************
 ;; Defined at:
@@ -5360,7 +5360,7 @@ __ptext711:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text711
+psect	text710
 	file	"1.C"
 	line	422
 	global	__size_ofi1_EX_INT_FallingEdge
@@ -5371,7 +5371,7 @@ i1_EX_INT_FallingEdge:
 ; Regs used in i1_EX_INT_FallingEdge: []
 	line	423
 	
-i1l3541:	
+i1l3561:	
 ;1.C: 423: INTEDG =0;
 	bsf	status, 5	;RP0=1, select bank1
 	bcf	(1038/8)^080h,(1038)&7
@@ -5389,9 +5389,9 @@ GLOBAL	__end_ofi1_EX_INT_FallingEdge
 
 	signat	i1_EX_INT_FallingEdge,88
 	global	___lbmod
-psect	text712,local,class=CODE,delta=2
-global __ptext712
-__ptext712:
+psect	text711,local,class=CODE,delta=2
+global __ptext711
+__ptext711:
 
 ;; *************** function ___lbmod *****************
 ;; Defined at:
@@ -5424,7 +5424,7 @@ __ptext712:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text712
+psect	text711
 	file	"f:\program files (x86)\fmd\fmdide\data\sources\lbmod.c"
 	line	5
 	global	__size_of___lbmod
@@ -5437,16 +5437,16 @@ ___lbmod:
 	line	9
 	movwf	(___lbmod@dividend)
 	
-i1l3523:	
+i1l3543:	
 	movlw	(08h)
 	movwf	(___lbmod@counter)
 	line	10
 	
-i1l3525:	
+i1l3545:	
 	clrf	(___lbmod@rem)
 	line	12
 	
-i1l3527:	
+i1l3547:	
 	movf	(___lbmod@dividend),w
 	movwf	(??___lbmod+0)+0
 	movlw	07h
@@ -5462,37 +5462,37 @@ u264_25:
 	movwf	(___lbmod@rem)
 	line	13
 	
-i1l3529:	
+i1l3549:	
 	clrc
 	rlf	(___lbmod@dividend),f
 	line	14
 	
-i1l3531:	
+i1l3551:	
 	movf	(___lbmod@divisor),w
 	subwf	(___lbmod@rem),w
 	skipc
 	goto	u265_21
 	goto	u265_20
 u265_21:
-	goto	i1l3535
+	goto	i1l3555
 u265_20:
 	line	15
 	
-i1l3533:	
+i1l3553:	
 	movf	(___lbmod@divisor),w
 	subwf	(___lbmod@rem),f
 	line	16
 	
-i1l3535:	
+i1l3555:	
 	decfsz	(___lbmod@counter),f
 	goto	u266_21
 	goto	u266_20
 u266_21:
-	goto	i1l3527
+	goto	i1l3547
 u266_20:
 	line	17
 	
-i1l3537:	
+i1l3557:	
 	movf	(___lbmod@rem),w
 	line	18
 	
@@ -5505,9 +5505,9 @@ GLOBAL	__end_of___lbmod
 
 	signat	___lbmod,8313
 	global	___wmul
-psect	text713,local,class=CODE,delta=2
-global __ptext713
-__ptext713:
+psect	text712,local,class=CODE,delta=2
+global __ptext712
+__ptext712:
 
 ;; *************** function ___wmul *****************
 ;; Defined at:
@@ -5538,7 +5538,7 @@ __ptext713:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text713
+psect	text712
 	file	"f:\program files (x86)\fmd\fmdide\data\sources\wmul.c"
 	line	3
 	global	__size_of___wmul
@@ -5549,21 +5549,21 @@ ___wmul:
 ; Regs used in ___wmul: [wreg+status,2+status,0]
 	line	4
 	
-i1l3507:	
+i1l3527:	
 	clrf	(___wmul@product)
 	clrf	(___wmul@product+1)
 	line	7
 	
-i1l3509:	
+i1l3529:	
 	btfss	(___wmul@multiplier),(0)&7
 	goto	u262_21
 	goto	u262_20
 u262_21:
-	goto	i1l3513
+	goto	i1l3533
 u262_20:
 	line	8
 	
-i1l3511:	
+i1l3531:	
 	movf	(___wmul@multiplicand),w
 	addwf	(___wmul@product),f
 	skipnc
@@ -5572,30 +5572,30 @@ i1l3511:
 	addwf	(___wmul@product+1),f
 	line	9
 	
-i1l3513:	
+i1l3533:	
 	clrc
 	rlf	(___wmul@multiplicand),f
 	rlf	(___wmul@multiplicand+1),f
 	line	10
 	
-i1l3515:	
+i1l3535:	
 	clrc
 	rrf	(___wmul@multiplier+1),f
 	rrf	(___wmul@multiplier),f
 	line	11
 	
-i1l3517:	
+i1l3537:	
 	movf	((___wmul@multiplier+1)),w
 	iorwf	((___wmul@multiplier)),w
 	skipz
 	goto	u263_21
 	goto	u263_20
 u263_21:
-	goto	i1l3509
+	goto	i1l3529
 u263_20:
 	line	12
 	
-i1l3519:	
+i1l3539:	
 	movf	(___wmul@product+1),w
 	movwf	(?___wmul+1)
 	movf	(___wmul@product),w
@@ -5611,9 +5611,9 @@ GLOBAL	__end_of___wmul
 
 	signat	___wmul,8314
 	global	_IAPWrite
-psect	text714,local,class=CODE,delta=2
-global __ptext714
-__ptext714:
+psect	text713,local,class=CODE,delta=2
+global __ptext713
+__ptext713:
 
 ;; *************** function _IAPWrite *****************
 ;; Defined at:
@@ -5646,7 +5646,7 @@ __ptext714:
 ;;		_CH3_EEPROM_Write
 ;; This function uses a non-reentrant model
 ;;
-psect	text714
+psect	text713
 	file	"1.C"
 	line	495
 	global	__size_of_IAPWrite
@@ -5659,7 +5659,7 @@ _IAPWrite:
 	movwf	(IAPWrite@EEAddr)
 	line	496
 	
-i1l3491:	
+i1l3511:	
 ;1.C: 496: GIE = 0;
 	bcf	(95/8),(95)&7
 	line	497
@@ -5674,7 +5674,7 @@ u260_21:
 u260_20:
 	line	498
 	
-i1l3493:	
+i1l3513:	
 ;1.C: 498: EEADR = EEAddr;
 	movf	(IAPWrite@EEAddr),w
 	bsf	status, 5	;RP0=1, select bank1
@@ -5685,20 +5685,20 @@ i1l3493:
 	movwf	(154)^080h	;volatile
 	line	500
 	
-i1l3495:	
+i1l3515:	
 ;1.C: 500: EEIF = 0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(103/8),(103)&7
 	line	501
 	
-i1l3497:	
+i1l3517:	
 ;1.C: 501: EECON1 |= 0x34;
 	movlw	(034h)
 	bsf	status, 5	;RP0=1, select bank1
 	iorwf	(156)^080h,f	;volatile
 	line	502
 	
-i1l3499:	
+i1l3519:	
 ;1.C: 502: WR = 1;
 	bsf	(1256/8)^080h,(1256)&7
 	line	503
@@ -5727,9 +5727,9 @@ GLOBAL	__end_of_IAPWrite
 
 	signat	_IAPWrite,8312
 	global	_KEYSCAN
-psect	text715,local,class=CODE,delta=2
-global __ptext715
-__ptext715:
+psect	text714,local,class=CODE,delta=2
+global __ptext714
+__ptext714:
 
 ;; *************** function _KEYSCAN *****************
 ;; Defined at:
@@ -5759,7 +5759,7 @@ __ptext715:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text715
+psect	text714
 	file	"1.C"
 	line	591
 	global	__size_of_KEYSCAN
@@ -5770,7 +5770,7 @@ _KEYSCAN:
 ; Regs used in _KEYSCAN: [wreg+status,2+status,0]
 	line	592
 	
-i1l3193:	
+i1l3213:	
 ;1.C: 592: if(PRESSED == 0){
 	movf	(_PRESSED),f
 	skipz
@@ -5781,17 +5781,17 @@ u202_21:
 u202_20:
 	line	593
 	
-i1l3195:	
+i1l3215:	
 ;1.C: 593: if(PC5 == 0){
 	btfsc	(61/8),(61)&7
 	goto	u203_21
 	goto	u203_20
 u203_21:
-	goto	i1l3235
+	goto	i1l3255
 u203_20:
 	line	594
 	
-i1l3197:	
+i1l3217:	
 ;1.C: 594: if(KEY1_LongPress < 125) PRESS_FLAG |= 0x01;
 	movlw	(07Dh)
 	subwf	(_KEY1_LongPress),w
@@ -5799,14 +5799,14 @@ i1l3197:
 	goto	u204_21
 	goto	u204_20
 u204_21:
-	goto	i1l3201
+	goto	i1l3221
 u204_20:
 	
-i1l3199:	
+i1l3219:	
 	bsf	(_PRESS_FLAG)+(0/8),(0)&7
 	line	595
 	
-i1l3201:	
+i1l3221:	
 ;1.C: 595: if(KEY1_LongPress < 254) KEY1_LongPress++;
 	movlw	(0FEh)
 	subwf	(_KEY1_LongPress),w
@@ -5814,14 +5814,14 @@ i1l3201:
 	goto	u205_21
 	goto	u205_20
 u205_21:
-	goto	i1l3205
+	goto	i1l3225
 u205_20:
 	
-i1l3203:	
+i1l3223:	
 	incf	(_KEY1_LongPress),f
 	line	596
 	
-i1l3205:	
+i1l3225:	
 ;1.C: 596: if((KEY1_LongPress > 125) && (KEY1_LongPress < 250)){
 	movlw	(07Eh)
 	subwf	(_KEY1_LongPress),w
@@ -5829,36 +5829,36 @@ i1l3205:
 	goto	u206_21
 	goto	u206_20
 u206_21:
-	goto	i1l3217
+	goto	i1l3237
 u206_20:
 	
-i1l3207:	
+i1l3227:	
 	movlw	(0FAh)
 	subwf	(_KEY1_LongPress),w
 	skipnc
 	goto	u207_21
 	goto	u207_20
 u207_21:
-	goto	i1l3217
+	goto	i1l3237
 u207_20:
 	line	597
 	
-i1l3209:	
+i1l3229:	
 ;1.C: 597: PRESS_FLAG |= 0x10;
 	bsf	(_PRESS_FLAG)+(4/8),(4)&7
 	line	598
 	
-i1l3211:	
+i1l3231:	
 ;1.C: 598: match_slice = 0;
 	clrf	(_match_slice)
 	line	599
 	
-i1l3213:	
+i1l3233:	
 ;1.C: 599: PC0 = 0;
 	bcf	(56/8),(56)&7
 	line	600
 	
-i1l3215:	
+i1l3235:	
 ;1.C: 600: PA7 = 0;
 	bcf	(47/8),(47)&7
 	line	601
@@ -5867,7 +5867,7 @@ i1l3215:
 	clrf	(_LONGPRESS_OverTime_Counter)^080h
 	line	603
 	
-i1l3217:	
+i1l3237:	
 ;1.C: 602: }
 ;1.C: 603: if(KEY1_LongPress > 250){
 	movlw	(0FBh)
@@ -5877,11 +5877,11 @@ i1l3217:
 	goto	u208_21
 	goto	u208_20
 u208_21:
-	goto	i1l3237
+	goto	i1l3257
 u208_20:
 	line	604
 	
-i1l3219:	
+i1l3239:	
 ;1.C: 604: CH1_remotekey[0] = 0xFFFFFFFF;
 	movlw	0FFh
 	movwf	(_CH1_remotekey+3)
@@ -5927,59 +5927,59 @@ i1l3219:
 
 	line	608
 	
-i1l3221:	
+i1l3241:	
 ;1.C: 608: CH1_remotekey_num = 0;
 	clrf	(_CH1_remotekey_num)
 	line	609
 	
-i1l3223:	
+i1l3243:	
 ;1.C: 609: CH1_remotekey_Latest = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_CH1_remotekey_Latest)^080h
 	line	610
 	
-i1l3225:	
+i1l3245:	
 ;1.C: 610: PRESS_FLAG &= ~0x10;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(_PRESS_FLAG)+(4/8),(4)&7
 	line	611
 	
-i1l3227:	
+i1l3247:	
 ;1.C: 611: PRESS_FLAG &= ~0x01;
 	bcf	(_PRESS_FLAG)+(0/8),(0)&7
 	line	612
 	
-i1l3229:	
+i1l3249:	
 ;1.C: 612: PC0 = 1;
 	bsf	(56/8),(56)&7
 	line	613
 	
-i1l3231:	
+i1l3251:	
 ;1.C: 613: PA7 = 1;
 	bsf	(47/8),(47)&7
 	line	614
 	
-i1l3233:	
+i1l3253:	
 ;1.C: 614: KEY_Match_counter = 0;
 	clrf	(_KEY_Match_counter)
-	goto	i1l3237
+	goto	i1l3257
 	line	616
 	
-i1l3235:	
+i1l3255:	
 	clrf	(_KEY1_LongPress)
 	line	618
 	
-i1l3237:	
+i1l3257:	
 ;1.C: 618: if(PA4 == 0){
 	btfsc	(44/8),(44)&7
 	goto	u209_21
 	goto	u209_20
 u209_21:
-	goto	i1l3277
+	goto	i1l3297
 u209_20:
 	line	619
 	
-i1l3239:	
+i1l3259:	
 ;1.C: 619: if(KEY2_LongPress < 125) PRESS_FLAG |= 0x02;
 	movlw	(07Dh)
 	subwf	(_KEY2_LongPress),w
@@ -5987,14 +5987,14 @@ i1l3239:
 	goto	u210_21
 	goto	u210_20
 u210_21:
-	goto	i1l3243
+	goto	i1l3263
 u210_20:
 	
-i1l3241:	
+i1l3261:	
 	bsf	(_PRESS_FLAG)+(1/8),(1)&7
 	line	620
 	
-i1l3243:	
+i1l3263:	
 ;1.C: 620: if(KEY2_LongPress < 254) KEY2_LongPress++;
 	movlw	(0FEh)
 	subwf	(_KEY2_LongPress),w
@@ -6002,14 +6002,14 @@ i1l3243:
 	goto	u211_21
 	goto	u211_20
 u211_21:
-	goto	i1l3247
+	goto	i1l3267
 u211_20:
 	
-i1l3245:	
+i1l3265:	
 	incf	(_KEY2_LongPress),f
 	line	621
 	
-i1l3247:	
+i1l3267:	
 ;1.C: 621: if((KEY2_LongPress > 125) && (KEY2_LongPress < 250)){
 	movlw	(07Eh)
 	subwf	(_KEY2_LongPress),w
@@ -6017,36 +6017,36 @@ i1l3247:
 	goto	u212_21
 	goto	u212_20
 u212_21:
-	goto	i1l3259
+	goto	i1l3279
 u212_20:
 	
-i1l3249:	
+i1l3269:	
 	movlw	(0FAh)
 	subwf	(_KEY2_LongPress),w
 	skipnc
 	goto	u213_21
 	goto	u213_20
 u213_21:
-	goto	i1l3259
+	goto	i1l3279
 u213_20:
 	line	622
 	
-i1l3251:	
+i1l3271:	
 ;1.C: 622: PRESS_FLAG |= 0x20;
 	bsf	(_PRESS_FLAG)+(5/8),(5)&7
 	line	623
 	
-i1l3253:	
+i1l3273:	
 ;1.C: 623: match_slice = 0;
 	clrf	(_match_slice)
 	line	624
 	
-i1l3255:	
+i1l3275:	
 ;1.C: 624: PC0 = 0;
 	bcf	(56/8),(56)&7
 	line	625
 	
-i1l3257:	
+i1l3277:	
 ;1.C: 625: PA6 = 0;
 	bcf	(46/8),(46)&7
 	line	626
@@ -6055,7 +6055,7 @@ i1l3257:
 	clrf	(_LONGPRESS_OverTime_Counter)^080h
 	line	628
 	
-i1l3259:	
+i1l3279:	
 ;1.C: 627: }
 ;1.C: 628: if(KEY2_LongPress > 250){
 	movlw	(0FBh)
@@ -6065,11 +6065,11 @@ i1l3259:
 	goto	u214_21
 	goto	u214_20
 u214_21:
-	goto	i1l3279
+	goto	i1l3299
 u214_20:
 	line	629
 	
-i1l3261:	
+i1l3281:	
 ;1.C: 629: CH2_remotekey[0] = 0xFFFFFFFF;
 	movlw	0FFh
 	movwf	(_CH2_remotekey+3)
@@ -6115,59 +6115,59 @@ i1l3261:
 
 	line	633
 	
-i1l3263:	
+i1l3283:	
 ;1.C: 633: CH2_remotekey_num = 0;
 	clrf	(_CH2_remotekey_num)
 	line	634
 	
-i1l3265:	
+i1l3285:	
 ;1.C: 634: CH2_remotekey_Latest = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_CH2_remotekey_Latest)^080h
 	line	635
 	
-i1l3267:	
+i1l3287:	
 ;1.C: 635: PRESS_FLAG &= ~0x20;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(_PRESS_FLAG)+(5/8),(5)&7
 	line	636
 	
-i1l3269:	
+i1l3289:	
 ;1.C: 636: PRESS_FLAG &= ~0x02;
 	bcf	(_PRESS_FLAG)+(1/8),(1)&7
 	line	637
 	
-i1l3271:	
+i1l3291:	
 ;1.C: 637: PC0 = 1;
 	bsf	(56/8),(56)&7
 	line	638
 	
-i1l3273:	
+i1l3293:	
 ;1.C: 638: PA6 = 1;
 	bsf	(46/8),(46)&7
 	line	639
 	
-i1l3275:	
+i1l3295:	
 ;1.C: 639: KEY_Match_counter = 0;
 	clrf	(_KEY_Match_counter)
-	goto	i1l3279
+	goto	i1l3299
 	line	641
 	
-i1l3277:	
+i1l3297:	
 	clrf	(_KEY2_LongPress)
 	line	643
 	
-i1l3279:	
+i1l3299:	
 ;1.C: 643: if(PC4 == 0){
 	btfsc	(60/8),(60)&7
 	goto	u215_21
 	goto	u215_20
 u215_21:
-	goto	i1l3319
+	goto	i1l3339
 u215_20:
 	line	644
 	
-i1l3281:	
+i1l3301:	
 ;1.C: 644: if(KEY3_LongPress < 125) PRESS_FLAG |= 0x04;
 	movlw	(07Dh)
 	subwf	(_KEY3_LongPress),w
@@ -6175,14 +6175,14 @@ i1l3281:
 	goto	u216_21
 	goto	u216_20
 u216_21:
-	goto	i1l3285
+	goto	i1l3305
 u216_20:
 	
-i1l3283:	
+i1l3303:	
 	bsf	(_PRESS_FLAG)+(2/8),(2)&7
 	line	645
 	
-i1l3285:	
+i1l3305:	
 ;1.C: 645: if(KEY3_LongPress < 254) KEY3_LongPress++;
 	movlw	(0FEh)
 	subwf	(_KEY3_LongPress),w
@@ -6190,14 +6190,14 @@ i1l3285:
 	goto	u217_21
 	goto	u217_20
 u217_21:
-	goto	i1l3289
+	goto	i1l3309
 u217_20:
 	
-i1l3287:	
+i1l3307:	
 	incf	(_KEY3_LongPress),f
 	line	646
 	
-i1l3289:	
+i1l3309:	
 ;1.C: 646: if((KEY3_LongPress > 125) && (KEY3_LongPress < 250)){
 	movlw	(07Eh)
 	subwf	(_KEY3_LongPress),w
@@ -6205,36 +6205,36 @@ i1l3289:
 	goto	u218_21
 	goto	u218_20
 u218_21:
-	goto	i1l3301
+	goto	i1l3321
 u218_20:
 	
-i1l3291:	
+i1l3311:	
 	movlw	(0FAh)
 	subwf	(_KEY3_LongPress),w
 	skipnc
 	goto	u219_21
 	goto	u219_20
 u219_21:
-	goto	i1l3301
+	goto	i1l3321
 u219_20:
 	line	647
 	
-i1l3293:	
+i1l3313:	
 ;1.C: 647: PRESS_FLAG |= 0x40;
 	bsf	(_PRESS_FLAG)+(6/8),(6)&7
 	line	648
 	
-i1l3295:	
+i1l3315:	
 ;1.C: 648: match_slice = 0;
 	clrf	(_match_slice)
 	line	649
 	
-i1l3297:	
+i1l3317:	
 ;1.C: 649: PC0 = 0;
 	bcf	(56/8),(56)&7
 	line	650
 	
-i1l3299:	
+i1l3319:	
 ;1.C: 650: PA5 = 0;
 	bcf	(45/8),(45)&7
 	line	651
@@ -6243,7 +6243,7 @@ i1l3299:
 	clrf	(_LONGPRESS_OverTime_Counter)^080h
 	line	653
 	
-i1l3301:	
+i1l3321:	
 ;1.C: 652: }
 ;1.C: 653: if(KEY3_LongPress > 250){
 	movlw	(0FBh)
@@ -6253,11 +6253,11 @@ i1l3301:
 	goto	u220_21
 	goto	u220_20
 u220_21:
-	goto	i1l3321
+	goto	i1l3341
 u220_20:
 	line	654
 	
-i1l3303:	
+i1l3323:	
 ;1.C: 654: CH3_remotekey[0] = 0xFFFFFFFF;
 	movlw	0FFh
 	movwf	(_CH3_remotekey+3)
@@ -6303,49 +6303,49 @@ i1l3303:
 
 	line	658
 	
-i1l3305:	
+i1l3325:	
 ;1.C: 658: CH3_remotekey_num = 0;
 	clrf	(_CH3_remotekey_num)
 	line	659
 	
-i1l3307:	
+i1l3327:	
 ;1.C: 659: CH3_remotekey_Latest = 0;
 	bsf	status, 5	;RP0=1, select bank1
 	clrf	(_CH3_remotekey_Latest)^080h
 	line	660
 	
-i1l3309:	
+i1l3329:	
 ;1.C: 660: PRESS_FLAG &= ~0x40;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	(_PRESS_FLAG)+(6/8),(6)&7
 	line	661
 	
-i1l3311:	
+i1l3331:	
 ;1.C: 661: PRESS_FLAG &= ~0x04;
 	bcf	(_PRESS_FLAG)+(2/8),(2)&7
 	line	662
 	
-i1l3313:	
+i1l3333:	
 ;1.C: 662: PC0 = 1;
 	bsf	(56/8),(56)&7
 	line	663
 	
-i1l3315:	
+i1l3335:	
 ;1.C: 663: PA5 = 1;
 	bsf	(45/8),(45)&7
 	line	664
 	
-i1l3317:	
+i1l3337:	
 ;1.C: 664: KEY_Match_counter = 0;
 	clrf	(_KEY_Match_counter)
-	goto	i1l3321
+	goto	i1l3341
 	line	666
 	
-i1l3319:	
+i1l3339:	
 	clrf	(_KEY3_LongPress)
 	line	668
 	
-i1l3321:	
+i1l3341:	
 ;1.C: 668: if((PRESS_FLAG>0)&&(PC5==1)&&(PA4==1)&&(PC4==1)){
 	movf	(_PRESS_FLAG),w
 	skipz
@@ -6353,7 +6353,7 @@ i1l3321:
 	goto	i1l995
 u221_20:
 	
-i1l3323:	
+i1l3343:	
 	btfss	(61/8),(61)&7
 	goto	u222_21
 	goto	u222_20
@@ -6361,7 +6361,7 @@ u222_21:
 	goto	i1l995
 u222_20:
 	
-i1l3325:	
+i1l3345:	
 	btfss	(44/8),(44)&7
 	goto	u223_21
 	goto	u223_20
@@ -6369,7 +6369,7 @@ u223_21:
 	goto	i1l995
 u223_20:
 	
-i1l3327:	
+i1l3347:	
 	btfss	(60/8),(60)&7
 	goto	u224_21
 	goto	u224_20
@@ -6378,13 +6378,13 @@ u224_21:
 u224_20:
 	line	669
 	
-i1l3329:	
+i1l3349:	
 ;1.C: 669: PRESSED = PRESS_FLAG;
 	movf	(_PRESS_FLAG),w
 	movwf	(_PRESSED)
 	line	670
 	
-i1l3331:	
+i1l3351:	
 ;1.C: 670: PRESS_FLAG = 0;
 	clrf	(_PRESS_FLAG)
 	line	673
@@ -6398,9 +6398,9 @@ GLOBAL	__end_of_KEYSCAN
 
 	signat	_KEYSCAN,88
 	global	_led1_debug
-psect	text716,local,class=CODE,delta=2
-global __ptext716
-__ptext716:
+psect	text715,local,class=CODE,delta=2
+global __ptext715
+__ptext715:
 
 ;; *************** function _led1_debug *****************
 ;; Defined at:
@@ -6412,11 +6412,11 @@ __ptext716:
 ;; Return value:  Size  Location     Type
 ;;		None               void
 ;; Registers used:
-;;		wreg
+;;		None
 ;; Tracked objects:
 ;;		On entry : 20/0
 ;;		On exit  : 20/0
-;;		Unchanged: FFFDF/0
+;;		Unchanged: FFFFFFDF/0
 ;; Data sizes:     COMMON   BANK0   BANK1
 ;;      Params:         0       0       0
 ;;      Locals:         0       0       0
@@ -6431,7 +6431,7 @@ __ptext716:
 ;;		_KEY
 ;; This function uses a non-reentrant model
 ;;
-psect	text716
+psect	text715
 	file	"1.C"
 	line	405
 	global	__size_of_led1_debug
@@ -6439,13 +6439,7 @@ psect	text716
 	
 _led1_debug:	
 	opt	stack 2
-; Regs used in _led1_debug: [wreg]
-	line	407
-	
-i1l3191:	
-;1.C: 407: PC0 = ~PC0;
-	movlw	1<<((56)&7)
-	xorwf	((56)/8),f
+; Regs used in _led1_debug: []
 	line	409
 	
 i1l924:	
@@ -6457,9 +6451,9 @@ GLOBAL	__end_of_led1_debug
 
 	signat	_led1_debug,88
 	global	_EX_INT_RisingEdge
-psect	text717,local,class=CODE,delta=2
-global __ptext717
-__ptext717:
+psect	text716,local,class=CODE,delta=2
+global __ptext716
+__ptext716:
 
 ;; *************** function _EX_INT_RisingEdge *****************
 ;; Defined at:
@@ -6489,7 +6483,7 @@ __ptext717:
 ;;		_ISR
 ;; This function uses a non-reentrant model
 ;;
-psect	text717
+psect	text716
 	file	"1.C"
 	line	418
 	global	__size_of_EX_INT_RisingEdge
@@ -6500,7 +6494,7 @@ _EX_INT_RisingEdge:
 ; Regs used in _EX_INT_RisingEdge: []
 	line	419
 	
-i1l3189:	
+i1l3211:	
 ;1.C: 419: INTEDG =1;
 	bsf	(1038/8)^080h,(1038)&7
 	line	420
@@ -6516,9 +6510,9 @@ GLOBAL	__end_of_EX_INT_RisingEdge
 ;; =============== function _EX_INT_RisingEdge ends ============
 
 	signat	_EX_INT_RisingEdge,88
-psect	text718,local,class=CODE,delta=2
-global __ptext718
-__ptext718:
+psect	text717,local,class=CODE,delta=2
+global __ptext717
+__ptext717:
 	global	btemp
 	btemp set 07Eh
 
