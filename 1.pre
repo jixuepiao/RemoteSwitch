@@ -1058,9 +1058,9 @@ unsigned char CH3_remotekey_num = 0;
 unsigned char CH1_remotekey_Latest = 0;
 unsigned char CH2_remotekey_Latest = 0;
 unsigned char CH3_remotekey_Latest = 0;
-
-
-
+unsigned char i;
+unsigned int HIndata = 0;
+unsigned int LIndata = 0;
 
 void led1_debug(void);
 void INT_INITIAL(void);
@@ -1102,11 +1102,11 @@ if( ((FLAGs&0x10) == 0) &&
 ){
 if((FLAGs&0x08) == 0x08){
 if(num < 24){
-if((buff>200)&&(buff<450)){
+if((buff>200)&&(buff<600)){
 remotekey = remotekey<<1;
 remotekey |= 0x00000001;
 }
-if((buff>700)&&(buff<1200)){
+if((buff>700)&&(buff<1800)){
 remotekey = remotekey<<1;
 }
 num++;
@@ -1203,7 +1203,7 @@ Key_dealed_counter = 0;
 
 }
 
-# 296
+# 295
 }
 
 
@@ -1245,7 +1245,7 @@ remotekey_Receive_num = 0;
 
 
 if((FLAGs&0x02) == 0){
-EE_Buff = ms16_counter%10;
+EE_Buff = ms16_counter%8;
 if(EE_Buff == 1){
 PA3 = 0;
 
@@ -1315,7 +1315,8 @@ PC0 = 1;
 }
 void led1_debug(void){
 
-# 409
+PC0 = ~PC0;
+
 }
 void INT_INITIAL(void){
 TRISA2 =1;
@@ -1374,7 +1375,7 @@ T0IF = 0;
 void TIMER2_INITIAL (void){
 T2CON0 = 0B00000001;
 
-# 471
+# 470
 T2CON1 = 0B00000000;
 
 
@@ -1689,7 +1690,7 @@ PRESSED &= 0xF0;
 
 }
 
-# 789
+# 788
 main(){
 OSC_INIT();
 TIMER0_INITIAL();

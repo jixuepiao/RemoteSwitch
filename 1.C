@@ -12,7 +12,7 @@
 //Variable definition
 //===========================================================
 
-//#define LED1_Debug_ON
+#define LED1_Debug_ON
 
 #define 	unchar     	unsigned char 
 #define 	unint       	unsigned int
@@ -107,9 +107,9 @@ unsigned char CH3_remotekey_num = 0;//存放CH3遥控字的数量 遥控字的序号 最大为4
 unsigned char CH1_remotekey_Latest = 0;//存放CH1最近一次控制时的遥控字的序号
 unsigned char CH2_remotekey_Latest = 0;
 unsigned char CH3_remotekey_Latest = 0;
-//unsigned char i;
-//unsigned int HIndata = 0;
-//unsigned int LIndata = 0;
+unsigned char i;
+unsigned int HIndata = 0;
+unsigned int LIndata = 0;
 
 void led1_debug(void);
 void INT_INITIAL(void);
@@ -155,11 +155,11 @@ void interrupt ISR(void){
 			){
 				if((FLAGs&BIT_Head_flag) == BIT_Head_flag){	//接收到头时接收24个位
 					if(num < 24){
-						if((buff>200)&&(buff<450)){
+						if((buff>200)&&(buff<600)){
 							remotekey = remotekey<<1;
 							remotekey |= 0x00000001;
 						}
-						if((buff>700)&&(buff<1200)){
+						if((buff>700)&&(buff<1800)){
 							remotekey = remotekey<<1;
 						}
 						num++;
@@ -256,7 +256,6 @@ void interrupt ISR(void){
 //            led1_debug();
 		}
       		
-
 //		if((FLAGs&BIT_remotekey_detecting_flag) == 0){
 //			if(DIN == 1){
 //				HIndata++;
@@ -334,7 +333,7 @@ void interrupt ISR(void){
 
 //SYN480低功耗控制
 		if((FLAGs&BIT_remotekey_detected_flag) == 0){
-			EE_Buff = ms16_counter%10;
+			EE_Buff = ms16_counter%8;
 			if(EE_Buff == 1){
 				SHDN = 0;
 //				FLAGs &= ~BIT_Head_flag;

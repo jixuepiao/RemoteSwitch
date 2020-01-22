@@ -359,45 +359,45 @@
 ]
 [u S1006 . 1 `S1004 1 . 1 0 ]
 "138 1.C
-[v F1091 `(v  1 t 0 ]
+[v F1094 `(v  1 t 0 ]
 [v _ISR `I(v  1 e 0 0 ]
-"405
+"404
 [v _led1_debug `(v  1 e 0 0 ]
-"410
+"409
 [v _INT_INITIAL `(v  1 e 0 0 ]
-"418
+"417
 [v _EX_INT_RisingEdge `(v  1 e 0 0 ]
-"422
+"421
 [v _EX_INT_FallingEdge `(v  1 e 0 0 ]
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
-"426
+"425
 [v _OSC_INIT `(v  1 e 0 0 ]
-"449
+"448
 [v _WDT_INITIAL `(v  1 e 0 0 ]
-"454
+"453
 [v _TIMER0_INITIAL `(v  1 e 0 0 ]
-"464
+"463
 [v _TIMER2_INITIAL `(v  1 e 0 0 ]
-"488
+"487
 [v _IAPRead `(uc  1 e 1 0 ]
-"495
+"494
 [v _IAPWrite `(v  1 e 0 0 ]
-"506
+"505
 [v _CH1_EEPROM_Write `(v  1 e 0 0 ]
-"525
+"524
 [v _CH2_EEPROM_Write `(v  1 e 0 0 ]
-"544
+"543
 [v _CH3_EEPROM_Write `(v  1 e 0 0 ]
-"563
+"562
 [v _EEPROM_ReadWord `(v  1 e 0 0 ]
-"574
+"573
 [v _EEPROM_Read `(v  1 e 0 0 ]
-"591
+"590
 [v _KEYSCAN `(v  1 e 0 0 ]
-"674
+"673
 [v _KEY `(v  1 e 0 0 ]
-"789
+"788
 [v _main `(i  1 e 2 0 ]
 "7 eeprom.c
 [v _eecpymem `(v  1 e 0 0 ]
@@ -1699,106 +1699,93 @@
 [v _SFR9E `VEuc  1 e 1 @158 ]
 "1013
 [v _SFR9F `VEuc  1 e 1 @159 ]
-"789 1.C
+"788 1.C
 [v _main `(i  1 e 2 0 ]
 {
-"814
+"813
 } 0
-"574
+"573
 [v _EEPROM_Read `(v  1 e 0 0 ]
 {
-"590
+"589
 } 0
-"563
+"562
 [v _EEPROM_ReadWord `(v  1 e 0 0 ]
 {
 [v EEPROM_ReadWord@buff `*.0ul  1 a 1 wreg ]
 [v EEPROM_ReadWord@buff `*.0ul  1 a 1 wreg ]
 [v EEPROM_ReadWord@data `uc  1 p 1 2 ]
-"573
+"572
 } 0
-"410
+"409
 [v _INT_INITIAL `(v  1 e 0 0 ]
 {
-"417
+"416
 } 0
-"488
+"487
 [v _IAPRead `(uc  1 e 1 0 ]
 {
 [v IAPRead@EEAddr `uc  1 a 1 wreg ]
-"489
-[v IAPRead@ReEEPROMread `uc  1 a 1 1 ]
 "488
+[v IAPRead@ReEEPROMread `uc  1 a 1 1 ]
+"487
 [v IAPRead@EEAddr `uc  1 a 1 wreg ]
-"494
+"493
 } 0
-"464
+"463
 [v _TIMER2_INITIAL `(v  1 e 0 0 ]
 {
-"487
+"486
 } 0
-"454
+"453
 [v _TIMER0_INITIAL `(v  1 e 0 0 ]
 {
-"463
+"462
 } 0
-"449
+"448
 [v _WDT_INITIAL `(v  1 e 0 0 ]
 {
-"453
+"452
 } 0
-"426
+"425
 [v _OSC_INIT `(v  1 e 0 0 ]
 {
-"448
+"447
 } 0
-"422
+"421
 [v _EX_INT_FallingEdge `(v  1 e 0 0 ]
 {
-"425
+"424
 } 0
 "138
 [v _ISR `I(v  1 e 0 0 ]
 {
-"404
+"403
 } 0
-"674
+"673
 [v _KEY `(v  1 e 0 0 ]
 {
-"783
+"782
 } 0
-"544
+"543
 [v _CH3_EEPROM_Write `(v  1 e 0 0 ]
 {
-"562
+"561
 } 0
-"525
+"524
 [v _CH2_EEPROM_Write `(v  1 e 0 0 ]
 {
-"543
+"542
 } 0
-"506
+"505
 [v _CH1_EEPROM_Write `(v  1 e 0 0 ]
 {
-"524
+"523
 } 0
-"422
+"421
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
 {
-"425
-} 0
-"5 f:\program files (x86)\fmd\fmdide\data\sources\lbmod.c
-[v ___lbmod `(uc  1 e 1 0 ]
-{
-[v ___lbmod@dividend `uc  1 a 1 wreg ]
-"6
-[v ___lbmod@rem `uc  1 a 1 4 ]
-"7
-[v ___lbmod@counter `uc  1 a 1 3 ]
-"5
-[v ___lbmod@dividend `uc  1 a 1 wreg ]
-[v ___lbmod@divisor `uc  1 p 1 0 ]
-"18
+"424
 } 0
 "3 f:\program files (x86)\fmd\fmdide\data\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
@@ -1810,26 +1797,26 @@
 [v ___wmul@multiplicand `ui  1 p 2 2 ]
 "13
 } 0
-"495 1.C
+"494 1.C
 [v _IAPWrite `(v  1 e 0 0 ]
 {
 [v IAPWrite@EEAddr `uc  1 a 1 wreg ]
 [v IAPWrite@EEAddr `uc  1 a 1 wreg ]
 [v IAPWrite@Data `uc  1 p 1 0 ]
-"505
+"504
 } 0
-"591
+"590
 [v _KEYSCAN `(v  1 e 0 0 ]
 {
-"673
+"672
 } 0
-"405
+"404
 [v _led1_debug `(v  1 e 0 0 ]
 {
-"409
+"408
 } 0
-"418
+"417
 [v _EX_INT_RisingEdge `(v  1 e 0 0 ]
 {
-"421
+"420
 } 0
