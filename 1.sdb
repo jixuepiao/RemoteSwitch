@@ -358,46 +358,46 @@
 [s S1004 . 1 `uc 1 PSINKC 1 0 :6:0 
 ]
 [u S1006 . 1 `S1004 1 . 1 0 ]
-"138 1.C
-[v F1094 `(v  1 t 0 ]
+"136 1.C
+[v F1093 `(v  1 t 0 ]
 [v _ISR `I(v  1 e 0 0 ]
-"404
+"397
 [v _led1_debug `(v  1 e 0 0 ]
-"409
+"402
 [v _INT_INITIAL `(v  1 e 0 0 ]
-"417
+"410
 [v _EX_INT_RisingEdge `(v  1 e 0 0 ]
-"421
+"414
 [v _EX_INT_FallingEdge `(v  1 e 0 0 ]
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
-"425
+"418
 [v _OSC_INIT `(v  1 e 0 0 ]
-"448
+"441
 [v _WDT_INITIAL `(v  1 e 0 0 ]
-"453
+"446
 [v _TIMER0_INITIAL `(v  1 e 0 0 ]
-"463
+"456
 [v _TIMER2_INITIAL `(v  1 e 0 0 ]
-"487
+"480
 [v _IAPRead `(uc  1 e 1 0 ]
-"494
+"487
 [v _IAPWrite `(v  1 e 0 0 ]
-"505
+"498
 [v _CH1_EEPROM_Write `(v  1 e 0 0 ]
-"524
+"517
 [v _CH2_EEPROM_Write `(v  1 e 0 0 ]
-"543
+"536
 [v _CH3_EEPROM_Write `(v  1 e 0 0 ]
-"562
+"555
 [v _EEPROM_ReadWord `(v  1 e 0 0 ]
-"573
+"566
 [v _EEPROM_Read `(v  1 e 0 0 ]
-"590
+"583
 [v _KEYSCAN `(v  1 e 0 0 ]
-"673
+"666
 [v _KEY `(v  1 e 0 0 ]
-"788
+"781
 [v _main `(i  1 e 2 0 ]
 "7 eeprom.c
 [v _eecpymem `(v  1 e 0 0 ]
@@ -1117,44 +1117,48 @@
 [v _remotekey_Receive_num `uc  1 e 1 0 ]
 "88
 [v _Indata `ui  1 e 2 0 ]
-"89
-[v _Key_dealed_counter `uc  1 e 1 0 ]
-"91
+"90
 [v _num `uc  1 e 1 0 ]
-"93
+"91
 [v _ms16_counter `uc  1 e 1 0 ]
-"94
+"92
 [v _KEY_Match_counter `uc  1 e 1 0 ]
-"95
+"93
 [v _PRESSED `uc  1 e 1 0 ]
-"96
+"94
 [v _KEY1_LongPress `uc  1 e 1 0 ]
-"97
+"95
 [v _KEY2_LongPress `uc  1 e 1 0 ]
-"98
+"96
 [v _KEY3_LongPress `uc  1 e 1 0 ]
-"99
+"97
 [v _LONGPRESS_OverTime_Counter `uc  1 e 1 0 ]
-"100
+"98
 [v _EE_Buff `uc  1 e 1 0 ]
-"101
+"99
 [v _CH1_remotekey `[4]ul  1 e 16 0 ]
-"102
+"100
 [v _CH2_remotekey `[4]ul  1 e 16 0 ]
-"103
+"101
 [v _CH3_remotekey `[4]ul  1 e 16 0 ]
-"104
+"102
 [v _CH1_remotekey_num `uc  1 e 1 0 ]
-"105
+"103
 [v _CH2_remotekey_num `uc  1 e 1 0 ]
-"106
+"104
 [v _CH3_remotekey_num `uc  1 e 1 0 ]
-"107
+"105
 [v _CH1_remotekey_Latest `uc  1 e 1 0 ]
-"108
+"106
 [v _CH2_remotekey_Latest `uc  1 e 1 0 ]
-"109
+"107
 [v _CH3_remotekey_Latest `uc  1 e 1 0 ]
+"108
+[v _i `uc  1 e 1 0 ]
+"109
+[v _HIndata `ui  1 e 2 0 ]
+"110
+[v _LIndata `ui  1 e 2 0 ]
 "29 f:\program files (x86)\fmd\fmdide\data\include\DEVICE.h
 [v _RP `VEb  1 e 0 @29 ]
 "31
@@ -1699,93 +1703,93 @@
 [v _SFR9E `VEuc  1 e 1 @158 ]
 "1013
 [v _SFR9F `VEuc  1 e 1 @159 ]
-"788 1.C
+"781 1.C
 [v _main `(i  1 e 2 0 ]
 {
-"813
+"805
 } 0
-"573
+"566
 [v _EEPROM_Read `(v  1 e 0 0 ]
 {
-"589
+"582
 } 0
-"562
+"555
 [v _EEPROM_ReadWord `(v  1 e 0 0 ]
 {
 [v EEPROM_ReadWord@buff `*.0ul  1 a 1 wreg ]
 [v EEPROM_ReadWord@buff `*.0ul  1 a 1 wreg ]
 [v EEPROM_ReadWord@data `uc  1 p 1 2 ]
-"572
+"565
 } 0
-"409
+"402
 [v _INT_INITIAL `(v  1 e 0 0 ]
 {
-"416
+"409
 } 0
-"487
+"480
 [v _IAPRead `(uc  1 e 1 0 ]
 {
 [v IAPRead@EEAddr `uc  1 a 1 wreg ]
-"488
+"481
 [v IAPRead@ReEEPROMread `uc  1 a 1 1 ]
-"487
+"480
 [v IAPRead@EEAddr `uc  1 a 1 wreg ]
-"493
-} 0
-"463
-[v _TIMER2_INITIAL `(v  1 e 0 0 ]
-{
 "486
 } 0
-"453
+"456
+[v _TIMER2_INITIAL `(v  1 e 0 0 ]
+{
+"479
+} 0
+"446
 [v _TIMER0_INITIAL `(v  1 e 0 0 ]
 {
-"462
+"455
 } 0
-"448
+"441
 [v _WDT_INITIAL `(v  1 e 0 0 ]
 {
-"452
+"445
 } 0
-"425
+"418
 [v _OSC_INIT `(v  1 e 0 0 ]
 {
-"447
+"440
 } 0
-"421
+"414
 [v _EX_INT_FallingEdge `(v  1 e 0 0 ]
 {
-"424
+"417
 } 0
-"138
+"136
 [v _ISR `I(v  1 e 0 0 ]
 {
-"403
+"396
 } 0
-"673
+"666
 [v _KEY `(v  1 e 0 0 ]
 {
-"782
+"775
 } 0
-"543
+"536
 [v _CH3_EEPROM_Write `(v  1 e 0 0 ]
 {
-"561
+"554
 } 0
-"524
+"517
 [v _CH2_EEPROM_Write `(v  1 e 0 0 ]
 {
-"542
+"535
 } 0
-"505
+"498
 [v _CH1_EEPROM_Write `(v  1 e 0 0 ]
 {
-"523
+"516
 } 0
-"421
+"414
 [v i1_EX_INT_FallingEdge `(v  1 e 0 0 ]
 {
-"424
+"417
 } 0
 "3 f:\program files (x86)\fmd\fmdide\data\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
@@ -1797,26 +1801,26 @@
 [v ___wmul@multiplicand `ui  1 p 2 2 ]
 "13
 } 0
-"494 1.C
+"487 1.C
 [v _IAPWrite `(v  1 e 0 0 ]
 {
 [v IAPWrite@EEAddr `uc  1 a 1 wreg ]
 [v IAPWrite@EEAddr `uc  1 a 1 wreg ]
 [v IAPWrite@Data `uc  1 p 1 0 ]
-"504
+"497
 } 0
-"590
+"583
 [v _KEYSCAN `(v  1 e 0 0 ]
 {
-"672
+"665
 } 0
-"404
+"397
 [v _led1_debug `(v  1 e 0 0 ]
 {
-"408
+"401
 } 0
-"417
+"410
 [v _EX_INT_RisingEdge `(v  1 e 0 0 ]
 {
-"420
+"413
 } 0

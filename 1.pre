@@ -1037,10 +1037,8 @@ unsigned char remotekey_slice = 0;
 unsigned char match_slice = 0;
 unsigned char remotekey_Receive_num = 0;
 unsigned int Indata = 0;
-unsigned char Key_dealed_counter = 0;
 
 unsigned char num = 0;
-
 unsigned char ms16_counter = 0;
 unsigned char KEY_Match_counter = 0;
 unsigned char PRESSED = 0;
@@ -1081,7 +1079,7 @@ void EEPROM_Read(void);
 void KEYSCAN(void);
 void KEY(void);
 
-# 138
+# 136
 void interrupt ISR(void){
 
 if(INTE && INTF){
@@ -1132,7 +1130,6 @@ if((FLAGs&0x10) == 0){
 for(buff=0;buff<CH1_remotekey_num;buff++){
 if(Ctrl_remotekey == CH1_remotekey[buff]){
 FLAGs |= 0x10;
-Key_dealed_counter = 0;
 led1_debug();
 PA7 = ~PA7;
 CH1_remotekey_Latest = buff;
@@ -1143,7 +1140,6 @@ if((FLAGs&0x20) == 0){
 for(buff=0;buff<CH2_remotekey_num;buff++){
 if(Ctrl_remotekey == CH2_remotekey[buff]){
 FLAGs |= 0x20;
-Key_dealed_counter = 0;
 led1_debug();
 PA6 = ~PA6;
 CH2_remotekey_Latest = buff;
@@ -1154,7 +1150,6 @@ if((FLAGs&0x40) == 0){
 for(buff=0;buff<CH3_remotekey_num;buff++){
 if(Ctrl_remotekey == CH3_remotekey[buff]){
 FLAGs |= 0x40;
-Key_dealed_counter = 0;
 led1_debug();
 PA5 = ~PA5;
 CH3_remotekey_Latest = buff;
@@ -1169,18 +1164,19 @@ remotekey = 0;
 Ctrl_remotekey = 0;
 }
 }
+}
 if((FLAGs&0x08) == 0){
 if(buff > 7000){
 FLAGs |= 0x08;
 num = 0;
 remotekey = 0;
+
 if( ((FLAGs&0x10) == 0x10) ||
 ((FLAGs&0x20) == 0x20) ||
 ((FLAGs&0x40) == 0x40)
 ){
 remotekey_slice = 0;
 FLAGs &= ~0x08;
-}
 }
 }
 }
@@ -1195,15 +1191,46 @@ TMR2IF = 0;
 
 if((FLAGs&0x02) == 0x02){
 Indata++;
-}
+}else{
+
+# 256
+if((FLAGs&0x80) == 0){
 if(PA2 == 1){
+HIndata++;
+}else{
+buff = HIndata*53;
+HIndata = 0;
+if( ((buff>200)&&(buff<600)) ||
+((buff>700)&&(buff<1800))
+){
+FLAGs |= 0x80;
+}else{
+i = 0;
+}
+}
+}
+if((FLAGs&0x80) == 0x80){
+if(PA2 == 0){
+LIndata++;
+}else{
+buff = LIndata*53;
+LIndata = 0;
+if( ((buff>200)&&(buff<600)) ||
+((buff>700)&&(buff<1800))
+){
+i++;
+}else{
+i = 0;
+}
+FLAGs &= ~0x80;
+}
+}
+if(i>3){
 FLAGs |= 0x02;
-remotekey_slice = 0;
-Key_dealed_counter = 0;
+i = 0;
 
 }
-
-# 295
+}
 }
 
 
@@ -1216,12 +1243,8 @@ if( ((FLAGs&0x10) == 0x10) ||
 ((FLAGs&0x20) == 0x20) ||
 ((FLAGs&0x40) == 0x40)
 ){
-if(PA2 == 0) remotekey_slice++;
-if(PA2 == 1) remotekey_slice = 0;
-if(Key_dealed_counter<255) Key_dealed_counter++;
-if( (remotekey_slice>(150/8)) ||
-(Key_dealed_counter > (1024/8))
-){
+remotekey_slice++;
+if( remotekey_slice>(110/8)){
 remotekey_slice = 0;
 
 FLAGs &= ~0x02;
@@ -1231,13 +1254,12 @@ FLAGs &= ~0x40;
 }
 }
 
-
 if( ((PRESSED&0x10) == 0x10) ||
 ((PRESSED&0x20) == 0x20) ||
 ((PRESSED&0x40) == 0x40)
 ){
 match_slice++;
-if(match_slice>(150/8)){
+if(match_slice>(110/8)){
 match_slice = 0;
 remotekey_Receive_num = 0;
 }
@@ -1253,7 +1275,7 @@ EX_INT_FallingEdge();
 INTE =1;
 TMR2ON =1;
 }
-if(EE_Buff == 3){
+if(EE_Buff == 4){
 PA3 = 1;
 TMR2ON =0;
 INTE =0;
@@ -1315,8 +1337,7 @@ PC0 = 1;
 }
 void led1_debug(void){
 
-PC0 = ~PC0;
-
+# 401
 }
 void INT_INITIAL(void){
 TRISA2 =1;
@@ -1375,7 +1396,7 @@ T0IF = 0;
 void TIMER2_INITIAL (void){
 T2CON0 = 0B00000001;
 
-# 470
+# 463
 T2CON1 = 0B00000000;
 
 
@@ -1690,7 +1711,7 @@ PRESSED &= 0xF0;
 
 }
 
-# 788
+# 781
 main(){
 OSC_INIT();
 TIMER0_INITIAL();
@@ -1707,7 +1728,6 @@ PA3 = 0;
 FLAGs &= ~0x08;
 EX_INT_FallingEdge();
 INTE =1;
-
 TMR2ON =1;
 
 PEIE = 1;

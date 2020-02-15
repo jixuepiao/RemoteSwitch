@@ -971,59 +971,57 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _remotekey_Receive_num `uc  1 e ]
 "88 1.C
 [v _Indata `ui  1 e ]
-"89 1.C
-[v _Key_dealed_counter `uc  1 e ]
-"91 1.C
+"90 1.C
 [v _num `uc  1 e ]
-"93 1.C
+"91 1.C
 [v _ms16_counter `uc  1 e ]
-"94 1.C
+"92 1.C
 [v _KEY_Match_counter `uc  1 e ]
-"95 1.C
+"93 1.C
 [v _PRESSED `uc  1 e ]
-"96 1.C
+"94 1.C
 [v _KEY1_LongPress `uc  1 e ]
-"97 1.C
+"95 1.C
 [v _KEY2_LongPress `uc  1 e ]
-"98 1.C
+"96 1.C
 [v _KEY3_LongPress `uc  1 e ]
-"99 1.C
+"97 1.C
 [v _LONGPRESS_OverTime_Counter `uc  1 e ]
-"100 1.C
+"98 1.C
 [v _EE_Buff `uc  1 e ]
-"101 1.C
+"99 1.C
 [v _CH1_remotekey `ul  -> 4 `i e ]
-"102 1.C
+"100 1.C
 [v _CH2_remotekey `ul  -> 4 `i e ]
-"103 1.C
+"101 1.C
 [v _CH3_remotekey `ul  -> 4 `i e ]
-"104 1.C
+"102 1.C
 [v _CH1_remotekey_num `uc  1 e ]
-"105 1.C
+"103 1.C
 [v _CH2_remotekey_num `uc  1 e ]
-"106 1.C
+"104 1.C
 [v _CH3_remotekey_num `uc  1 e ]
-"107 1.C
+"105 1.C
 [v _CH1_remotekey_Latest `uc  1 e ]
-"108 1.C
+"106 1.C
 [v _CH2_remotekey_Latest `uc  1 e ]
-"109 1.C
+"107 1.C
 [v _CH3_remotekey_Latest `uc  1 e ]
-"110 1.C
+"108 1.C
 [v _i `uc  1 e ]
-"111 1.C
+"109 1.C
 [v _HIndata `ui  1 e ]
-"112 1.C
+"110 1.C
 [v _LIndata `ui  1 e ]
-"116 1.C
-[v _EX_INT_RisingEdge `(v  0 ef ]
-"117 1.C
-[v _EX_INT_FallingEdge `(v  0 ef ]
 "114 1.C
+[v _EX_INT_RisingEdge `(v  0 ef ]
+"115 1.C
+[v _EX_INT_FallingEdge `(v  0 ef ]
+"112 1.C
 [v _led1_debug `(v  0 ef ]
-"130 1.C
+"128 1.C
 [v _KEYSCAN `(v  0 ef ]
-"131 1.C
+"129 1.C
 [v _KEY `(v  0 ef ]
 [p mainexit ]
 [; ;DEVICE.h: 10: volatile unsigned char INDF @ 0x000;
@@ -1846,2061 +1844,2142 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 [; ;1.C: 88: unsigned int Indata = 0;
-"89
-[i _Key_dealed_counter
--> -> 0 `i `uc
-]
-[; ;1.C: 89: unsigned char Key_dealed_counter = 0;
-"91
+"90
 [i _num
 -> -> 0 `i `uc
 ]
-[; ;1.C: 91: unsigned char num = 0;
-"93
+[; ;1.C: 90: unsigned char num = 0;
+"91
 [i _ms16_counter
 -> -> 0 `i `uc
 ]
-[; ;1.C: 93: unsigned char ms16_counter = 0;
-"94
+[; ;1.C: 91: unsigned char ms16_counter = 0;
+"92
 [i _KEY_Match_counter
 -> -> 0 `i `uc
 ]
-[; ;1.C: 94: unsigned char KEY_Match_counter = 0;
-"95
+[; ;1.C: 92: unsigned char KEY_Match_counter = 0;
+"93
 [i _PRESSED
 -> -> 0 `i `uc
 ]
-[; ;1.C: 95: unsigned char PRESSED = 0;
-"96
+[; ;1.C: 93: unsigned char PRESSED = 0;
+"94
 [i _KEY1_LongPress
 -> -> 0 `i `uc
 ]
-[; ;1.C: 96: unsigned char KEY1_LongPress = 0;
-"97
+[; ;1.C: 94: unsigned char KEY1_LongPress = 0;
+"95
 [i _KEY2_LongPress
 -> -> 0 `i `uc
 ]
-[; ;1.C: 97: unsigned char KEY2_LongPress = 0;
-"98
+[; ;1.C: 95: unsigned char KEY2_LongPress = 0;
+"96
 [i _KEY3_LongPress
 -> -> 0 `i `uc
 ]
-[; ;1.C: 98: unsigned char KEY3_LongPress = 0;
-"99
+[; ;1.C: 96: unsigned char KEY3_LongPress = 0;
+"97
 [i _LONGPRESS_OverTime_Counter
 -> -> 0 `i `uc
 ]
-[; ;1.C: 99: unsigned char LONGPRESS_OverTime_Counter = 0;
-"100
+[; ;1.C: 97: unsigned char LONGPRESS_OverTime_Counter = 0;
+"98
 [i _EE_Buff
 -> -> 0 `i `uc
 ]
-[; ;1.C: 100: unsigned char EE_Buff = 0;
-[; ;1.C: 101: unsigned long CH1_remotekey[4];
-[; ;1.C: 102: unsigned long CH2_remotekey[4];
-[; ;1.C: 103: unsigned long CH3_remotekey[4];
-"104
+[; ;1.C: 98: unsigned char EE_Buff = 0;
+[; ;1.C: 99: unsigned long CH1_remotekey[4];
+[; ;1.C: 100: unsigned long CH2_remotekey[4];
+[; ;1.C: 101: unsigned long CH3_remotekey[4];
+"102
 [i _CH1_remotekey_num
 -> -> 0 `i `uc
 ]
-[; ;1.C: 104: unsigned char CH1_remotekey_num = 0;
-"105
+[; ;1.C: 102: unsigned char CH1_remotekey_num = 0;
+"103
 [i _CH2_remotekey_num
 -> -> 0 `i `uc
 ]
-[; ;1.C: 105: unsigned char CH2_remotekey_num = 0;
-"106
+[; ;1.C: 103: unsigned char CH2_remotekey_num = 0;
+"104
 [i _CH3_remotekey_num
 -> -> 0 `i `uc
 ]
-[; ;1.C: 106: unsigned char CH3_remotekey_num = 0;
-"107
+[; ;1.C: 104: unsigned char CH3_remotekey_num = 0;
+"105
 [i _CH1_remotekey_Latest
 -> -> 0 `i `uc
 ]
-[; ;1.C: 107: unsigned char CH1_remotekey_Latest = 0;
-"108
+[; ;1.C: 105: unsigned char CH1_remotekey_Latest = 0;
+"106
 [i _CH2_remotekey_Latest
 -> -> 0 `i `uc
 ]
-[; ;1.C: 108: unsigned char CH2_remotekey_Latest = 0;
-"109
+[; ;1.C: 106: unsigned char CH2_remotekey_Latest = 0;
+"107
 [i _CH3_remotekey_Latest
 -> -> 0 `i `uc
 ]
-[; ;1.C: 109: unsigned char CH3_remotekey_Latest = 0;
-[; ;1.C: 110: unsigned char i;
-"111
+[; ;1.C: 107: unsigned char CH3_remotekey_Latest = 0;
+[; ;1.C: 108: unsigned char i;
+"109
 [i _HIndata
 -> -> 0 `i `ui
 ]
-[; ;1.C: 111: unsigned int HIndata = 0;
-"112
+[; ;1.C: 109: unsigned int HIndata = 0;
+"110
 [i _LIndata
 -> -> 0 `i `ui
 ]
-[; ;1.C: 112: unsigned int LIndata = 0;
-[; ;1.C: 114: void led1_debug(void);
-[; ;1.C: 115: void INT_INITIAL(void);
-[; ;1.C: 116: void EX_INT_RisingEdge(void);
-[; ;1.C: 117: void EX_INT_FallingEdge(void);
-[; ;1.C: 118: void OSC_INIT (void);
-[; ;1.C: 119: void WDT_INITIAL (void);
-[; ;1.C: 120: void TIMER0_INITIAL (void);
-[; ;1.C: 121: void TIMER2_INITIAL (void);
-[; ;1.C: 122: unsigned char IAPRead(unsigned char EEAddr);
-[; ;1.C: 123: void IAPWrite(unsigned char EEAddr,unsigned char Data);
-[; ;1.C: 125: void CH1_EEPROM_Write(void);
-[; ;1.C: 126: void CH2_EEPROM_Write(void);
-[; ;1.C: 127: void CH3_EEPROM_Write(void);
-[; ;1.C: 128: void EEPROM_ReadWord(unsigned long *buff,unsigned char data);
-[; ;1.C: 129: void EEPROM_Read(void);
-[; ;1.C: 130: void KEYSCAN(void);
-[; ;1.C: 131: void KEY(void);
-"138
-[v F1094 `(v  1 tf ]
-[v _ISR `IF1094  1 e ]
+[; ;1.C: 110: unsigned int LIndata = 0;
+[; ;1.C: 112: void led1_debug(void);
+[; ;1.C: 113: void INT_INITIAL(void);
+[; ;1.C: 114: void EX_INT_RisingEdge(void);
+[; ;1.C: 115: void EX_INT_FallingEdge(void);
+[; ;1.C: 116: void OSC_INIT (void);
+[; ;1.C: 117: void WDT_INITIAL (void);
+[; ;1.C: 118: void TIMER0_INITIAL (void);
+[; ;1.C: 119: void TIMER2_INITIAL (void);
+[; ;1.C: 120: unsigned char IAPRead(unsigned char EEAddr);
+[; ;1.C: 121: void IAPWrite(unsigned char EEAddr,unsigned char Data);
+[; ;1.C: 123: void CH1_EEPROM_Write(void);
+[; ;1.C: 124: void CH2_EEPROM_Write(void);
+[; ;1.C: 125: void CH3_EEPROM_Write(void);
+[; ;1.C: 126: void EEPROM_ReadWord(unsigned long *buff,unsigned char data);
+[; ;1.C: 127: void EEPROM_Read(void);
+[; ;1.C: 128: void KEYSCAN(void);
+[; ;1.C: 129: void KEY(void);
+"136
+[v F1093 `(v  1 tf ]
+[v _ISR `IF1093  1 e ]
 {
-[; ;1.C: 138: void interrupt ISR(void){
+[; ;1.C: 136: void interrupt ISR(void){
 [e :U _ISR ]
 [f ]
-[; ;1.C: 140: if(INTE && INTF){
-"140
+[; ;1.C: 138: if(INTE && INTF){
+"138
 [e $ ! && _INTE _INTF 87  ]
 {
-[; ;1.C: 141: INTF = 0;
-"141
+[; ;1.C: 139: INTF = 0;
+"139
 [e = _INTF -> -> 0 `i `b ]
-[; ;1.C: 142: INTE = 0;
-"142
+[; ;1.C: 140: INTE = 0;
+"140
 [e = _INTE -> -> 0 `i `b ]
-[; ;1.C: 143: TMR2ON =0;
-"143
+[; ;1.C: 141: TMR2ON =0;
+"141
 [e = _TMR2ON -> -> 0 `i `b ]
-[; ;1.C: 144: if((FLAGs&0x01) == 0){
-"144
+[; ;1.C: 142: if((FLAGs&0x01) == 0){
+"142
 [e $ ! == & -> _FLAGs `i -> 1 `i -> 0 `i 88  ]
 {
-[; ;1.C: 145: Indata = 0;
-"145
+[; ;1.C: 143: Indata = 0;
+"143
 [e = _Indata -> -> 0 `i `ui ]
-[; ;1.C: 146: EX_INT_RisingEdge();
-"146
+[; ;1.C: 144: EX_INT_RisingEdge();
+"144
 [e ( _EX_INT_RisingEdge ..  ]
-"147
+"145
 }
-[; ;1.C: 147: }else if((FLAGs&0x01) == 0x01){
+[; ;1.C: 145: }else if((FLAGs&0x01) == 0x01){
 [e $U 89  ]
 [e :U 88 ]
 [e $ ! == & -> _FLAGs `i -> 1 `i -> 1 `i 90  ]
 {
-[; ;1.C: 148: EX_INT_FallingEdge();
-"148
+[; ;1.C: 146: EX_INT_FallingEdge();
+"146
 [e ( _EX_INT_FallingEdge ..  ]
-[; ;1.C: 149: buff = Indata*53;
-"149
+[; ;1.C: 147: buff = Indata*53;
+"147
 [e = _buff * _Indata -> -> 53 `i `ui ]
-[; ;1.C: 150: Indata = 0;
-"150
+[; ;1.C: 148: Indata = 0;
+"148
 [e = _Indata -> -> 0 `i `ui ]
-[; ;1.C: 152: if( ((FLAGs&0x10) == 0) &&
-[; ;1.C: 153: ((FLAGs&0x20) == 0) &&
-[; ;1.C: 154: ((FLAGs&0x40) == 0)
-[; ;1.C: 155: ){
-"155
+[; ;1.C: 150: if( ((FLAGs&0x10) == 0) &&
+[; ;1.C: 151: ((FLAGs&0x20) == 0) &&
+[; ;1.C: 152: ((FLAGs&0x40) == 0)
+[; ;1.C: 153: ){
+"153
 [e $ ! && && == & -> _FLAGs `i -> 16 `i -> 0 `i == & -> _FLAGs `i -> 32 `i -> 0 `i == & -> _FLAGs `i -> 64 `i -> 0 `i 91  ]
 {
-[; ;1.C: 156: if((FLAGs&0x08) == 0x08){
-"156
+[; ;1.C: 154: if((FLAGs&0x08) == 0x08){
+"154
 [e $ ! == & -> _FLAGs `i -> 8 `i -> 8 `i 92  ]
 {
-[; ;1.C: 157: if(num < 24){
-"157
+[; ;1.C: 155: if(num < 24){
+"155
 [e $ ! < -> _num `i -> 24 `i 93  ]
 {
-[; ;1.C: 158: if((buff>200)&&(buff<600)){
-"158
+[; ;1.C: 156: if((buff>200)&&(buff<600)){
+"156
 [e $ ! && > _buff -> -> 200 `i `ui < _buff -> -> 600 `i `ui 94  ]
 {
-[; ;1.C: 159: remotekey = remotekey<<1;
-"159
+[; ;1.C: 157: remotekey = remotekey<<1;
+"157
 [e = _remotekey << _remotekey -> 1 `i ]
-[; ;1.C: 160: remotekey |= 0x00000001;
-"160
+[; ;1.C: 158: remotekey |= 0x00000001;
+"158
 [e =| _remotekey -> -> -> 1 `i `l `ul ]
-"161
+"159
 }
 [e :U 94 ]
-[; ;1.C: 161: }
-[; ;1.C: 162: if((buff>700)&&(buff<1800)){
-"162
+[; ;1.C: 159: }
+[; ;1.C: 160: if((buff>700)&&(buff<1800)){
+"160
 [e $ ! && > _buff -> -> 700 `i `ui < _buff -> -> 1800 `i `ui 95  ]
 {
-[; ;1.C: 163: remotekey = remotekey<<1;
-"163
+[; ;1.C: 161: remotekey = remotekey<<1;
+"161
 [e = _remotekey << _remotekey -> 1 `i ]
-"164
+"162
 }
 [e :U 95 ]
-[; ;1.C: 164: }
-[; ;1.C: 165: num++;
-"165
+[; ;1.C: 162: }
+[; ;1.C: 163: num++;
+"163
 [e ++ _num -> -> 1 `i `uc ]
-"166
+"164
 }
 [e :U 93 ]
-[; ;1.C: 166: }
-[; ;1.C: 168: if(num >= 24){
-"168
+[; ;1.C: 164: }
+[; ;1.C: 166: if(num >= 24){
+"166
 [e $ ! >= -> _num `i -> 24 `i 96  ]
 {
-[; ;1.C: 170: if(remotekey>0){
-"170
+[; ;1.C: 168: if(remotekey>0){
+"168
 [e $ ! > _remotekey -> -> -> 0 `i `l `ul 97  ]
 {
-[; ;1.C: 171: if(Match_remotekey == remotekey){
-"171
+[; ;1.C: 169: if(Match_remotekey == remotekey){
+"169
 [e $ ! == _Match_remotekey _remotekey 98  ]
 {
-[; ;1.C: 172: remotekey_Receive_num++;
-"172
+[; ;1.C: 170: remotekey_Receive_num++;
+"170
 [e ++ _remotekey_Receive_num -> -> 1 `i `uc ]
-[; ;1.C: 173: match_slice = 0;
-"173
+[; ;1.C: 171: match_slice = 0;
+"171
 [e = _match_slice -> -> 0 `i `uc ]
-"174
+"172
 }
 [e :U 98 ]
-[; ;1.C: 174: }
-[; ;1.C: 175: if(remotekey_Receive_num == 0) Match_remotekey = remotekey;
-"175
+[; ;1.C: 172: }
+[; ;1.C: 173: if(remotekey_Receive_num == 0) Match_remotekey = remotekey;
+"173
 [e $ ! == -> _remotekey_Receive_num `i -> 0 `i 99  ]
 [e = _Match_remotekey _remotekey ]
 [e :U 99 ]
-"176
+"174
 }
 [e :U 97 ]
-[; ;1.C: 176: }
-[; ;1.C: 178: Ctrl_remotekey = remotekey;
-"178
+[; ;1.C: 174: }
+[; ;1.C: 176: Ctrl_remotekey = remotekey;
+"176
 [e = _Ctrl_remotekey _remotekey ]
-[; ;1.C: 180: if( ((PRESSED&0x10) == 0) &&
-[; ;1.C: 181: ((PRESSED&0x20) == 0) &&
-[; ;1.C: 182: ((PRESSED&0x40) == 0)
-[; ;1.C: 183: ){
-"183
+[; ;1.C: 178: if( ((PRESSED&0x10) == 0) &&
+[; ;1.C: 179: ((PRESSED&0x20) == 0) &&
+[; ;1.C: 180: ((PRESSED&0x40) == 0)
+[; ;1.C: 181: ){
+"181
 [e $ ! && && == & -> _PRESSED `i -> 16 `i -> 0 `i == & -> _PRESSED `i -> 32 `i -> 0 `i == & -> _PRESSED `i -> 64 `i -> 0 `i 100  ]
 {
-[; ;1.C: 184: if((FLAGs&0x10) == 0){
-"184
+[; ;1.C: 182: if((FLAGs&0x10) == 0){
+"182
 [e $ ! == & -> _FLAGs `i -> 16 `i -> 0 `i 101  ]
 {
-[; ;1.C: 185: for(buff=0;buff<CH1_remotekey_num;buff++){
-"185
+[; ;1.C: 183: for(buff=0;buff<CH1_remotekey_num;buff++){
+"183
 {
 [e = _buff -> -> 0 `i `ui ]
 [e $U 105  ]
 [e :U 102 ]
 {
-[; ;1.C: 186: if(Ctrl_remotekey == CH1_remotekey[buff]){
-"186
+[; ;1.C: 184: if(Ctrl_remotekey == CH1_remotekey[buff]){
+"184
 [e $ ! == _Ctrl_remotekey *U + &U _CH1_remotekey * -> _buff `ux -> -> # *U &U _CH1_remotekey `ui `ux 106  ]
 {
-[; ;1.C: 187: FLAGs |= 0x10;
-"187
+[; ;1.C: 185: FLAGs |= 0x10;
+"185
 [e =| _FLAGs -> -> 16 `i `uc ]
-[; ;1.C: 188: Key_dealed_counter = 0;
-"188
-[e = _Key_dealed_counter -> -> 0 `i `uc ]
-[; ;1.C: 189: led1_debug();
-"189
+[; ;1.C: 186: led1_debug();
+"186
 [e ( _led1_debug ..  ]
-[; ;1.C: 190: PA7 = ~PA7;
-"190
+[; ;1.C: 187: PA7 = ~PA7;
+"187
 [e = _PA7 ! _PA7 ]
-[; ;1.C: 191: CH1_remotekey_Latest = buff;
-"191
+[; ;1.C: 188: CH1_remotekey_Latest = buff;
+"188
 [e = _CH1_remotekey_Latest -> _buff `uc ]
-"192
+"189
 }
 [e :U 106 ]
-"193
+"190
 }
-"185
+"183
 [e ++ _buff -> -> 1 `i `ui ]
 [e :U 105 ]
 [e $ < _buff -> _CH1_remotekey_num `ui 102  ]
 [e :U 103 ]
-"193
+"190
 }
-"194
+"191
 }
 [e :U 101 ]
-[; ;1.C: 192: }
-[; ;1.C: 193: }
-[; ;1.C: 194: }
-[; ;1.C: 195: if((FLAGs&0x20) == 0){
-"195
+[; ;1.C: 189: }
+[; ;1.C: 190: }
+[; ;1.C: 191: }
+[; ;1.C: 192: if((FLAGs&0x20) == 0){
+"192
 [e $ ! == & -> _FLAGs `i -> 32 `i -> 0 `i 107  ]
 {
-[; ;1.C: 196: for(buff=0;buff<CH2_remotekey_num;buff++){
-"196
+[; ;1.C: 193: for(buff=0;buff<CH2_remotekey_num;buff++){
+"193
 {
 [e = _buff -> -> 0 `i `ui ]
 [e $U 111  ]
 [e :U 108 ]
 {
-[; ;1.C: 197: if(Ctrl_remotekey == CH2_remotekey[buff]){
-"197
+[; ;1.C: 194: if(Ctrl_remotekey == CH2_remotekey[buff]){
+"194
 [e $ ! == _Ctrl_remotekey *U + &U _CH2_remotekey * -> _buff `ux -> -> # *U &U _CH2_remotekey `ui `ux 112  ]
 {
-[; ;1.C: 198: FLAGs |= 0x20;
-"198
+[; ;1.C: 195: FLAGs |= 0x20;
+"195
 [e =| _FLAGs -> -> 32 `i `uc ]
-[; ;1.C: 199: Key_dealed_counter = 0;
-"199
-[e = _Key_dealed_counter -> -> 0 `i `uc ]
-[; ;1.C: 200: led1_debug();
-"200
+[; ;1.C: 196: led1_debug();
+"196
 [e ( _led1_debug ..  ]
-[; ;1.C: 201: PA6 = ~PA6;
-"201
+[; ;1.C: 197: PA6 = ~PA6;
+"197
 [e = _PA6 ! _PA6 ]
-[; ;1.C: 202: CH2_remotekey_Latest = buff;
-"202
+[; ;1.C: 198: CH2_remotekey_Latest = buff;
+"198
 [e = _CH2_remotekey_Latest -> _buff `uc ]
-"203
+"199
 }
 [e :U 112 ]
-"204
+"200
 }
-"196
+"193
 [e ++ _buff -> -> 1 `i `ui ]
 [e :U 111 ]
 [e $ < _buff -> _CH2_remotekey_num `ui 108  ]
 [e :U 109 ]
-"204
+"200
 }
-"205
+"201
 }
 [e :U 107 ]
-[; ;1.C: 203: }
-[; ;1.C: 204: }
-[; ;1.C: 205: }
-[; ;1.C: 206: if((FLAGs&0x40) == 0){
-"206
+[; ;1.C: 199: }
+[; ;1.C: 200: }
+[; ;1.C: 201: }
+[; ;1.C: 202: if((FLAGs&0x40) == 0){
+"202
 [e $ ! == & -> _FLAGs `i -> 64 `i -> 0 `i 113  ]
 {
-[; ;1.C: 207: for(buff=0;buff<CH3_remotekey_num;buff++){
-"207
+[; ;1.C: 203: for(buff=0;buff<CH3_remotekey_num;buff++){
+"203
 {
 [e = _buff -> -> 0 `i `ui ]
 [e $U 117  ]
 [e :U 114 ]
 {
-[; ;1.C: 208: if(Ctrl_remotekey == CH3_remotekey[buff]){
-"208
+[; ;1.C: 204: if(Ctrl_remotekey == CH3_remotekey[buff]){
+"204
 [e $ ! == _Ctrl_remotekey *U + &U _CH3_remotekey * -> _buff `ux -> -> # *U &U _CH3_remotekey `ui `ux 118  ]
 {
-[; ;1.C: 209: FLAGs |= 0x40;
-"209
+[; ;1.C: 205: FLAGs |= 0x40;
+"205
 [e =| _FLAGs -> -> 64 `i `uc ]
-[; ;1.C: 210: Key_dealed_counter = 0;
-"210
-[e = _Key_dealed_counter -> -> 0 `i `uc ]
-[; ;1.C: 211: led1_debug();
-"211
+[; ;1.C: 206: led1_debug();
+"206
 [e ( _led1_debug ..  ]
-[; ;1.C: 212: PA5 = ~PA5;
-"212
+[; ;1.C: 207: PA5 = ~PA5;
+"207
 [e = _PA5 ! _PA5 ]
-[; ;1.C: 213: CH3_remotekey_Latest = buff;
-"213
+[; ;1.C: 208: CH3_remotekey_Latest = buff;
+"208
 [e = _CH3_remotekey_Latest -> _buff `uc ]
-"214
+"209
 }
 [e :U 118 ]
-"215
+"210
 }
-"207
+"203
 [e ++ _buff -> -> 1 `i `ui ]
 [e :U 117 ]
 [e $ < _buff -> _CH3_remotekey_num `ui 114  ]
 [e :U 115 ]
-"215
+"210
 }
-"216
+"211
 }
 [e :U 113 ]
-"217
+"212
 }
 [e :U 100 ]
-[; ;1.C: 214: }
-[; ;1.C: 215: }
-[; ;1.C: 216: }
-[; ;1.C: 217: }
-[; ;1.C: 218: FLAGs &= ~0x08;
-"218
+[; ;1.C: 209: }
+[; ;1.C: 210: }
+[; ;1.C: 211: }
+[; ;1.C: 212: }
+[; ;1.C: 213: FLAGs &= ~0x08;
+"213
 [e =& _FLAGs -> ~ -> 8 `i `uc ]
-[; ;1.C: 219: Indata = 0;
-"219
+[; ;1.C: 214: Indata = 0;
+"214
 [e = _Indata -> -> 0 `i `ui ]
-[; ;1.C: 220: num = 0;
-"220
+[; ;1.C: 215: num = 0;
+"215
 [e = _num -> -> 0 `i `uc ]
-[; ;1.C: 221: remotekey = 0;
-"221
+[; ;1.C: 216: remotekey = 0;
+"216
 [e = _remotekey -> -> -> 0 `i `l `ul ]
-[; ;1.C: 222: Ctrl_remotekey = 0;
-"222
+[; ;1.C: 217: Ctrl_remotekey = 0;
+"217
 [e = _Ctrl_remotekey -> -> -> 0 `i `l `ul ]
-"223
+"218
 }
 [e :U 96 ]
-"224
+"219
 }
 [e :U 92 ]
-[; ;1.C: 223: }
-[; ;1.C: 224: }
-[; ;1.C: 225: if((FLAGs&0x08) == 0){
-"225
-[e $ ! == & -> _FLAGs `i -> 8 `i -> 0 `i 119  ]
-{
-[; ;1.C: 226: if(buff > 7000){
-"226
-[e $ ! > _buff -> -> 7000 `i `ui 120  ]
-{
-[; ;1.C: 227: FLAGs |= 0x08;
-"227
-[e =| _FLAGs -> -> 8 `i `uc ]
-[; ;1.C: 228: num = 0;
-"228
-[e = _num -> -> 0 `i `uc ]
-[; ;1.C: 229: remotekey = 0;
-"229
-[e = _remotekey -> -> -> 0 `i `l `ul ]
-[; ;1.C: 230: if( ((FLAGs&0x10) == 0x10) ||
-[; ;1.C: 231: ((FLAGs&0x20) == 0x20) ||
-[; ;1.C: 232: ((FLAGs&0x40) == 0x40)
-[; ;1.C: 233: ){
-"233
-[e $ ! || || == & -> _FLAGs `i -> 16 `i -> 16 `i == & -> _FLAGs `i -> 32 `i -> 32 `i == & -> _FLAGs `i -> 64 `i -> 64 `i 121  ]
-{
-[; ;1.C: 234: remotekey_slice = 0;
-"234
-[e = _remotekey_slice -> -> 0 `i `uc ]
-[; ;1.C: 235: FLAGs &= ~0x08;
-"235
-[e =& _FLAGs -> ~ -> 8 `i `uc ]
-"236
-}
-[e :U 121 ]
-"237
-}
-[e :U 120 ]
-"238
-}
-[e :U 119 ]
-"239
+"220
 }
 [e :U 91 ]
-"240
+[; ;1.C: 218: }
+[; ;1.C: 219: }
+[; ;1.C: 220: }
+[; ;1.C: 221: if((FLAGs&0x08) == 0){
+"221
+[e $ ! == & -> _FLAGs `i -> 8 `i -> 0 `i 119  ]
+{
+[; ;1.C: 222: if(buff > 7000){
+"222
+[e $ ! > _buff -> -> 7000 `i `ui 120  ]
+{
+[; ;1.C: 223: FLAGs |= 0x08;
+"223
+[e =| _FLAGs -> -> 8 `i `uc ]
+[; ;1.C: 224: num = 0;
+"224
+[e = _num -> -> 0 `i `uc ]
+[; ;1.C: 225: remotekey = 0;
+"225
+[e = _remotekey -> -> -> 0 `i `l `ul ]
+[; ;1.C: 227: if( ((FLAGs&0x10) == 0x10) ||
+[; ;1.C: 228: ((FLAGs&0x20) == 0x20) ||
+[; ;1.C: 229: ((FLAGs&0x40) == 0x40)
+[; ;1.C: 230: ){
+"230
+[e $ ! || || == & -> _FLAGs `i -> 16 `i -> 16 `i == & -> _FLAGs `i -> 32 `i -> 32 `i == & -> _FLAGs `i -> 64 `i -> 64 `i 121  ]
+{
+[; ;1.C: 231: remotekey_slice = 0;
+"231
+[e = _remotekey_slice -> -> 0 `i `uc ]
+[; ;1.C: 232: FLAGs &= ~0x08;
+"232
+[e =& _FLAGs -> ~ -> 8 `i `uc ]
+"233
+}
+[e :U 121 ]
+"234
+}
+[e :U 120 ]
+"235
+}
+[e :U 119 ]
+"236
 }
 [e :U 90 ]
-"241
+"237
 [e :U 89 ]
+[; ;1.C: 233: }
+[; ;1.C: 234: }
+[; ;1.C: 235: }
 [; ;1.C: 236: }
-[; ;1.C: 237: }
-[; ;1.C: 238: }
-[; ;1.C: 239: }
-[; ;1.C: 240: }
-[; ;1.C: 241: TMR2ON =1;
+[; ;1.C: 237: TMR2ON =1;
 [e = _TMR2ON -> -> 1 `i `b ]
-[; ;1.C: 242: INTE = 1;
-"242
+[; ;1.C: 238: INTE = 1;
+"238
 [e = _INTE -> -> 1 `i `b ]
-"243
+"239
 }
 [e :U 87 ]
-[; ;1.C: 243: }
-[; ;1.C: 246: if(TMR2IE && TMR2IF){
-"246
+[; ;1.C: 239: }
+[; ;1.C: 242: if(TMR2IE && TMR2IF){
+"242
 [e $ ! && _TMR2IE _TMR2IF 122  ]
 {
-[; ;1.C: 247: TMR2IF = 0;
-"247
+[; ;1.C: 243: TMR2IF = 0;
+"243
 [e = _TMR2IF -> -> 0 `i `b ]
-[; ;1.C: 249: if((FLAGs&0x02) == 0x02){
-"249
+[; ;1.C: 245: if((FLAGs&0x02) == 0x02){
+"245
 [e $ ! == & -> _FLAGs `i -> 2 `i -> 2 `i 123  ]
 {
-[; ;1.C: 250: Indata++;
-"250
+[; ;1.C: 246: Indata++;
+"246
 [e ++ _Indata -> -> 1 `i `ui ]
-"251
+"247
 }
+[; ;1.C: 247: }else{
+[e $U 124  ]
 [e :U 123 ]
-[; ;1.C: 251: }
-[; ;1.C: 252: if(PA2 == 1){
-"252
-[e $ ! == -> _PA2 `i -> 1 `i 124  ]
 {
-[; ;1.C: 253: FLAGs |= 0x02;
-"253
-[e =| _FLAGs -> -> 2 `i `uc ]
-[; ;1.C: 254: remotekey_slice = 0;
-"254
-[e = _remotekey_slice -> -> 0 `i `uc ]
-[; ;1.C: 255: Key_dealed_counter = 0;
-"255
-[e = _Key_dealed_counter -> -> 0 `i `uc ]
+[; ;1.C: 256: if((FLAGs&0x80) == 0){
+"256
+[e $ ! == & -> _FLAGs `i -> 128 `i -> 0 `i 125  ]
+{
+[; ;1.C: 257: if(PA2 == 1){
 "257
-}
-[e :U 124 ]
-"295
-}
-[e :U 122 ]
-[; ;1.C: 257: }
-[; ;1.C: 295: }
-[; ;1.C: 298: if(T0IE && T0IF){
-"298
-[e $ ! && _T0IE _T0IF 125  ]
+[e $ ! == -> _PA2 `i -> 1 `i 126  ]
 {
-[; ;1.C: 299: T0IF = 0;
-"299
-[e = _T0IF -> -> 0 `i `b ]
-[; ;1.C: 300: ms16_counter ++;
-"300
-[e ++ _ms16_counter -> -> 1 `i `uc ]
-[; ;1.C: 303: if( ((FLAGs&0x10) == 0x10) ||
-[; ;1.C: 304: ((FLAGs&0x20) == 0x20) ||
-[; ;1.C: 305: ((FLAGs&0x40) == 0x40)
-[; ;1.C: 306: ){
-"306
-[e $ ! || || == & -> _FLAGs `i -> 16 `i -> 16 `i == & -> _FLAGs `i -> 32 `i -> 32 `i == & -> _FLAGs `i -> 64 `i -> 64 `i 126  ]
-{
-[; ;1.C: 307: if(PA2 == 0) remotekey_slice++;
-"307
-[e $ ! == -> _PA2 `i -> 0 `i 127  ]
-[e ++ _remotekey_slice -> -> 1 `i `uc ]
-[e :U 127 ]
-[; ;1.C: 308: if(PA2 == 1) remotekey_slice = 0;
-"308
-[e $ ! == -> _PA2 `i -> 1 `i 128  ]
-[e = _remotekey_slice -> -> 0 `i `uc ]
-[e :U 128 ]
-[; ;1.C: 309: if(Key_dealed_counter<255) Key_dealed_counter++;
-"309
-[e $ ! < -> _Key_dealed_counter `i -> 255 `i 129  ]
-[e ++ _Key_dealed_counter -> -> 1 `i `uc ]
-[e :U 129 ]
-[; ;1.C: 310: if( (remotekey_slice>(150/8)) ||
-[; ;1.C: 311: (Key_dealed_counter > (1024/8))
-[; ;1.C: 312: ){
-"312
-[e $ ! || > -> _remotekey_slice `i / -> 150 `i -> 8 `i > -> _Key_dealed_counter `i / -> 1024 `i -> 8 `i 130  ]
-{
-[; ;1.C: 313: remotekey_slice = 0;
-"313
-[e = _remotekey_slice -> -> 0 `i `uc ]
-[; ;1.C: 315: FLAGs &= ~0x02;
-"315
-[e =& _FLAGs -> ~ -> 2 `i `uc ]
-[; ;1.C: 316: FLAGs &= ~0x10;
-"316
-[e =& _FLAGs -> ~ -> 16 `i `uc ]
-[; ;1.C: 317: FLAGs &= ~0x20;
-"317
-[e =& _FLAGs -> ~ -> 32 `i `uc ]
-[; ;1.C: 318: FLAGs &= ~0x40;
-"318
-[e =& _FLAGs -> ~ -> 64 `i `uc ]
-"319
+[; ;1.C: 258: HIndata++;
+"258
+[e ++ _HIndata -> -> 1 `i `ui ]
+"259
 }
-[e :U 130 ]
-"320
-}
+[; ;1.C: 259: }else{
+[e $U 127  ]
 [e :U 126 ]
-[; ;1.C: 319: }
-[; ;1.C: 320: }
-[; ;1.C: 323: if( ((PRESSED&0x10) == 0x10) ||
-[; ;1.C: 324: ((PRESSED&0x20) == 0x20) ||
-[; ;1.C: 325: ((PRESSED&0x40) == 0x40)
-[; ;1.C: 326: ){
-"326
-[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 131  ]
 {
-[; ;1.C: 327: match_slice++;
-"327
-[e ++ _match_slice -> -> 1 `i `uc ]
-[; ;1.C: 328: if(match_slice>(150/8)){
-"328
-[e $ ! > -> _match_slice `i / -> 150 `i -> 8 `i 132  ]
+[; ;1.C: 260: buff = HIndata*53;
+"260
+[e = _buff * _HIndata -> -> 53 `i `ui ]
+[; ;1.C: 261: HIndata = 0;
+"261
+[e = _HIndata -> -> 0 `i `ui ]
+[; ;1.C: 262: if( ((buff>200)&&(buff<600)) ||
+[; ;1.C: 263: ((buff>700)&&(buff<1800))
+[; ;1.C: 264: ){
+"264
+[e $ ! || && > _buff -> -> 200 `i `ui < _buff -> -> 600 `i `ui && > _buff -> -> 700 `i `ui < _buff -> -> 1800 `i `ui 128  ]
 {
-[; ;1.C: 329: match_slice = 0;
-"329
-[e = _match_slice -> -> 0 `i `uc ]
-[; ;1.C: 330: remotekey_Receive_num = 0;
-"330
-[e = _remotekey_Receive_num -> -> 0 `i `uc ]
-"331
+[; ;1.C: 265: FLAGs |= 0x80;
+"265
+[e =| _FLAGs -> -> 128 `i `uc ]
+"266
 }
-[e :U 132 ]
-"332
-}
-[e :U 131 ]
-[; ;1.C: 331: }
-[; ;1.C: 332: }
-[; ;1.C: 335: if((FLAGs&0x02) == 0){
-"335
-[e $ ! == & -> _FLAGs `i -> 2 `i -> 0 `i 133  ]
+[; ;1.C: 266: }else{
+[e $U 129  ]
+[e :U 128 ]
 {
-[; ;1.C: 336: EE_Buff = ms16_counter%8;
-"336
-[e = _EE_Buff -> % -> _ms16_counter `i -> 8 `i `uc ]
-[; ;1.C: 337: if(EE_Buff == 1){
-"337
-[e $ ! == -> _EE_Buff `i -> 1 `i 134  ]
-{
-[; ;1.C: 338: PA3 = 0;
-"338
-[e = _PA3 -> -> 0 `i `b ]
-[; ;1.C: 340: EX_INT_FallingEdge();
-"340
-[e ( _EX_INT_FallingEdge ..  ]
-[; ;1.C: 341: INTE =1;
-"341
-[e = _INTE -> -> 1 `i `b ]
-[; ;1.C: 342: TMR2ON =1;
-"342
-[e = _TMR2ON -> -> 1 `i `b ]
-"343
+[; ;1.C: 267: i = 0;
+"267
+[e = _i -> -> 0 `i `uc ]
+"268
 }
-[e :U 134 ]
-[; ;1.C: 343: }
-[; ;1.C: 344: if(EE_Buff == 3){
-"344
-[e $ ! == -> _EE_Buff `i -> 3 `i 135  ]
-{
-[; ;1.C: 345: PA3 = 1;
-"345
-[e = _PA3 -> -> 1 `i `b ]
-[; ;1.C: 346: TMR2ON =0;
-"346
-[e = _TMR2ON -> -> 0 `i `b ]
-[; ;1.C: 347: INTE =0;
-"347
-[e = _INTE -> -> 0 `i `b ]
-"348
+[e :U 129 ]
+"269
 }
-[e :U 135 ]
-"349
-}
-[; ;1.C: 348: }
-[; ;1.C: 349: }else{
-[e $U 136  ]
-[e :U 133 ]
-{
-[; ;1.C: 350: PA3 = 0;
-"350
-[e = _PA3 -> -> 0 `i `b ]
-[; ;1.C: 351: INTE =1;
-"351
-[e = _INTE -> -> 1 `i `b ]
-[; ;1.C: 352: TMR2ON =1;
-"352
-[e = _TMR2ON -> -> 1 `i `b ]
-"353
-}
-[e :U 136 ]
-[; ;1.C: 353: }
-[; ;1.C: 356: if(ms16_counter%2 == 0){
-"356
-[e $ ! == % -> _ms16_counter `i -> 2 `i -> 0 `i 137  ]
-{
-[; ;1.C: 357: KEYSCAN();
-"357
-[e ( _KEYSCAN ..  ]
-[; ;1.C: 358: KEY();
-"358
-[e ( _KEY ..  ]
-"359
-}
-[e :U 137 ]
-[; ;1.C: 359: }
-[; ;1.C: 363: if(ms16_counter >= 120){
-"363
-[e $ ! >= -> _ms16_counter `i -> 120 `i 138  ]
-{
-[; ;1.C: 364: ms16_counter = 0;
-"364
-[e = _ms16_counter -> -> 0 `i `uc ]
-[; ;1.C: 367: if( ((PRESSED&0x10) == 0x10) ||
-[; ;1.C: 368: ((PRESSED&0x20) == 0x20) ||
-[; ;1.C: 369: ((PRESSED&0x40) == 0x40)
-[; ;1.C: 370: ){
-"370
-[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 139  ]
-{
-[; ;1.C: 371: if(KEY_Match_counter<4){
-"371
-[e $ ! < -> _KEY_Match_counter `i -> 4 `i 140  ]
-{
-[; ;1.C: 372: KEY_Match_counter++;
-"372
-[e ++ _KEY_Match_counter -> -> 1 `i `uc ]
-"373
-}
-[e :U 140 ]
-[; ;1.C: 373: }
-[; ;1.C: 374: LONGPRESS_OverTime_Counter++;
-"374
-[e ++ _LONGPRESS_OverTime_Counter -> -> 1 `i `uc ]
-[; ;1.C: 375: if(LONGPRESS_OverTime_Counter > 15){
-"375
-[e $ ! > -> _LONGPRESS_OverTime_Counter `i -> 15 `i 141  ]
-{
-[; ;1.C: 376: LONGPRESS_OverTime_Counter = 0;
-"376
-[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
-[; ;1.C: 377: if((PRESSED&0x10) == 0x10){
-"377
-[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 142  ]
-{
-[; ;1.C: 378: CH1_remotekey[CH1_remotekey_Latest] = CH1_remotekey[CH1_remotekey_num-1];
-"378
-[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_Latest `ux -> -> # *U &U _CH1_remotekey `ui `ux *U + &U _CH1_remotekey * -> -> - -> _CH1_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux ]
-[; ;1.C: 379: CH1_remotekey[CH1_remotekey_num-1] = 0xFFFFFFFF;
-"379
-[e = *U + &U _CH1_remotekey * -> -> - -> _CH1_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 380: if(CH1_remotekey_num>0) CH1_remotekey_num--;
-"380
-[e $ ! > -> _CH1_remotekey_num `i -> 0 `i 143  ]
-[e -- _CH1_remotekey_num -> -> 1 `i `uc ]
-[e :U 143 ]
-[; ;1.C: 381: PRESSED &= ~0x10;
-"381
-[e =& _PRESSED -> ~ -> 16 `i `uc ]
-[; ;1.C: 382: PA7 = 1;
-"382
-[e = _PA7 -> -> 1 `i `b ]
-"383
-}
-[e :U 142 ]
-[; ;1.C: 383: }
-[; ;1.C: 384: if((PRESSED&0x20) == 0x20){
-"384
-[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 144  ]
-{
-[; ;1.C: 385: CH2_remotekey[CH2_remotekey_Latest] = CH2_remotekey[CH2_remotekey_num-1];
-"385
-[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_Latest `ux -> -> # *U &U _CH2_remotekey `ui `ux *U + &U _CH2_remotekey * -> -> - -> _CH2_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux ]
-[; ;1.C: 386: CH2_remotekey[CH2_remotekey_num-1] = 0xFFFFFFFF;
-"386
-[e = *U + &U _CH2_remotekey * -> -> - -> _CH2_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 387: if(CH2_remotekey_num>0) CH2_remotekey_num--;
-"387
-[e $ ! > -> _CH2_remotekey_num `i -> 0 `i 145  ]
-[e -- _CH2_remotekey_num -> -> 1 `i `uc ]
-[e :U 145 ]
-[; ;1.C: 388: PRESSED &= ~0x20;
-"388
-[e =& _PRESSED -> ~ -> 32 `i `uc ]
-[; ;1.C: 389: PA6 = 1;
-"389
-[e = _PA6 -> -> 1 `i `b ]
-"390
-}
-[e :U 144 ]
-[; ;1.C: 390: }
-[; ;1.C: 391: if((PRESSED&0x40) == 0x40){
-"391
-[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 146  ]
-{
-[; ;1.C: 392: CH3_remotekey[CH3_remotekey_Latest] = CH3_remotekey[CH3_remotekey_num-1];
-"392
-[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_Latest `ux -> -> # *U &U _CH3_remotekey `ui `ux *U + &U _CH3_remotekey * -> -> - -> _CH3_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux ]
-[; ;1.C: 393: CH3_remotekey[CH3_remotekey_num-1] = 0xFFFFFFFF;
-"393
-[e = *U + &U _CH3_remotekey * -> -> - -> _CH3_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 394: if(CH3_remotekey_num>0) CH3_remotekey_num--;
-"394
-[e $ ! > -> _CH3_remotekey_num `i -> 0 `i 147  ]
-[e -- _CH3_remotekey_num -> -> 1 `i `uc ]
-[e :U 147 ]
-[; ;1.C: 395: PRESSED &= ~0x40;
-"395
-[e =& _PRESSED -> ~ -> 64 `i `uc ]
-[; ;1.C: 396: PA5 = 1;
-"396
-[e = _PA5 -> -> 1 `i `b ]
-"397
-}
-[e :U 146 ]
-[; ;1.C: 397: }
-[; ;1.C: 398: PC0 = 1;
-"398
-[e = _PC0 -> -> 1 `i `b ]
-"399
-}
-[e :U 141 ]
-"400
-}
-[e :U 139 ]
-"401
-}
-[e :U 138 ]
-"402
+[e :U 127 ]
+"270
 }
 [e :U 125 ]
-[; ;1.C: 399: }
-[; ;1.C: 400: }
-[; ;1.C: 401: }
-[; ;1.C: 402: }
-[; ;1.C: 403: }
-"403
+[; ;1.C: 268: }
+[; ;1.C: 269: }
+[; ;1.C: 270: }
+[; ;1.C: 271: if((FLAGs&0x80) == 0x80){
+"271
+[e $ ! == & -> _FLAGs `i -> 128 `i -> 128 `i 130  ]
+{
+[; ;1.C: 272: if(PA2 == 0){
+"272
+[e $ ! == -> _PA2 `i -> 0 `i 131  ]
+{
+[; ;1.C: 273: LIndata++;
+"273
+[e ++ _LIndata -> -> 1 `i `ui ]
+"274
+}
+[; ;1.C: 274: }else{
+[e $U 132  ]
+[e :U 131 ]
+{
+[; ;1.C: 275: buff = LIndata*53;
+"275
+[e = _buff * _LIndata -> -> 53 `i `ui ]
+[; ;1.C: 276: LIndata = 0;
+"276
+[e = _LIndata -> -> 0 `i `ui ]
+[; ;1.C: 277: if( ((buff>200)&&(buff<600)) ||
+[; ;1.C: 278: ((buff>700)&&(buff<1800))
+[; ;1.C: 279: ){
+"279
+[e $ ! || && > _buff -> -> 200 `i `ui < _buff -> -> 600 `i `ui && > _buff -> -> 700 `i `ui < _buff -> -> 1800 `i `ui 133  ]
+{
+[; ;1.C: 280: i++;
+"280
+[e ++ _i -> -> 1 `i `uc ]
+"281
+}
+[; ;1.C: 281: }else{
+[e $U 134  ]
+[e :U 133 ]
+{
+[; ;1.C: 282: i = 0;
+"282
+[e = _i -> -> 0 `i `uc ]
+"283
+}
+[e :U 134 ]
+[; ;1.C: 283: }
+[; ;1.C: 284: FLAGs &= ~0x80;
+"284
+[e =& _FLAGs -> ~ -> 128 `i `uc ]
+"285
+}
+[e :U 132 ]
+"286
+}
+[e :U 130 ]
+[; ;1.C: 285: }
+[; ;1.C: 286: }
+[; ;1.C: 287: if(i>3){
+"287
+[e $ ! > -> _i `i -> 3 `i 135  ]
+{
+[; ;1.C: 288: FLAGs |= 0x02;
+"288
+[e =| _FLAGs -> -> 2 `i `uc ]
+[; ;1.C: 289: i = 0;
+"289
+[e = _i -> -> 0 `i `uc ]
+"291
+}
+[e :U 135 ]
+"292
+}
+[e :U 124 ]
+"293
+}
+[e :U 122 ]
+[; ;1.C: 291: }
+[; ;1.C: 292: }
+[; ;1.C: 293: }
+[; ;1.C: 296: if(T0IE && T0IF){
+"296
+[e $ ! && _T0IE _T0IF 136  ]
+{
+[; ;1.C: 297: T0IF = 0;
+"297
+[e = _T0IF -> -> 0 `i `b ]
+[; ;1.C: 298: ms16_counter ++;
+"298
+[e ++ _ms16_counter -> -> 1 `i `uc ]
+[; ;1.C: 301: if( ((FLAGs&0x10) == 0x10) ||
+[; ;1.C: 302: ((FLAGs&0x20) == 0x20) ||
+[; ;1.C: 303: ((FLAGs&0x40) == 0x40)
+[; ;1.C: 304: ){
+"304
+[e $ ! || || == & -> _FLAGs `i -> 16 `i -> 16 `i == & -> _FLAGs `i -> 32 `i -> 32 `i == & -> _FLAGs `i -> 64 `i -> 64 `i 137  ]
+{
+[; ;1.C: 305: remotekey_slice++;
+"305
+[e ++ _remotekey_slice -> -> 1 `i `uc ]
+[; ;1.C: 306: if( remotekey_slice>(110/8)){
+"306
+[e $ ! > -> _remotekey_slice `i / -> 110 `i -> 8 `i 138  ]
+{
+[; ;1.C: 307: remotekey_slice = 0;
+"307
+[e = _remotekey_slice -> -> 0 `i `uc ]
+[; ;1.C: 309: FLAGs &= ~0x02;
+"309
+[e =& _FLAGs -> ~ -> 2 `i `uc ]
+[; ;1.C: 310: FLAGs &= ~0x10;
+"310
+[e =& _FLAGs -> ~ -> 16 `i `uc ]
+[; ;1.C: 311: FLAGs &= ~0x20;
+"311
+[e =& _FLAGs -> ~ -> 32 `i `uc ]
+[; ;1.C: 312: FLAGs &= ~0x40;
+"312
+[e =& _FLAGs -> ~ -> 64 `i `uc ]
+"313
+}
+[e :U 138 ]
+"314
+}
+[e :U 137 ]
+[; ;1.C: 313: }
+[; ;1.C: 314: }
+[; ;1.C: 316: if( ((PRESSED&0x10) == 0x10) ||
+[; ;1.C: 317: ((PRESSED&0x20) == 0x20) ||
+[; ;1.C: 318: ((PRESSED&0x40) == 0x40)
+[; ;1.C: 319: ){
+"319
+[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 139  ]
+{
+[; ;1.C: 320: match_slice++;
+"320
+[e ++ _match_slice -> -> 1 `i `uc ]
+[; ;1.C: 321: if(match_slice>(110/8)){
+"321
+[e $ ! > -> _match_slice `i / -> 110 `i -> 8 `i 140  ]
+{
+[; ;1.C: 322: match_slice = 0;
+"322
+[e = _match_slice -> -> 0 `i `uc ]
+[; ;1.C: 323: remotekey_Receive_num = 0;
+"323
+[e = _remotekey_Receive_num -> -> 0 `i `uc ]
+"324
+}
+[e :U 140 ]
+"325
+}
+[e :U 139 ]
+[; ;1.C: 324: }
+[; ;1.C: 325: }
+[; ;1.C: 328: if((FLAGs&0x02) == 0){
+"328
+[e $ ! == & -> _FLAGs `i -> 2 `i -> 0 `i 141  ]
+{
+[; ;1.C: 329: EE_Buff = ms16_counter%8;
+"329
+[e = _EE_Buff -> % -> _ms16_counter `i -> 8 `i `uc ]
+[; ;1.C: 330: if(EE_Buff == 1){
+"330
+[e $ ! == -> _EE_Buff `i -> 1 `i 142  ]
+{
+[; ;1.C: 331: PA3 = 0;
+"331
+[e = _PA3 -> -> 0 `i `b ]
+[; ;1.C: 333: EX_INT_FallingEdge();
+"333
+[e ( _EX_INT_FallingEdge ..  ]
+[; ;1.C: 334: INTE =1;
+"334
+[e = _INTE -> -> 1 `i `b ]
+[; ;1.C: 335: TMR2ON =1;
+"335
+[e = _TMR2ON -> -> 1 `i `b ]
+"336
+}
+[e :U 142 ]
+[; ;1.C: 336: }
+[; ;1.C: 337: if(EE_Buff == 4){
+"337
+[e $ ! == -> _EE_Buff `i -> 4 `i 143  ]
+{
+[; ;1.C: 338: PA3 = 1;
+"338
+[e = _PA3 -> -> 1 `i `b ]
+[; ;1.C: 339: TMR2ON =0;
+"339
+[e = _TMR2ON -> -> 0 `i `b ]
+[; ;1.C: 340: INTE =0;
+"340
+[e = _INTE -> -> 0 `i `b ]
+"341
+}
+[e :U 143 ]
+"342
+}
+[; ;1.C: 341: }
+[; ;1.C: 342: }else{
+[e $U 144  ]
+[e :U 141 ]
+{
+[; ;1.C: 343: PA3 = 0;
+"343
+[e = _PA3 -> -> 0 `i `b ]
+[; ;1.C: 344: INTE =1;
+"344
+[e = _INTE -> -> 1 `i `b ]
+[; ;1.C: 345: TMR2ON =1;
+"345
+[e = _TMR2ON -> -> 1 `i `b ]
+"346
+}
+[e :U 144 ]
+[; ;1.C: 346: }
+[; ;1.C: 349: if(ms16_counter%2 == 0){
+"349
+[e $ ! == % -> _ms16_counter `i -> 2 `i -> 0 `i 145  ]
+{
+[; ;1.C: 350: KEYSCAN();
+"350
+[e ( _KEYSCAN ..  ]
+[; ;1.C: 351: KEY();
+"351
+[e ( _KEY ..  ]
+"352
+}
+[e :U 145 ]
+[; ;1.C: 352: }
+[; ;1.C: 356: if(ms16_counter >= 120){
+"356
+[e $ ! >= -> _ms16_counter `i -> 120 `i 146  ]
+{
+[; ;1.C: 357: ms16_counter = 0;
+"357
+[e = _ms16_counter -> -> 0 `i `uc ]
+[; ;1.C: 360: if( ((PRESSED&0x10) == 0x10) ||
+[; ;1.C: 361: ((PRESSED&0x20) == 0x20) ||
+[; ;1.C: 362: ((PRESSED&0x40) == 0x40)
+[; ;1.C: 363: ){
+"363
+[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 147  ]
+{
+[; ;1.C: 364: if(KEY_Match_counter<4){
+"364
+[e $ ! < -> _KEY_Match_counter `i -> 4 `i 148  ]
+{
+[; ;1.C: 365: KEY_Match_counter++;
+"365
+[e ++ _KEY_Match_counter -> -> 1 `i `uc ]
+"366
+}
+[e :U 148 ]
+[; ;1.C: 366: }
+[; ;1.C: 367: LONGPRESS_OverTime_Counter++;
+"367
+[e ++ _LONGPRESS_OverTime_Counter -> -> 1 `i `uc ]
+[; ;1.C: 368: if(LONGPRESS_OverTime_Counter > 15){
+"368
+[e $ ! > -> _LONGPRESS_OverTime_Counter `i -> 15 `i 149  ]
+{
+[; ;1.C: 369: LONGPRESS_OverTime_Counter = 0;
+"369
+[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
+[; ;1.C: 370: if((PRESSED&0x10) == 0x10){
+"370
+[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 150  ]
+{
+[; ;1.C: 371: CH1_remotekey[CH1_remotekey_Latest] = CH1_remotekey[CH1_remotekey_num-1];
+"371
+[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_Latest `ux -> -> # *U &U _CH1_remotekey `ui `ux *U + &U _CH1_remotekey * -> -> - -> _CH1_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux ]
+[; ;1.C: 372: CH1_remotekey[CH1_remotekey_num-1] = 0xFFFFFFFF;
+"372
+[e = *U + &U _CH1_remotekey * -> -> - -> _CH1_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 373: if(CH1_remotekey_num>0) CH1_remotekey_num--;
+"373
+[e $ ! > -> _CH1_remotekey_num `i -> 0 `i 151  ]
+[e -- _CH1_remotekey_num -> -> 1 `i `uc ]
+[e :U 151 ]
+[; ;1.C: 374: PRESSED &= ~0x10;
+"374
+[e =& _PRESSED -> ~ -> 16 `i `uc ]
+[; ;1.C: 375: PA7 = 1;
+"375
+[e = _PA7 -> -> 1 `i `b ]
+"376
+}
+[e :U 150 ]
+[; ;1.C: 376: }
+[; ;1.C: 377: if((PRESSED&0x20) == 0x20){
+"377
+[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 152  ]
+{
+[; ;1.C: 378: CH2_remotekey[CH2_remotekey_Latest] = CH2_remotekey[CH2_remotekey_num-1];
+"378
+[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_Latest `ux -> -> # *U &U _CH2_remotekey `ui `ux *U + &U _CH2_remotekey * -> -> - -> _CH2_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux ]
+[; ;1.C: 379: CH2_remotekey[CH2_remotekey_num-1] = 0xFFFFFFFF;
+"379
+[e = *U + &U _CH2_remotekey * -> -> - -> _CH2_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 380: if(CH2_remotekey_num>0) CH2_remotekey_num--;
+"380
+[e $ ! > -> _CH2_remotekey_num `i -> 0 `i 153  ]
+[e -- _CH2_remotekey_num -> -> 1 `i `uc ]
+[e :U 153 ]
+[; ;1.C: 381: PRESSED &= ~0x20;
+"381
+[e =& _PRESSED -> ~ -> 32 `i `uc ]
+[; ;1.C: 382: PA6 = 1;
+"382
+[e = _PA6 -> -> 1 `i `b ]
+"383
+}
+[e :U 152 ]
+[; ;1.C: 383: }
+[; ;1.C: 384: if((PRESSED&0x40) == 0x40){
+"384
+[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 154  ]
+{
+[; ;1.C: 385: CH3_remotekey[CH3_remotekey_Latest] = CH3_remotekey[CH3_remotekey_num-1];
+"385
+[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_Latest `ux -> -> # *U &U _CH3_remotekey `ui `ux *U + &U _CH3_remotekey * -> -> - -> _CH3_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux ]
+[; ;1.C: 386: CH3_remotekey[CH3_remotekey_num-1] = 0xFFFFFFFF;
+"386
+[e = *U + &U _CH3_remotekey * -> -> - -> _CH3_remotekey_num `i -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 387: if(CH3_remotekey_num>0) CH3_remotekey_num--;
+"387
+[e $ ! > -> _CH3_remotekey_num `i -> 0 `i 155  ]
+[e -- _CH3_remotekey_num -> -> 1 `i `uc ]
+[e :U 155 ]
+[; ;1.C: 388: PRESSED &= ~0x40;
+"388
+[e =& _PRESSED -> ~ -> 64 `i `uc ]
+[; ;1.C: 389: PA5 = 1;
+"389
+[e = _PA5 -> -> 1 `i `b ]
+"390
+}
+[e :U 154 ]
+[; ;1.C: 390: }
+[; ;1.C: 391: PC0 = 1;
+"391
+[e = _PC0 -> -> 1 `i `b ]
+"392
+}
+[e :U 149 ]
+"393
+}
+[e :U 147 ]
+"394
+}
+[e :U 146 ]
+"395
+}
+[e :U 136 ]
+[; ;1.C: 392: }
+[; ;1.C: 393: }
+[; ;1.C: 394: }
+[; ;1.C: 395: }
+[; ;1.C: 396: }
+"396
 [e :UE 86 ]
 }
-"404
+"397
 [v _led1_debug `(v  1 ef ]
 {
-[; ;1.C: 404: void led1_debug(void){
+[; ;1.C: 397: void led1_debug(void){
 [e :U _led1_debug ]
 [f ]
-[; ;1.C: 406: PC0 = ~PC0;
-"406
-[e = _PC0 ! _PC0 ]
-[; ;1.C: 408: }
-"408
-[e :UE 148 ]
+[; ;1.C: 401: }
+"401
+[e :UE 156 ]
 }
-"409
+"402
 [v _INT_INITIAL `(v  1 ef ]
 {
-[; ;1.C: 409: void INT_INITIAL(void){
+[; ;1.C: 402: void INT_INITIAL(void){
 [e :U _INT_INITIAL ]
 [f ]
-[; ;1.C: 410: TRISA2 =1;
-"410
+[; ;1.C: 403: TRISA2 =1;
+"403
 [e = _TRISA2 -> -> 1 `i `b ]
-[; ;1.C: 411: IOCA2 =0;
-"411
+[; ;1.C: 404: IOCA2 =0;
+"404
 [e = _IOCA2 -> -> 0 `i `b ]
-[; ;1.C: 412: EX_INT_FallingEdge();
-"412
+[; ;1.C: 405: EX_INT_FallingEdge();
+"405
 [e ( _EX_INT_FallingEdge ..  ]
-[; ;1.C: 413: INTF =0;
-"413
+[; ;1.C: 406: INTF =0;
+"406
 [e = _INTF -> -> 0 `i `b ]
-[; ;1.C: 415: INTE =0;
-"415
+[; ;1.C: 408: INTE =0;
+"408
 [e = _INTE -> -> 0 `i `b ]
-[; ;1.C: 416: }
-"416
-[e :UE 149 ]
+[; ;1.C: 409: }
+"409
+[e :UE 157 ]
 }
-"417
+"410
 [v _EX_INT_RisingEdge `(v  1 ef ]
 {
-[; ;1.C: 417: void EX_INT_RisingEdge(void){
+[; ;1.C: 410: void EX_INT_RisingEdge(void){
 [e :U _EX_INT_RisingEdge ]
 [f ]
-[; ;1.C: 418: INTEDG =1;
-"418
+[; ;1.C: 411: INTEDG =1;
+"411
 [e = _INTEDG -> -> 1 `i `b ]
-[; ;1.C: 419: FLAGs |= 0x01;
-"419
+[; ;1.C: 412: FLAGs |= 0x01;
+"412
 [e =| _FLAGs -> -> 1 `i `uc ]
-[; ;1.C: 420: }
-"420
-[e :UE 150 ]
+[; ;1.C: 413: }
+"413
+[e :UE 158 ]
 }
-"421
+"414
 [v _EX_INT_FallingEdge `(v  1 ef ]
 {
-[; ;1.C: 421: void EX_INT_FallingEdge(void){
+[; ;1.C: 414: void EX_INT_FallingEdge(void){
 [e :U _EX_INT_FallingEdge ]
 [f ]
-[; ;1.C: 422: INTEDG =0;
-"422
+[; ;1.C: 415: INTEDG =0;
+"415
 [e = _INTEDG -> -> 0 `i `b ]
-[; ;1.C: 423: FLAGs &= ~0x01;
-"423
+[; ;1.C: 416: FLAGs &= ~0x01;
+"416
 [e =& _FLAGs -> ~ -> 1 `i `uc ]
-[; ;1.C: 424: }
-"424
-[e :UE 151 ]
+[; ;1.C: 417: }
+"417
+[e :UE 159 ]
 }
-"425
+"418
 [v _OSC_INIT `(v  1 ef ]
 {
-[; ;1.C: 425: void OSC_INIT (void){
+[; ;1.C: 418: void OSC_INIT (void){
 [e :U _OSC_INIT ]
 [f ]
-[; ;1.C: 426: OSCCON = 0B01100001;
-"426
+[; ;1.C: 419: OSCCON = 0B01100001;
+"419
 [e = _OSCCON -> -> 97 `i `uc ]
-[; ;1.C: 431: INTCON = 0;
-"431
+[; ;1.C: 424: INTCON = 0;
+"424
 [e = _INTCON -> -> 0 `i `uc ]
-[; ;1.C: 433: PORTA = 0B00000000;
-"433
+[; ;1.C: 426: PORTA = 0B00000000;
+"426
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;1.C: 434: TRISA = 0B00010111;
-"434
+[; ;1.C: 427: TRISA = 0B00010111;
+"427
 [e = _TRISA -> -> 23 `i `uc ]
-[; ;1.C: 435: WPUA = 0B00000000;
-"435
+[; ;1.C: 428: WPUA = 0B00000000;
+"428
 [e = _WPUA -> -> 0 `i `uc ]
-[; ;1.C: 436: PSRCA = 0B11111111;
-"436
+[; ;1.C: 429: PSRCA = 0B11111111;
+"429
 [e = _PSRCA -> -> 255 `i `uc ]
-[; ;1.C: 437: PSINKA = 0B11111111;
-"437
+[; ;1.C: 430: PSINKA = 0B11111111;
+"430
 [e = _PSINKA -> -> 255 `i `uc ]
-[; ;1.C: 439: PORTC = 0B00000000;
-"439
+[; ;1.C: 432: PORTC = 0B00000000;
+"432
 [e = _PORTC -> -> 0 `i `uc ]
-[; ;1.C: 440: TRISC = 0B11110000;
-"440
+[; ;1.C: 433: TRISC = 0B11110000;
+"433
 [e = _TRISC -> -> 240 `i `uc ]
-[; ;1.C: 441: WPUC = 0B00000000;
-"441
+[; ;1.C: 434: WPUC = 0B00000000;
+"434
 [e = _WPUC -> -> 0 `i `uc ]
-[; ;1.C: 442: PSRCC = 0B11111111;
-"442
+[; ;1.C: 435: PSRCC = 0B11111111;
+"435
 [e = _PSRCC -> -> 255 `i `uc ]
-[; ;1.C: 443: PSINKC = 0B11111111;
-"443
+[; ;1.C: 436: PSINKC = 0B11111111;
+"436
 [e = _PSINKC -> -> 255 `i `uc ]
-[; ;1.C: 445: OPTION = 0B00001000;
-"445
+[; ;1.C: 438: OPTION = 0B00001000;
+"438
 [e = _OPTION -> -> 8 `i `uc ]
-[; ;1.C: 447: }
-"447
-[e :UE 152 ]
+[; ;1.C: 440: }
+"440
+[e :UE 160 ]
 }
-"448
+"441
 [v _WDT_INITIAL `(v  1 ef ]
 {
-[; ;1.C: 448: void WDT_INITIAL (void){
+[; ;1.C: 441: void WDT_INITIAL (void){
 [e :U _WDT_INITIAL ]
 [f ]
-[; ;1.C: 449: asm("clrwdt");
-"449
+[; ;1.C: 442: asm("clrwdt");
+"442
 [; clrwdt ;#
-[; ;1.C: 450: WDTCON = 0B00010110;
-"450
+[; ;1.C: 443: WDTCON = 0B00010110;
+"443
 [e = _WDTCON -> -> 22 `i `uc ]
-[; ;1.C: 452: }
-"452
-[e :UE 153 ]
+[; ;1.C: 445: }
+"445
+[e :UE 161 ]
 }
-"453
+"446
 [v _TIMER0_INITIAL `(v  1 ef ]
 {
-[; ;1.C: 453: void TIMER0_INITIAL (void){
+[; ;1.C: 446: void TIMER0_INITIAL (void){
 [e :U _TIMER0_INITIAL ]
 [f ]
-[; ;1.C: 454: T0CS = 0;
-"454
+[; ;1.C: 447: T0CS = 0;
+"447
 [e = _T0CS -> -> 0 `i `b ]
-[; ;1.C: 455: PSA = 0;
-"455
+[; ;1.C: 448: PSA = 0;
+"448
 [e = _PSA -> -> 0 `i `b ]
-[; ;1.C: 456: OPTION &= 0xF8;
-"456
+[; ;1.C: 449: OPTION &= 0xF8;
+"449
 [e =& _OPTION -> -> 248 `i `uc ]
-[; ;1.C: 457: OPTION |= 0x06;
-"457
+[; ;1.C: 450: OPTION |= 0x06;
+"450
 [e =| _OPTION -> -> 6 `i `uc ]
-[; ;1.C: 459: TMR0 = 5;
-"459
+[; ;1.C: 452: TMR0 = 5;
+"452
 [e = _TMR0 -> -> 5 `i `uc ]
-[; ;1.C: 460: T0IE = 1;
-"460
+[; ;1.C: 453: T0IE = 1;
+"453
 [e = _T0IE -> -> 1 `i `b ]
-[; ;1.C: 461: T0IF = 0;
-"461
+[; ;1.C: 454: T0IF = 0;
+"454
 [e = _T0IF -> -> 0 `i `b ]
-[; ;1.C: 462: }
-"462
-[e :UE 154 ]
+[; ;1.C: 455: }
+"455
+[e :UE 162 ]
 }
-"463
+"456
 [v _TIMER2_INITIAL `(v  1 ef ]
 {
-[; ;1.C: 463: void TIMER2_INITIAL (void){
+[; ;1.C: 456: void TIMER2_INITIAL (void){
 [e :U _TIMER2_INITIAL ]
 [f ]
-[; ;1.C: 464: T2CON0 = 0B00000001;
-"464
+[; ;1.C: 457: T2CON0 = 0B00000001;
+"457
 [e = _T2CON0 -> -> 1 `i `uc ]
-[; ;1.C: 470: T2CON1 = 0B00000000;
-"470
+[; ;1.C: 463: T2CON1 = 0B00000000;
+"463
 [e = _T2CON1 -> -> 0 `i `uc ]
-[; ;1.C: 475: TMR2H = (53)/256;
-"475
+[; ;1.C: 468: TMR2H = (53)/256;
+"468
 [e = _TMR2H -> / -> 53 `i -> 256 `i `uc ]
-[; ;1.C: 476: TMR2L = (53)%256;
-"476
+[; ;1.C: 469: TMR2L = (53)%256;
+"469
 [e = _TMR2L -> % -> 53 `i -> 256 `i `uc ]
-[; ;1.C: 479: PR2H = (53)/256;
-"479
+[; ;1.C: 472: PR2H = (53)/256;
+"472
 [e = _PR2H -> / -> 53 `i -> 256 `i `uc ]
-[; ;1.C: 480: PR2L = (53)%256;
-"480
+[; ;1.C: 473: PR2L = (53)%256;
+"473
 [e = _PR2L -> % -> 53 `i -> 256 `i `uc ]
-[; ;1.C: 482: TMR2IF = 0;
-"482
+[; ;1.C: 475: TMR2IF = 0;
+"475
 [e = _TMR2IF -> -> 0 `i `b ]
-[; ;1.C: 483: TMR2IE = 1;
-"483
+[; ;1.C: 476: TMR2IE = 1;
+"476
 [e = _TMR2IE -> -> 1 `i `b ]
-[; ;1.C: 485: TMR2ON =0;
-"485
+[; ;1.C: 478: TMR2ON =0;
+"478
 [e = _TMR2ON -> -> 0 `i `b ]
-[; ;1.C: 486: }
-"486
-[e :UE 155 ]
+[; ;1.C: 479: }
+"479
+[e :UE 163 ]
 }
-"487
+"480
 [v _IAPRead `(uc  1 ef1`uc ]
 {
-[; ;1.C: 487: unsigned char IAPRead(unsigned char EEAddr){
+[; ;1.C: 480: unsigned char IAPRead(unsigned char EEAddr){
 [e :U _IAPRead ]
 [v _EEAddr `uc  1 r1 ]
 [f ]
-"488
+"481
 [v _ReEEPROMread `uc  1 a ]
-[; ;1.C: 488: unsigned char ReEEPROMread;
-[; ;1.C: 489: EEADR = EEAddr;
-"489
+[; ;1.C: 481: unsigned char ReEEPROMread;
+[; ;1.C: 482: EEADR = EEAddr;
+"482
 [e = _EEADR _EEAddr ]
-[; ;1.C: 490: RD = 1;
-"490
+[; ;1.C: 483: RD = 1;
+"483
 [e = _RD -> -> 1 `i `b ]
-[; ;1.C: 491: ReEEPROMread = EEDAT;
-"491
+[; ;1.C: 484: ReEEPROMread = EEDAT;
+"484
 [e = _ReEEPROMread _EEDAT ]
-[; ;1.C: 492: return ReEEPROMread;
-"492
+[; ;1.C: 485: return ReEEPROMread;
+"485
 [e ) _ReEEPROMread ]
-[e $UE 156  ]
-[; ;1.C: 493: }
-"493
-[e :UE 156 ]
+[e $UE 164  ]
+[; ;1.C: 486: }
+"486
+[e :UE 164 ]
 }
-"494
+"487
 [v _IAPWrite `(v  1 ef2`uc`uc ]
 {
-[; ;1.C: 494: void IAPWrite(unsigned char EEAddr,unsigned char Data){
+[; ;1.C: 487: void IAPWrite(unsigned char EEAddr,unsigned char Data){
 [e :U _IAPWrite ]
 [v _EEAddr `uc  1 r1 ]
 [v _Data `uc  1 r2 ]
 [f ]
-[; ;1.C: 495: GIE = 0;
-"495
+[; ;1.C: 488: GIE = 0;
+"488
 [e = _GIE -> -> 0 `i `b ]
-[; ;1.C: 496: while(GIE);
-"496
-[e $U 158  ]
-[e :U 159 ]
-[e :U 158 ]
-[e $ _GIE 159  ]
-[e :U 160 ]
-[; ;1.C: 497: EEADR = EEAddr;
-"497
+[; ;1.C: 489: while(GIE);
+"489
+[e $U 166  ]
+[e :U 167 ]
+[e :U 166 ]
+[e $ _GIE 167  ]
+[e :U 168 ]
+[; ;1.C: 490: EEADR = EEAddr;
+"490
 [e = _EEADR _EEAddr ]
-[; ;1.C: 498: EEDAT = Data;
-"498
+[; ;1.C: 491: EEDAT = Data;
+"491
 [e = _EEDAT _Data ]
-[; ;1.C: 499: EEIF = 0;
-"499
+[; ;1.C: 492: EEIF = 0;
+"492
 [e = _EEIF -> -> 0 `i `b ]
-[; ;1.C: 500: EECON1 |= 0x34;
-"500
+[; ;1.C: 493: EECON1 |= 0x34;
+"493
 [e =| _EECON1 -> -> 52 `i `uc ]
-[; ;1.C: 501: WR = 1;
-"501
+[; ;1.C: 494: WR = 1;
+"494
 [e = _WR -> -> 1 `i `b ]
-[; ;1.C: 502: while(WR);
-"502
-[e $U 161  ]
-[e :U 162 ]
-[e :U 161 ]
-[e $ _WR 162  ]
-[e :U 163 ]
-[; ;1.C: 503: GIE = 1;
-"503
+[; ;1.C: 495: while(WR);
+"495
+[e $U 169  ]
+[e :U 170 ]
+[e :U 169 ]
+[e $ _WR 170  ]
+[e :U 171 ]
+[; ;1.C: 496: GIE = 1;
+"496
 [e = _GIE -> -> 1 `i `b ]
-[; ;1.C: 504: }
-"504
-[e :UE 157 ]
-}
-"505
-[v _CH1_EEPROM_Write `(v  1 ef ]
-{
-[; ;1.C: 505: void CH1_EEPROM_Write(void){
-[e :U _CH1_EEPROM_Write ]
-[f ]
-[; ;1.C: 506: IAPWrite(0x00,((CH1_remotekey[0]&0x000000FF)>>0));
-"506
-[e ( _IAPWrite (2 , -> -> 0 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 507: IAPWrite(0x01,((CH1_remotekey[0]&0x0000FF00)>>8));
-"507
-[e ( _IAPWrite (2 , -> -> 1 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 508: IAPWrite(0x02,((CH1_remotekey[0]&0x00FF0000)>>16));
-"508
-[e ( _IAPWrite (2 , -> -> 2 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 510: IAPWrite(0x0C,((CH1_remotekey[1]&0x000000FF)>>0));
-"510
-[e ( _IAPWrite (2 , -> -> 12 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 511: IAPWrite(0x0D,((CH1_remotekey[1]&0x0000FF00)>>8));
-"511
-[e ( _IAPWrite (2 , -> -> 13 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 512: IAPWrite(0x0E,((CH1_remotekey[1]&0x00FF0000)>>16));
-"512
-[e ( _IAPWrite (2 , -> -> 14 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 514: IAPWrite(0x18,((CH1_remotekey[2]&0x000000FF)>>0));
-"514
-[e ( _IAPWrite (2 , -> -> 24 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 515: IAPWrite(0x19,((CH1_remotekey[2]&0x0000FF00)>>8));
-"515
-[e ( _IAPWrite (2 , -> -> 25 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 516: IAPWrite(0x1A,((CH1_remotekey[2]&0x00FF0000)>>16));
-"516
-[e ( _IAPWrite (2 , -> -> 26 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 518: IAPWrite(0x24,((CH1_remotekey[3]&0x000000FF)>>0));
-"518
-[e ( _IAPWrite (2 , -> -> 36 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 519: IAPWrite(0x25,((CH1_remotekey[3]&0x0000FF00)>>8));
-"519
-[e ( _IAPWrite (2 , -> -> 37 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 520: IAPWrite(0x26,((CH1_remotekey[3]&0x00FF0000)>>16));
-"520
-[e ( _IAPWrite (2 , -> -> 38 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 522: IAPWrite(0x30,CH1_remotekey_num);
-"522
-[e ( _IAPWrite (2 , -> -> 48 `i `uc _CH1_remotekey_num ]
-[; ;1.C: 523: }
-"523
-[e :UE 164 ]
-}
-"524
-[v _CH2_EEPROM_Write `(v  1 ef ]
-{
-[; ;1.C: 524: void CH2_EEPROM_Write(void){
-[e :U _CH2_EEPROM_Write ]
-[f ]
-[; ;1.C: 525: IAPWrite(0x04,((CH2_remotekey[0]&0x000000FF)>>0));
-"525
-[e ( _IAPWrite (2 , -> -> 4 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 526: IAPWrite(0x05,((CH2_remotekey[0]&0x0000FF00)>>8));
-"526
-[e ( _IAPWrite (2 , -> -> 5 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 527: IAPWrite(0x06,((CH2_remotekey[0]&0x00FF0000)>>16));
-"527
-[e ( _IAPWrite (2 , -> -> 6 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 529: IAPWrite(0x10,((CH2_remotekey[1]&0x000000FF)>>0));
-"529
-[e ( _IAPWrite (2 , -> -> 16 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 530: IAPWrite(0x11,((CH2_remotekey[1]&0x0000FF00)>>8));
-"530
-[e ( _IAPWrite (2 , -> -> 17 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 531: IAPWrite(0x12,((CH2_remotekey[1]&0x00FF0000)>>16));
-"531
-[e ( _IAPWrite (2 , -> -> 18 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 533: IAPWrite(0x1C,((CH2_remotekey[2]&0x000000FF)>>0));
-"533
-[e ( _IAPWrite (2 , -> -> 28 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 534: IAPWrite(0x1D,((CH2_remotekey[2]&0x0000FF00)>>8));
-"534
-[e ( _IAPWrite (2 , -> -> 29 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 535: IAPWrite(0x1E,((CH2_remotekey[2]&0x00FF0000)>>16));
-"535
-[e ( _IAPWrite (2 , -> -> 30 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 537: IAPWrite(0x28,((CH2_remotekey[3]&0x000000FF)>>0));
-"537
-[e ( _IAPWrite (2 , -> -> 40 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 538: IAPWrite(0x29,((CH2_remotekey[3]&0x0000FF00)>>8));
-"538
-[e ( _IAPWrite (2 , -> -> 41 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 539: IAPWrite(0x2A,((CH2_remotekey[3]&0x00FF0000)>>16));
-"539
-[e ( _IAPWrite (2 , -> -> 42 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 541: IAPWrite(0x31,CH2_remotekey_num);
-"541
-[e ( _IAPWrite (2 , -> -> 49 `i `uc _CH2_remotekey_num ]
-[; ;1.C: 542: }
-"542
+[; ;1.C: 497: }
+"497
 [e :UE 165 ]
 }
-"543
+"498
+[v _CH1_EEPROM_Write `(v  1 ef ]
+{
+[; ;1.C: 498: void CH1_EEPROM_Write(void){
+[e :U _CH1_EEPROM_Write ]
+[f ]
+[; ;1.C: 499: IAPWrite(0x00,((CH1_remotekey[0]&0x000000FF)>>0));
+"499
+[e ( _IAPWrite (2 , -> -> 0 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 500: IAPWrite(0x01,((CH1_remotekey[0]&0x0000FF00)>>8));
+"500
+[e ( _IAPWrite (2 , -> -> 1 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 501: IAPWrite(0x02,((CH1_remotekey[0]&0x00FF0000)>>16));
+"501
+[e ( _IAPWrite (2 , -> -> 2 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 503: IAPWrite(0x0C,((CH1_remotekey[1]&0x000000FF)>>0));
+"503
+[e ( _IAPWrite (2 , -> -> 12 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 504: IAPWrite(0x0D,((CH1_remotekey[1]&0x0000FF00)>>8));
+"504
+[e ( _IAPWrite (2 , -> -> 13 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 505: IAPWrite(0x0E,((CH1_remotekey[1]&0x00FF0000)>>16));
+"505
+[e ( _IAPWrite (2 , -> -> 14 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 507: IAPWrite(0x18,((CH1_remotekey[2]&0x000000FF)>>0));
+"507
+[e ( _IAPWrite (2 , -> -> 24 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 508: IAPWrite(0x19,((CH1_remotekey[2]&0x0000FF00)>>8));
+"508
+[e ( _IAPWrite (2 , -> -> 25 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 509: IAPWrite(0x1A,((CH1_remotekey[2]&0x00FF0000)>>16));
+"509
+[e ( _IAPWrite (2 , -> -> 26 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 511: IAPWrite(0x24,((CH1_remotekey[3]&0x000000FF)>>0));
+"511
+[e ( _IAPWrite (2 , -> -> 36 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 512: IAPWrite(0x25,((CH1_remotekey[3]&0x0000FF00)>>8));
+"512
+[e ( _IAPWrite (2 , -> -> 37 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 513: IAPWrite(0x26,((CH1_remotekey[3]&0x00FF0000)>>16));
+"513
+[e ( _IAPWrite (2 , -> -> 38 `i `uc -> >> & *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 515: IAPWrite(0x30,CH1_remotekey_num);
+"515
+[e ( _IAPWrite (2 , -> -> 48 `i `uc _CH1_remotekey_num ]
+[; ;1.C: 516: }
+"516
+[e :UE 172 ]
+}
+"517
+[v _CH2_EEPROM_Write `(v  1 ef ]
+{
+[; ;1.C: 517: void CH2_EEPROM_Write(void){
+[e :U _CH2_EEPROM_Write ]
+[f ]
+[; ;1.C: 518: IAPWrite(0x04,((CH2_remotekey[0]&0x000000FF)>>0));
+"518
+[e ( _IAPWrite (2 , -> -> 4 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 519: IAPWrite(0x05,((CH2_remotekey[0]&0x0000FF00)>>8));
+"519
+[e ( _IAPWrite (2 , -> -> 5 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 520: IAPWrite(0x06,((CH2_remotekey[0]&0x00FF0000)>>16));
+"520
+[e ( _IAPWrite (2 , -> -> 6 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 522: IAPWrite(0x10,((CH2_remotekey[1]&0x000000FF)>>0));
+"522
+[e ( _IAPWrite (2 , -> -> 16 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 523: IAPWrite(0x11,((CH2_remotekey[1]&0x0000FF00)>>8));
+"523
+[e ( _IAPWrite (2 , -> -> 17 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 524: IAPWrite(0x12,((CH2_remotekey[1]&0x00FF0000)>>16));
+"524
+[e ( _IAPWrite (2 , -> -> 18 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 526: IAPWrite(0x1C,((CH2_remotekey[2]&0x000000FF)>>0));
+"526
+[e ( _IAPWrite (2 , -> -> 28 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 527: IAPWrite(0x1D,((CH2_remotekey[2]&0x0000FF00)>>8));
+"527
+[e ( _IAPWrite (2 , -> -> 29 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 528: IAPWrite(0x1E,((CH2_remotekey[2]&0x00FF0000)>>16));
+"528
+[e ( _IAPWrite (2 , -> -> 30 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 530: IAPWrite(0x28,((CH2_remotekey[3]&0x000000FF)>>0));
+"530
+[e ( _IAPWrite (2 , -> -> 40 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
+[; ;1.C: 531: IAPWrite(0x29,((CH2_remotekey[3]&0x0000FF00)>>8));
+"531
+[e ( _IAPWrite (2 , -> -> 41 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
+[; ;1.C: 532: IAPWrite(0x2A,((CH2_remotekey[3]&0x00FF0000)>>16));
+"532
+[e ( _IAPWrite (2 , -> -> 42 `i `uc -> >> & *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
+[; ;1.C: 534: IAPWrite(0x31,CH2_remotekey_num);
+"534
+[e ( _IAPWrite (2 , -> -> 49 `i `uc _CH2_remotekey_num ]
+[; ;1.C: 535: }
+"535
+[e :UE 173 ]
+}
+"536
 [v _CH3_EEPROM_Write `(v  1 ef ]
 {
-[; ;1.C: 543: void CH3_EEPROM_Write(void){
+[; ;1.C: 536: void CH3_EEPROM_Write(void){
 [e :U _CH3_EEPROM_Write ]
 [f ]
-[; ;1.C: 544: IAPWrite(0x08,((CH3_remotekey[0]&0x000000FF)>>0));
-"544
+[; ;1.C: 537: IAPWrite(0x08,((CH3_remotekey[0]&0x000000FF)>>0));
+"537
 [e ( _IAPWrite (2 , -> -> 8 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 545: IAPWrite(0x09,((CH3_remotekey[0]&0x0000FF00)>>8));
-"545
+[; ;1.C: 538: IAPWrite(0x09,((CH3_remotekey[0]&0x0000FF00)>>8));
+"538
 [e ( _IAPWrite (2 , -> -> 9 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 546: IAPWrite(0x0A,((CH3_remotekey[0]&0x00FF0000)>>16));
-"546
+[; ;1.C: 539: IAPWrite(0x0A,((CH3_remotekey[0]&0x00FF0000)>>16));
+"539
 [e ( _IAPWrite (2 , -> -> 10 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 548: IAPWrite(0x14,((CH3_remotekey[1]&0x000000FF)>>0));
-"548
+[; ;1.C: 541: IAPWrite(0x14,((CH3_remotekey[1]&0x000000FF)>>0));
+"541
 [e ( _IAPWrite (2 , -> -> 20 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 549: IAPWrite(0x15,((CH3_remotekey[1]&0x0000FF00)>>8));
-"549
+[; ;1.C: 542: IAPWrite(0x15,((CH3_remotekey[1]&0x0000FF00)>>8));
+"542
 [e ( _IAPWrite (2 , -> -> 21 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 550: IAPWrite(0x16,((CH3_remotekey[1]&0x00FF0000)>>16));
-"550
+[; ;1.C: 543: IAPWrite(0x16,((CH3_remotekey[1]&0x00FF0000)>>16));
+"543
 [e ( _IAPWrite (2 , -> -> 22 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 552: IAPWrite(0x20,((CH3_remotekey[2]&0x000000FF)>>0));
-"552
+[; ;1.C: 545: IAPWrite(0x20,((CH3_remotekey[2]&0x000000FF)>>0));
+"545
 [e ( _IAPWrite (2 , -> -> 32 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 553: IAPWrite(0x21,((CH3_remotekey[2]&0x0000FF00)>>8));
-"553
+[; ;1.C: 546: IAPWrite(0x21,((CH3_remotekey[2]&0x0000FF00)>>8));
+"546
 [e ( _IAPWrite (2 , -> -> 33 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 554: IAPWrite(0x22,((CH3_remotekey[2]&0x00FF0000)>>16));
-"554
+[; ;1.C: 547: IAPWrite(0x22,((CH3_remotekey[2]&0x00FF0000)>>16));
+"547
 [e ( _IAPWrite (2 , -> -> 34 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 556: IAPWrite(0x2C,((CH3_remotekey[3]&0x000000FF)>>0));
-"556
+[; ;1.C: 549: IAPWrite(0x2C,((CH3_remotekey[3]&0x000000FF)>>0));
+"549
 [e ( _IAPWrite (2 , -> -> 44 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> -> 255 `i `l `ul -> 0 `i `uc ]
-[; ;1.C: 557: IAPWrite(0x2D,((CH3_remotekey[3]&0x0000FF00)>>8));
-"557
+[; ;1.C: 550: IAPWrite(0x2D,((CH3_remotekey[3]&0x0000FF00)>>8));
+"550
 [e ( _IAPWrite (2 , -> -> 45 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;1.C: 558: IAPWrite(0x2E,((CH3_remotekey[3]&0x00FF0000)>>16));
-"558
+[; ;1.C: 551: IAPWrite(0x2E,((CH3_remotekey[3]&0x00FF0000)>>16));
+"551
 [e ( _IAPWrite (2 , -> -> 46 `i `uc -> >> & *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 16711680 `l `ul -> 16 `i `uc ]
-[; ;1.C: 560: IAPWrite(0x32,CH3_remotekey_num);
-"560
+[; ;1.C: 553: IAPWrite(0x32,CH3_remotekey_num);
+"553
 [e ( _IAPWrite (2 , -> -> 50 `i `uc _CH3_remotekey_num ]
-[; ;1.C: 561: }
-"561
-[e :UE 166 ]
+[; ;1.C: 554: }
+"554
+[e :UE 174 ]
 }
-"562
+"555
 [v _EEPROM_ReadWord `(v  1 ef2`*ul`uc ]
 {
-[; ;1.C: 562: void EEPROM_ReadWord(unsigned long *buff,unsigned char data){
+[; ;1.C: 555: void EEPROM_ReadWord(unsigned long *buff,unsigned char data){
 [e :U _EEPROM_ReadWord ]
 [v _buff `*ul  1 r1 ]
 [v _data `uc  1 r2 ]
 [f ]
-[; ;1.C: 563: *buff = 0;
-"563
+[; ;1.C: 556: *buff = 0;
+"556
 [e = *U _buff -> -> -> 0 `i `l `ul ]
-[; ;1.C: 564: EE_Buff = IAPRead(data+2);
-"564
+[; ;1.C: 557: EE_Buff = IAPRead(data+2);
+"557
 [e = _EE_Buff ( _IAPRead (1 -> + -> _data `i -> 2 `i `uc ]
-[; ;1.C: 565: *buff |= EE_Buff;
-"565
+[; ;1.C: 558: *buff |= EE_Buff;
+"558
 [e =| *U _buff -> _EE_Buff `ul ]
-[; ;1.C: 566: *buff = *buff<<8;
-"566
+[; ;1.C: 559: *buff = *buff<<8;
+"559
 [e = *U _buff << *U _buff -> 8 `i ]
-[; ;1.C: 567: EE_Buff = IAPRead(data+1);
-"567
+[; ;1.C: 560: EE_Buff = IAPRead(data+1);
+"560
 [e = _EE_Buff ( _IAPRead (1 -> + -> _data `i -> 1 `i `uc ]
-[; ;1.C: 568: *buff |= EE_Buff;
-"568
+[; ;1.C: 561: *buff |= EE_Buff;
+"561
 [e =| *U _buff -> _EE_Buff `ul ]
-[; ;1.C: 569: *buff = *buff<<8;
-"569
+[; ;1.C: 562: *buff = *buff<<8;
+"562
 [e = *U _buff << *U _buff -> 8 `i ]
-[; ;1.C: 570: EE_Buff = IAPRead(data);
-"570
+[; ;1.C: 563: EE_Buff = IAPRead(data);
+"563
 [e = _EE_Buff ( _IAPRead (1 _data ]
-[; ;1.C: 571: *buff |= EE_Buff;
-"571
+[; ;1.C: 564: *buff |= EE_Buff;
+"564
 [e =| *U _buff -> _EE_Buff `ul ]
-[; ;1.C: 572: }
-"572
-[e :UE 167 ]
+[; ;1.C: 565: }
+"565
+[e :UE 175 ]
 }
-"573
+"566
 [v _EEPROM_Read `(v  1 ef ]
 {
-[; ;1.C: 573: void EEPROM_Read(void){
+[; ;1.C: 566: void EEPROM_Read(void){
 [e :U _EEPROM_Read ]
 [f ]
-[; ;1.C: 574: EEPROM_ReadWord(&CH1_remotekey[0],0x00);
-"574
+[; ;1.C: 567: EEPROM_ReadWord(&CH1_remotekey[0],0x00);
+"567
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 0 `i `uc ]
-[; ;1.C: 575: EEPROM_ReadWord(&CH2_remotekey[0],0x04);
-"575
+[; ;1.C: 568: EEPROM_ReadWord(&CH2_remotekey[0],0x04);
+"568
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 4 `i `uc ]
-[; ;1.C: 576: EEPROM_ReadWord(&CH3_remotekey[0],0x08);
-"576
+[; ;1.C: 569: EEPROM_ReadWord(&CH3_remotekey[0],0x08);
+"569
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 8 `i `uc ]
-[; ;1.C: 577: EEPROM_ReadWord(&CH1_remotekey[1],0x0C);
-"577
+[; ;1.C: 570: EEPROM_ReadWord(&CH1_remotekey[1],0x0C);
+"570
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 12 `i `uc ]
-[; ;1.C: 578: EEPROM_ReadWord(&CH2_remotekey[1],0x10);
-"578
+[; ;1.C: 571: EEPROM_ReadWord(&CH2_remotekey[1],0x10);
+"571
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 16 `i `uc ]
-[; ;1.C: 579: EEPROM_ReadWord(&CH3_remotekey[1],0x14);
-"579
+[; ;1.C: 572: EEPROM_ReadWord(&CH3_remotekey[1],0x14);
+"572
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 20 `i `uc ]
-[; ;1.C: 580: EEPROM_ReadWord(&CH1_remotekey[2],0x18);
-"580
+[; ;1.C: 573: EEPROM_ReadWord(&CH1_remotekey[2],0x18);
+"573
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 24 `i `uc ]
-[; ;1.C: 581: EEPROM_ReadWord(&CH2_remotekey[2],0x1C);
-"581
+[; ;1.C: 574: EEPROM_ReadWord(&CH2_remotekey[2],0x1C);
+"574
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 28 `i `uc ]
-[; ;1.C: 582: EEPROM_ReadWord(&CH3_remotekey[2],0x20);
-"582
+[; ;1.C: 575: EEPROM_ReadWord(&CH3_remotekey[2],0x20);
+"575
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 32 `i `uc ]
-[; ;1.C: 583: EEPROM_ReadWord(&CH1_remotekey[3],0x24);
-"583
+[; ;1.C: 576: EEPROM_ReadWord(&CH1_remotekey[3],0x24);
+"576
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -> 36 `i `uc ]
-[; ;1.C: 584: EEPROM_ReadWord(&CH2_remotekey[3],0x28);
-"584
+[; ;1.C: 577: EEPROM_ReadWord(&CH2_remotekey[3],0x28);
+"577
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -> 40 `i `uc ]
-[; ;1.C: 585: EEPROM_ReadWord(&CH3_remotekey[3],0x2C);
-"585
+[; ;1.C: 578: EEPROM_ReadWord(&CH3_remotekey[3],0x2C);
+"578
 [e ( _EEPROM_ReadWord (2 , &U *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -> 44 `i `uc ]
-[; ;1.C: 586: CH1_remotekey_Latest = CH1_remotekey_num = IAPRead(0x30);
-"586
+[; ;1.C: 579: CH1_remotekey_Latest = CH1_remotekey_num = IAPRead(0x30);
+"579
 [e = _CH1_remotekey_Latest = _CH1_remotekey_num ( _IAPRead (1 -> -> 48 `i `uc ]
-[; ;1.C: 587: CH2_remotekey_Latest = CH2_remotekey_num = IAPRead(0x31);
-"587
+[; ;1.C: 580: CH2_remotekey_Latest = CH2_remotekey_num = IAPRead(0x31);
+"580
 [e = _CH2_remotekey_Latest = _CH2_remotekey_num ( _IAPRead (1 -> -> 49 `i `uc ]
-[; ;1.C: 588: CH3_remotekey_Latest = CH3_remotekey_num = IAPRead(0x32);
-"588
+[; ;1.C: 581: CH3_remotekey_Latest = CH3_remotekey_num = IAPRead(0x32);
+"581
 [e = _CH3_remotekey_Latest = _CH3_remotekey_num ( _IAPRead (1 -> -> 50 `i `uc ]
-[; ;1.C: 589: }
-"589
-[e :UE 168 ]
+[; ;1.C: 582: }
+"582
+[e :UE 176 ]
 }
-"590
+"583
 [v _KEYSCAN `(v  1 ef ]
 {
-[; ;1.C: 590: void KEYSCAN(void){
+[; ;1.C: 583: void KEYSCAN(void){
 [e :U _KEYSCAN ]
 [f ]
-[; ;1.C: 591: if(PRESSED == 0){
-"591
-[e $ ! == -> _PRESSED `i -> 0 `i 170  ]
+[; ;1.C: 584: if(PRESSED == 0){
+"584
+[e $ ! == -> _PRESSED `i -> 0 `i 178  ]
 {
-[; ;1.C: 592: if(PC5 == 0){
-"592
-[e $ ! == -> _PC5 `i -> 0 `i 171  ]
+[; ;1.C: 585: if(PC5 == 0){
+"585
+[e $ ! == -> _PC5 `i -> 0 `i 179  ]
 {
-[; ;1.C: 593: if(KEY1_LongPress < 125) PRESS_FLAG |= 0x01;
-"593
-[e $ ! < -> _KEY1_LongPress `i -> 125 `i 172  ]
+[; ;1.C: 586: if(KEY1_LongPress < 125) PRESS_FLAG |= 0x01;
+"586
+[e $ ! < -> _KEY1_LongPress `i -> 125 `i 180  ]
 [e =| _PRESS_FLAG -> -> 1 `i `uc ]
-[e :U 172 ]
-[; ;1.C: 594: if(KEY1_LongPress < 254) KEY1_LongPress++;
-"594
-[e $ ! < -> _KEY1_LongPress `i -> 254 `i 173  ]
-[e ++ _KEY1_LongPress -> -> 1 `i `uc ]
-[e :U 173 ]
-[; ;1.C: 595: if((KEY1_LongPress > 125) && (KEY1_LongPress < 250)){
-"595
-[e $ ! && > -> _KEY1_LongPress `i -> 125 `i < -> _KEY1_LongPress `i -> 250 `i 174  ]
-{
-[; ;1.C: 596: PRESS_FLAG |= 0x10;
-"596
-[e =| _PRESS_FLAG -> -> 16 `i `uc ]
-[; ;1.C: 597: match_slice = 0;
-"597
-[e = _match_slice -> -> 0 `i `uc ]
-[; ;1.C: 598: PC0 = 0;
-"598
-[e = _PC0 -> -> 0 `i `b ]
-[; ;1.C: 599: PA7 = 0;
-"599
-[e = _PA7 -> -> 0 `i `b ]
-[; ;1.C: 600: LONGPRESS_OverTime_Counter = 0;
-"600
-[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
-"601
-}
-[e :U 174 ]
-[; ;1.C: 601: }
-[; ;1.C: 602: if(KEY1_LongPress > 250){
-"602
-[e $ ! > -> _KEY1_LongPress `i -> 250 `i 175  ]
-{
-[; ;1.C: 603: CH1_remotekey[0] = 0xFFFFFFFF;
-"603
-[e = *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 604: CH1_remotekey[1] = 0xFFFFFFFF;
-"604
-[e = *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 605: CH1_remotekey[2] = 0xFFFFFFFF;
-"605
-[e = *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 606: CH1_remotekey[3] = 0xFFFFFFFF;
-"606
-[e = *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 607: CH1_remotekey_num = 0;
-"607
-[e = _CH1_remotekey_num -> -> 0 `i `uc ]
-[; ;1.C: 608: CH1_remotekey_Latest = 0;
-"608
-[e = _CH1_remotekey_Latest -> -> 0 `i `uc ]
-[; ;1.C: 609: PRESS_FLAG &= ~0x10;
-"609
-[e =& _PRESS_FLAG -> ~ -> 16 `i `uc ]
-[; ;1.C: 610: PRESS_FLAG &= ~0x01;
-"610
-[e =& _PRESS_FLAG -> ~ -> 1 `i `uc ]
-[; ;1.C: 611: PC0 = 1;
-"611
-[e = _PC0 -> -> 1 `i `b ]
-[; ;1.C: 612: PA7 = 1;
-"612
-[e = _PA7 -> -> 1 `i `b ]
-[; ;1.C: 613: KEY_Match_counter = 0;
-"613
-[e = _KEY_Match_counter -> -> 0 `i `uc ]
-"614
-}
-[e :U 175 ]
-"615
-}
-[; ;1.C: 614: }
-[; ;1.C: 615: }else KEY1_LongPress = 0;
-[e $U 176  ]
-[e :U 171 ]
-[e = _KEY1_LongPress -> -> 0 `i `uc ]
-[e :U 176 ]
-[; ;1.C: 617: if(PA4 == 0){
-"617
-[e $ ! == -> _PA4 `i -> 0 `i 177  ]
-{
-[; ;1.C: 618: if(KEY2_LongPress < 125) PRESS_FLAG |= 0x02;
-"618
-[e $ ! < -> _KEY2_LongPress `i -> 125 `i 178  ]
-[e =| _PRESS_FLAG -> -> 2 `i `uc ]
-[e :U 178 ]
-[; ;1.C: 619: if(KEY2_LongPress < 254) KEY2_LongPress++;
-"619
-[e $ ! < -> _KEY2_LongPress `i -> 254 `i 179  ]
-[e ++ _KEY2_LongPress -> -> 1 `i `uc ]
-[e :U 179 ]
-[; ;1.C: 620: if((KEY2_LongPress > 125) && (KEY2_LongPress < 250)){
-"620
-[e $ ! && > -> _KEY2_LongPress `i -> 125 `i < -> _KEY2_LongPress `i -> 250 `i 180  ]
-{
-[; ;1.C: 621: PRESS_FLAG |= 0x20;
-"621
-[e =| _PRESS_FLAG -> -> 32 `i `uc ]
-[; ;1.C: 622: match_slice = 0;
-"622
-[e = _match_slice -> -> 0 `i `uc ]
-[; ;1.C: 623: PC0 = 0;
-"623
-[e = _PC0 -> -> 0 `i `b ]
-[; ;1.C: 624: PA6 = 0;
-"624
-[e = _PA6 -> -> 0 `i `b ]
-[; ;1.C: 625: LONGPRESS_OverTime_Counter = 0;
-"625
-[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
-"626
-}
 [e :U 180 ]
-[; ;1.C: 626: }
-[; ;1.C: 627: if(KEY2_LongPress > 250){
-"627
-[e $ ! > -> _KEY2_LongPress `i -> 250 `i 181  ]
-{
-[; ;1.C: 628: CH2_remotekey[0] = 0xFFFFFFFF;
-"628
-[e = *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 629: CH2_remotekey[1] = 0xFFFFFFFF;
-"629
-[e = *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 630: CH2_remotekey[2] = 0xFFFFFFFF;
-"630
-[e = *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 631: CH2_remotekey[3] = 0xFFFFFFFF;
-"631
-[e = *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 632: CH2_remotekey_num = 0;
-"632
-[e = _CH2_remotekey_num -> -> 0 `i `uc ]
-[; ;1.C: 633: CH2_remotekey_Latest = 0;
-"633
-[e = _CH2_remotekey_Latest -> -> 0 `i `uc ]
-[; ;1.C: 634: PRESS_FLAG &= ~0x20;
-"634
-[e =& _PRESS_FLAG -> ~ -> 32 `i `uc ]
-[; ;1.C: 635: PRESS_FLAG &= ~0x02;
-"635
-[e =& _PRESS_FLAG -> ~ -> 2 `i `uc ]
-[; ;1.C: 636: PC0 = 1;
-"636
-[e = _PC0 -> -> 1 `i `b ]
-[; ;1.C: 637: PA6 = 1;
-"637
-[e = _PA6 -> -> 1 `i `b ]
-[; ;1.C: 638: KEY_Match_counter = 0;
-"638
-[e = _KEY_Match_counter -> -> 0 `i `uc ]
-"639
-}
+[; ;1.C: 587: if(KEY1_LongPress < 254) KEY1_LongPress++;
+"587
+[e $ ! < -> _KEY1_LongPress `i -> 254 `i 181  ]
+[e ++ _KEY1_LongPress -> -> 1 `i `uc ]
 [e :U 181 ]
-"640
-}
-[; ;1.C: 639: }
-[; ;1.C: 640: }else KEY2_LongPress = 0;
-[e $U 182  ]
-[e :U 177 ]
-[e = _KEY2_LongPress -> -> 0 `i `uc ]
-[e :U 182 ]
-[; ;1.C: 642: if(PC4 == 0){
-"642
-[e $ ! == -> _PC4 `i -> 0 `i 183  ]
+[; ;1.C: 588: if((KEY1_LongPress > 125) && (KEY1_LongPress < 250)){
+"588
+[e $ ! && > -> _KEY1_LongPress `i -> 125 `i < -> _KEY1_LongPress `i -> 250 `i 182  ]
 {
-[; ;1.C: 643: if(KEY3_LongPress < 125) PRESS_FLAG |= 0x04;
-"643
-[e $ ! < -> _KEY3_LongPress `i -> 125 `i 184  ]
-[e =| _PRESS_FLAG -> -> 4 `i `uc ]
-[e :U 184 ]
-[; ;1.C: 644: if(KEY3_LongPress < 254) KEY3_LongPress++;
-"644
-[e $ ! < -> _KEY3_LongPress `i -> 254 `i 185  ]
-[e ++ _KEY3_LongPress -> -> 1 `i `uc ]
-[e :U 185 ]
-[; ;1.C: 645: if((KEY3_LongPress > 125) && (KEY3_LongPress < 250)){
-"645
-[e $ ! && > -> _KEY3_LongPress `i -> 125 `i < -> _KEY3_LongPress `i -> 250 `i 186  ]
-{
-[; ;1.C: 646: PRESS_FLAG |= 0x40;
-"646
-[e =| _PRESS_FLAG -> -> 64 `i `uc ]
-[; ;1.C: 647: match_slice = 0;
-"647
+[; ;1.C: 589: PRESS_FLAG |= 0x10;
+"589
+[e =| _PRESS_FLAG -> -> 16 `i `uc ]
+[; ;1.C: 590: match_slice = 0;
+"590
 [e = _match_slice -> -> 0 `i `uc ]
-[; ;1.C: 648: PC0 = 0;
-"648
+[; ;1.C: 591: PC0 = 0;
+"591
 [e = _PC0 -> -> 0 `i `b ]
-[; ;1.C: 649: PA5 = 0;
-"649
-[e = _PA5 -> -> 0 `i `b ]
-[; ;1.C: 650: LONGPRESS_OverTime_Counter = 0;
-"650
+[; ;1.C: 592: PA7 = 0;
+"592
+[e = _PA7 -> -> 0 `i `b ]
+[; ;1.C: 593: LONGPRESS_OverTime_Counter = 0;
+"593
 [e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
-"651
+"594
 }
-[e :U 186 ]
-[; ;1.C: 651: }
-[; ;1.C: 652: if(KEY3_LongPress > 250){
-"652
-[e $ ! > -> _KEY3_LongPress `i -> 250 `i 187  ]
+[e :U 182 ]
+[; ;1.C: 594: }
+[; ;1.C: 595: if(KEY1_LongPress > 250){
+"595
+[e $ ! > -> _KEY1_LongPress `i -> 250 `i 183  ]
 {
-[; ;1.C: 653: CH3_remotekey[0] = 0xFFFFFFFF;
-"653
-[e = *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 654: CH3_remotekey[1] = 0xFFFFFFFF;
-"654
-[e = *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 655: CH3_remotekey[2] = 0xFFFFFFFF;
-"655
-[e = *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 656: CH3_remotekey[3] = 0xFFFFFFFF;
-"656
-[e = *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
-[; ;1.C: 657: CH3_remotekey_num = 0;
-"657
-[e = _CH3_remotekey_num -> -> 0 `i `uc ]
-[; ;1.C: 658: CH3_remotekey_Latest = 0;
-"658
-[e = _CH3_remotekey_Latest -> -> 0 `i `uc ]
-[; ;1.C: 659: PRESS_FLAG &= ~0x40;
-"659
-[e =& _PRESS_FLAG -> ~ -> 64 `i `uc ]
-[; ;1.C: 660: PRESS_FLAG &= ~0x04;
-"660
-[e =& _PRESS_FLAG -> ~ -> 4 `i `uc ]
-[; ;1.C: 661: PC0 = 1;
-"661
+[; ;1.C: 596: CH1_remotekey[0] = 0xFFFFFFFF;
+"596
+[e = *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 597: CH1_remotekey[1] = 0xFFFFFFFF;
+"597
+[e = *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 598: CH1_remotekey[2] = 0xFFFFFFFF;
+"598
+[e = *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 599: CH1_remotekey[3] = 0xFFFFFFFF;
+"599
+[e = *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 600: CH1_remotekey_num = 0;
+"600
+[e = _CH1_remotekey_num -> -> 0 `i `uc ]
+[; ;1.C: 601: CH1_remotekey_Latest = 0;
+"601
+[e = _CH1_remotekey_Latest -> -> 0 `i `uc ]
+[; ;1.C: 602: PRESS_FLAG &= ~0x10;
+"602
+[e =& _PRESS_FLAG -> ~ -> 16 `i `uc ]
+[; ;1.C: 603: PRESS_FLAG &= ~0x01;
+"603
+[e =& _PRESS_FLAG -> ~ -> 1 `i `uc ]
+[; ;1.C: 604: PC0 = 1;
+"604
 [e = _PC0 -> -> 1 `i `b ]
-[; ;1.C: 662: PA5 = 1;
-"662
-[e = _PA5 -> -> 1 `i `b ]
-[; ;1.C: 663: KEY_Match_counter = 0;
-"663
+[; ;1.C: 605: PA7 = 1;
+"605
+[e = _PA7 -> -> 1 `i `b ]
+[; ;1.C: 606: KEY_Match_counter = 0;
+"606
 [e = _KEY_Match_counter -> -> 0 `i `uc ]
-"664
+"607
 }
-[e :U 187 ]
-"665
-}
-[; ;1.C: 664: }
-[; ;1.C: 665: }else KEY3_LongPress = 0;
-[e $U 188  ]
 [e :U 183 ]
-[e = _KEY3_LongPress -> -> 0 `i `uc ]
-[e :U 188 ]
-[; ;1.C: 667: if((PRESS_FLAG>0)&&(PC5==1)&&(PA4==1)&&(PC4==1)){
-"667
-[e $ ! && && && > -> _PRESS_FLAG `i -> 0 `i == -> _PC5 `i -> 1 `i == -> _PA4 `i -> 1 `i == -> _PC4 `i -> 1 `i 189  ]
+"608
+}
+[; ;1.C: 607: }
+[; ;1.C: 608: }else KEY1_LongPress = 0;
+[e $U 184  ]
+[e :U 179 ]
+[e = _KEY1_LongPress -> -> 0 `i `uc ]
+[e :U 184 ]
+[; ;1.C: 610: if(PA4 == 0){
+"610
+[e $ ! == -> _PA4 `i -> 0 `i 185  ]
 {
-[; ;1.C: 668: PRESSED = PRESS_FLAG;
-"668
-[e = _PRESSED _PRESS_FLAG ]
-[; ;1.C: 669: PRESS_FLAG = 0;
-"669
-[e = _PRESS_FLAG -> -> 0 `i `uc ]
-"670
+[; ;1.C: 611: if(KEY2_LongPress < 125) PRESS_FLAG |= 0x02;
+"611
+[e $ ! < -> _KEY2_LongPress `i -> 125 `i 186  ]
+[e =| _PRESS_FLAG -> -> 2 `i `uc ]
+[e :U 186 ]
+[; ;1.C: 612: if(KEY2_LongPress < 254) KEY2_LongPress++;
+"612
+[e $ ! < -> _KEY2_LongPress `i -> 254 `i 187  ]
+[e ++ _KEY2_LongPress -> -> 1 `i `uc ]
+[e :U 187 ]
+[; ;1.C: 613: if((KEY2_LongPress > 125) && (KEY2_LongPress < 250)){
+"613
+[e $ ! && > -> _KEY2_LongPress `i -> 125 `i < -> _KEY2_LongPress `i -> 250 `i 188  ]
+{
+[; ;1.C: 614: PRESS_FLAG |= 0x20;
+"614
+[e =| _PRESS_FLAG -> -> 32 `i `uc ]
+[; ;1.C: 615: match_slice = 0;
+"615
+[e = _match_slice -> -> 0 `i `uc ]
+[; ;1.C: 616: PC0 = 0;
+"616
+[e = _PC0 -> -> 0 `i `b ]
+[; ;1.C: 617: PA6 = 0;
+"617
+[e = _PA6 -> -> 0 `i `b ]
+[; ;1.C: 618: LONGPRESS_OverTime_Counter = 0;
+"618
+[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
+"619
+}
+[e :U 188 ]
+[; ;1.C: 619: }
+[; ;1.C: 620: if(KEY2_LongPress > 250){
+"620
+[e $ ! > -> _KEY2_LongPress `i -> 250 `i 189  ]
+{
+[; ;1.C: 621: CH2_remotekey[0] = 0xFFFFFFFF;
+"621
+[e = *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 622: CH2_remotekey[1] = 0xFFFFFFFF;
+"622
+[e = *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 623: CH2_remotekey[2] = 0xFFFFFFFF;
+"623
+[e = *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 624: CH2_remotekey[3] = 0xFFFFFFFF;
+"624
+[e = *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 625: CH2_remotekey_num = 0;
+"625
+[e = _CH2_remotekey_num -> -> 0 `i `uc ]
+[; ;1.C: 626: CH2_remotekey_Latest = 0;
+"626
+[e = _CH2_remotekey_Latest -> -> 0 `i `uc ]
+[; ;1.C: 627: PRESS_FLAG &= ~0x20;
+"627
+[e =& _PRESS_FLAG -> ~ -> 32 `i `uc ]
+[; ;1.C: 628: PRESS_FLAG &= ~0x02;
+"628
+[e =& _PRESS_FLAG -> ~ -> 2 `i `uc ]
+[; ;1.C: 629: PC0 = 1;
+"629
+[e = _PC0 -> -> 1 `i `b ]
+[; ;1.C: 630: PA6 = 1;
+"630
+[e = _PA6 -> -> 1 `i `b ]
+[; ;1.C: 631: KEY_Match_counter = 0;
+"631
+[e = _KEY_Match_counter -> -> 0 `i `uc ]
+"632
 }
 [e :U 189 ]
-"671
+"633
 }
-[e :U 170 ]
-[; ;1.C: 670: }
-[; ;1.C: 671: }
-[; ;1.C: 672: }
-"672
-[e :UE 169 ]
+[; ;1.C: 632: }
+[; ;1.C: 633: }else KEY2_LongPress = 0;
+[e $U 190  ]
+[e :U 185 ]
+[e = _KEY2_LongPress -> -> 0 `i `uc ]
+[e :U 190 ]
+[; ;1.C: 635: if(PC4 == 0){
+"635
+[e $ ! == -> _PC4 `i -> 0 `i 191  ]
+{
+[; ;1.C: 636: if(KEY3_LongPress < 125) PRESS_FLAG |= 0x04;
+"636
+[e $ ! < -> _KEY3_LongPress `i -> 125 `i 192  ]
+[e =| _PRESS_FLAG -> -> 4 `i `uc ]
+[e :U 192 ]
+[; ;1.C: 637: if(KEY3_LongPress < 254) KEY3_LongPress++;
+"637
+[e $ ! < -> _KEY3_LongPress `i -> 254 `i 193  ]
+[e ++ _KEY3_LongPress -> -> 1 `i `uc ]
+[e :U 193 ]
+[; ;1.C: 638: if((KEY3_LongPress > 125) && (KEY3_LongPress < 250)){
+"638
+[e $ ! && > -> _KEY3_LongPress `i -> 125 `i < -> _KEY3_LongPress `i -> 250 `i 194  ]
+{
+[; ;1.C: 639: PRESS_FLAG |= 0x40;
+"639
+[e =| _PRESS_FLAG -> -> 64 `i `uc ]
+[; ;1.C: 640: match_slice = 0;
+"640
+[e = _match_slice -> -> 0 `i `uc ]
+[; ;1.C: 641: PC0 = 0;
+"641
+[e = _PC0 -> -> 0 `i `b ]
+[; ;1.C: 642: PA5 = 0;
+"642
+[e = _PA5 -> -> 0 `i `b ]
+[; ;1.C: 643: LONGPRESS_OverTime_Counter = 0;
+"643
+[e = _LONGPRESS_OverTime_Counter -> -> 0 `i `uc ]
+"644
 }
-"673
+[e :U 194 ]
+[; ;1.C: 644: }
+[; ;1.C: 645: if(KEY3_LongPress > 250){
+"645
+[e $ ! > -> _KEY3_LongPress `i -> 250 `i 195  ]
+{
+[; ;1.C: 646: CH3_remotekey[0] = 0xFFFFFFFF;
+"646
+[e = *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 647: CH3_remotekey[1] = 0xFFFFFFFF;
+"647
+[e = *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 648: CH3_remotekey[2] = 0xFFFFFFFF;
+"648
+[e = *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 649: CH3_remotekey[3] = 0xFFFFFFFF;
+"649
+[e = *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux -> -1 `ul ]
+[; ;1.C: 650: CH3_remotekey_num = 0;
+"650
+[e = _CH3_remotekey_num -> -> 0 `i `uc ]
+[; ;1.C: 651: CH3_remotekey_Latest = 0;
+"651
+[e = _CH3_remotekey_Latest -> -> 0 `i `uc ]
+[; ;1.C: 652: PRESS_FLAG &= ~0x40;
+"652
+[e =& _PRESS_FLAG -> ~ -> 64 `i `uc ]
+[; ;1.C: 653: PRESS_FLAG &= ~0x04;
+"653
+[e =& _PRESS_FLAG -> ~ -> 4 `i `uc ]
+[; ;1.C: 654: PC0 = 1;
+"654
+[e = _PC0 -> -> 1 `i `b ]
+[; ;1.C: 655: PA5 = 1;
+"655
+[e = _PA5 -> -> 1 `i `b ]
+[; ;1.C: 656: KEY_Match_counter = 0;
+"656
+[e = _KEY_Match_counter -> -> 0 `i `uc ]
+"657
+}
+[e :U 195 ]
+"658
+}
+[; ;1.C: 657: }
+[; ;1.C: 658: }else KEY3_LongPress = 0;
+[e $U 196  ]
+[e :U 191 ]
+[e = _KEY3_LongPress -> -> 0 `i `uc ]
+[e :U 196 ]
+[; ;1.C: 660: if((PRESS_FLAG>0)&&(PC5==1)&&(PA4==1)&&(PC4==1)){
+"660
+[e $ ! && && && > -> _PRESS_FLAG `i -> 0 `i == -> _PC5 `i -> 1 `i == -> _PA4 `i -> 1 `i == -> _PC4 `i -> 1 `i 197  ]
+{
+[; ;1.C: 661: PRESSED = PRESS_FLAG;
+"661
+[e = _PRESSED _PRESS_FLAG ]
+[; ;1.C: 662: PRESS_FLAG = 0;
+"662
+[e = _PRESS_FLAG -> -> 0 `i `uc ]
+"663
+}
+[e :U 197 ]
+"664
+}
+[e :U 178 ]
+[; ;1.C: 663: }
+[; ;1.C: 664: }
+[; ;1.C: 665: }
+"665
+[e :UE 177 ]
+}
+"666
 [v _KEY `(v  1 ef ]
 {
-[; ;1.C: 673: void KEY(void){
+[; ;1.C: 666: void KEY(void){
 [e :U _KEY ]
 [f ]
-[; ;1.C: 674: if( ((PRESSED&0x10) == 0x10) ||
-[; ;1.C: 675: ((PRESSED&0x20) == 0x20) ||
-[; ;1.C: 676: ((PRESSED&0x40) == 0x40)
-[; ;1.C: 677: ){
-"677
-[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 191  ]
+[; ;1.C: 667: if( ((PRESSED&0x10) == 0x10) ||
+[; ;1.C: 668: ((PRESSED&0x20) == 0x20) ||
+[; ;1.C: 669: ((PRESSED&0x40) == 0x40)
+[; ;1.C: 670: ){
+"670
+[e $ ! || || == & -> _PRESSED `i -> 16 `i -> 16 `i == & -> _PRESSED `i -> 32 `i -> 32 `i == & -> _PRESSED `i -> 64 `i -> 64 `i 199  ]
 {
-[; ;1.C: 678: switch(KEY_Match_counter){
-"678
-[e $U 193  ]
+[; ;1.C: 671: switch(KEY_Match_counter){
+"671
+[e $U 201  ]
 {
-[; ;1.C: 679: case 0:
-"679
-[e :U 194 ]
-[; ;1.C: 680: Match_remotekey = 0xFFFFFFFF;
-"680
-[e = _Match_remotekey -> -1 `ul ]
-[; ;1.C: 681: break;
-"681
-[e $U 192  ]
-[; ;1.C: 682: case 1:
-"682
-[e :U 195 ]
-[; ;1.C: 683: PC0 = 0;
-"683
-[e = _PC0 -> -> 0 `i `b ]
-[; ;1.C: 684: if((PRESSED&0x10) == 0x10) PA7 = 0;
-"684
-[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 196  ]
-[e = _PA7 -> -> 0 `i `b ]
-[e :U 196 ]
-[; ;1.C: 685: if((PRESSED&0x20) == 0x20) PA6 = 0;
-"685
-[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 197  ]
-[e = _PA6 -> -> 0 `i `b ]
-[e :U 197 ]
-[; ;1.C: 686: if((PRESSED&0x40) == 0x40) PA5 = 0;
-"686
-[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 198  ]
-[e = _PA5 -> -> 0 `i `b ]
-[e :U 198 ]
-[; ;1.C: 687: break;
-"687
-[e $U 192  ]
-[; ;1.C: 688: case 2:
-"688
-[e :U 199 ]
-[; ;1.C: 689: PC0 = 1;
-"689
-[e = _PC0 -> -> 1 `i `b ]
-[; ;1.C: 690: if((PRESSED&0x10) == 0x10) PA7 = 1;
-"690
-[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 200  ]
-[e = _PA7 -> -> 1 `i `b ]
-[e :U 200 ]
-[; ;1.C: 691: if((PRESSED&0x20) == 0x20) PA6 = 1;
-"691
-[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 201  ]
-[e = _PA6 -> -> 1 `i `b ]
-[e :U 201 ]
-[; ;1.C: 692: if((PRESSED&0x40) == 0x40) PA5 = 1;
-"692
-[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 202  ]
-[e = _PA5 -> -> 1 `i `b ]
+[; ;1.C: 672: case 0:
+"672
 [e :U 202 ]
-[; ;1.C: 693: break;
-"693
-[e $U 192  ]
-[; ;1.C: 694: case 3:
-"694
+[; ;1.C: 673: Match_remotekey = 0xFFFFFFFF;
+"673
+[e = _Match_remotekey -> -1 `ul ]
+[; ;1.C: 674: break;
+"674
+[e $U 200  ]
+[; ;1.C: 675: case 1:
+"675
 [e :U 203 ]
-[; ;1.C: 695: KEY_Match_counter = 1;
-"695
-[e = _KEY_Match_counter -> -> 1 `i `uc ]
-[; ;1.C: 696: if(remotekey_Receive_num >= 3){
-"696
-[e $ ! >= -> _remotekey_Receive_num `i -> 3 `i 204  ]
-{
-[; ;1.C: 697: if((PRESSED&0x10) == 0x10){
-"697
-[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 205  ]
-{
-[; ;1.C: 698: if( (Match_remotekey != CH1_remotekey[0]) &&
-[; ;1.C: 699: (Match_remotekey != CH1_remotekey[1]) &&
-[; ;1.C: 700: (Match_remotekey != CH1_remotekey[2]) &&
-[; ;1.C: 701: (Match_remotekey != CH1_remotekey[3])
-[; ;1.C: 702: ){
-"702
-[e $ ! && && && != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux 206  ]
-{
-[; ;1.C: 703: if(CH1_remotekey_num < 4){
-"703
-[e $ ! < -> _CH1_remotekey_num `i -> 4 `i 207  ]
-{
-[; ;1.C: 704: CH1_remotekey[CH1_remotekey_num] = Match_remotekey;
-"704
-[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_num `ux -> -> # *U &U _CH1_remotekey `ui `ux _Match_remotekey ]
-[; ;1.C: 705: CH1_remotekey_num++;
-"705
-[e ++ _CH1_remotekey_num -> -> 1 `i `uc ]
-"706
-}
-[; ;1.C: 706: }else{
-[e $U 208  ]
-[e :U 207 ]
-{
-[; ;1.C: 707: CH1_remotekey[CH1_remotekey_Latest] = Match_remotekey;
-"707
-[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_Latest `ux -> -> # *U &U _CH1_remotekey `ui `ux _Match_remotekey ]
-"708
-}
-[e :U 208 ]
-"709
-}
-[e :U 206 ]
-[; ;1.C: 708: }
-[; ;1.C: 709: }
-[; ;1.C: 710: if(CH1_remotekey_num > 4) CH1_remotekey_num = 4;
-"710
-[e $ ! > -> _CH1_remotekey_num `i -> 4 `i 209  ]
-[e = _CH1_remotekey_num -> -> 4 `i `uc ]
-[e :U 209 ]
-[; ;1.C: 711: PRESSED &= ~0x10;
-"711
-[e =& _PRESSED -> ~ -> 16 `i `uc ]
-[; ;1.C: 712: CH1_EEPROM_Write();
-"712
-[e ( _CH1_EEPROM_Write ..  ]
-[; ;1.C: 713: PA7 = 1;
-"713
-[e = _PA7 -> -> 1 `i `b ]
-"714
-}
+[; ;1.C: 676: PC0 = 0;
+"676
+[e = _PC0 -> -> 0 `i `b ]
+[; ;1.C: 677: if((PRESSED&0x10) == 0x10) PA7 = 0;
+"677
+[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 204  ]
+[e = _PA7 -> -> 0 `i `b ]
+[e :U 204 ]
+[; ;1.C: 678: if((PRESSED&0x20) == 0x20) PA6 = 0;
+"678
+[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 205  ]
+[e = _PA6 -> -> 0 `i `b ]
 [e :U 205 ]
-[; ;1.C: 714: }
-[; ;1.C: 715: if((PRESSED&0x20) == 0x20){
-"715
-[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 210  ]
-{
-[; ;1.C: 716: if( (Match_remotekey != CH2_remotekey[0]) &&
-[; ;1.C: 717: (Match_remotekey != CH2_remotekey[1]) &&
-[; ;1.C: 718: (Match_remotekey != CH2_remotekey[2]) &&
-[; ;1.C: 719: (Match_remotekey != CH2_remotekey[3])
-[; ;1.C: 720: ){
-"720
-[e $ ! && && && != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux 211  ]
-{
-[; ;1.C: 721: if(CH2_remotekey_num < 4){
-"721
-[e $ ! < -> _CH2_remotekey_num `i -> 4 `i 212  ]
-{
-[; ;1.C: 722: CH2_remotekey[CH2_remotekey_num] = Match_remotekey;
-"722
-[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_num `ux -> -> # *U &U _CH2_remotekey `ui `ux _Match_remotekey ]
-[; ;1.C: 723: CH2_remotekey_num++;
-"723
-[e ++ _CH2_remotekey_num -> -> 1 `i `uc ]
-"724
-}
-[; ;1.C: 724: }else{
-[e $U 213  ]
-[e :U 212 ]
-{
-[; ;1.C: 725: CH2_remotekey[CH2_remotekey_Latest] = Match_remotekey;
-"725
-[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_Latest `ux -> -> # *U &U _CH2_remotekey `ui `ux _Match_remotekey ]
-"726
-}
-[e :U 213 ]
-"727
-}
-[e :U 211 ]
-[; ;1.C: 726: }
-[; ;1.C: 727: }
-[; ;1.C: 728: if(CH2_remotekey_num > 4) CH2_remotekey_num = 4;
-"728
-[e $ ! > -> _CH2_remotekey_num `i -> 4 `i 214  ]
-[e = _CH2_remotekey_num -> -> 4 `i `uc ]
-[e :U 214 ]
-[; ;1.C: 729: PRESSED &= ~0x20;
-"729
-[e =& _PRESSED -> ~ -> 32 `i `uc ]
-[; ;1.C: 730: CH2_EEPROM_Write();
-"730
-[e ( _CH2_EEPROM_Write ..  ]
-[; ;1.C: 731: PA6 = 1;
-"731
+[; ;1.C: 679: if((PRESSED&0x40) == 0x40) PA5 = 0;
+"679
+[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 206  ]
+[e = _PA5 -> -> 0 `i `b ]
+[e :U 206 ]
+[; ;1.C: 680: break;
+"680
+[e $U 200  ]
+[; ;1.C: 681: case 2:
+"681
+[e :U 207 ]
+[; ;1.C: 682: PC0 = 1;
+"682
+[e = _PC0 -> -> 1 `i `b ]
+[; ;1.C: 683: if((PRESSED&0x10) == 0x10) PA7 = 1;
+"683
+[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 208  ]
+[e = _PA7 -> -> 1 `i `b ]
+[e :U 208 ]
+[; ;1.C: 684: if((PRESSED&0x20) == 0x20) PA6 = 1;
+"684
+[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 209  ]
 [e = _PA6 -> -> 1 `i `b ]
-"732
-}
+[e :U 209 ]
+[; ;1.C: 685: if((PRESSED&0x40) == 0x40) PA5 = 1;
+"685
+[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 210  ]
+[e = _PA5 -> -> 1 `i `b ]
 [e :U 210 ]
-[; ;1.C: 732: }
-[; ;1.C: 733: if((PRESSED&0x40) == 0x40){
-"733
-[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 215  ]
+[; ;1.C: 686: break;
+"686
+[e $U 200  ]
+[; ;1.C: 687: case 3:
+"687
+[e :U 211 ]
+[; ;1.C: 688: KEY_Match_counter = 1;
+"688
+[e = _KEY_Match_counter -> -> 1 `i `uc ]
+[; ;1.C: 689: if(remotekey_Receive_num >= 3){
+"689
+[e $ ! >= -> _remotekey_Receive_num `i -> 3 `i 212  ]
 {
-[; ;1.C: 734: if( (Match_remotekey != CH3_remotekey[0]) &&
-[; ;1.C: 735: (Match_remotekey != CH3_remotekey[1]) &&
-[; ;1.C: 736: (Match_remotekey != CH3_remotekey[2]) &&
-[; ;1.C: 737: (Match_remotekey != CH3_remotekey[3])
-[; ;1.C: 738: ){
-"738
-[e $ ! && && && != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux 216  ]
+[; ;1.C: 690: if((PRESSED&0x10) == 0x10){
+"690
+[e $ ! == & -> _PRESSED `i -> 16 `i -> 16 `i 213  ]
 {
-[; ;1.C: 739: if(CH3_remotekey_num < 4){
-"739
-[e $ ! < -> _CH3_remotekey_num `i -> 4 `i 217  ]
+[; ;1.C: 691: if( (Match_remotekey != CH1_remotekey[0]) &&
+[; ;1.C: 692: (Match_remotekey != CH1_remotekey[1]) &&
+[; ;1.C: 693: (Match_remotekey != CH1_remotekey[2]) &&
+[; ;1.C: 694: (Match_remotekey != CH1_remotekey[3])
+[; ;1.C: 695: ){
+"695
+[e $ ! && && && != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux != _Match_remotekey *U + &U _CH1_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH1_remotekey `ui `ux 214  ]
 {
-[; ;1.C: 740: CH3_remotekey[CH3_remotekey_num] = Match_remotekey;
-"740
-[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_num `ux -> -> # *U &U _CH3_remotekey `ui `ux _Match_remotekey ]
-[; ;1.C: 741: CH3_remotekey_num++;
-"741
-[e ++ _CH3_remotekey_num -> -> 1 `i `uc ]
-"742
+[; ;1.C: 696: if(CH1_remotekey_num < 4){
+"696
+[e $ ! < -> _CH1_remotekey_num `i -> 4 `i 215  ]
+{
+[; ;1.C: 697: CH1_remotekey[CH1_remotekey_num] = Match_remotekey;
+"697
+[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_num `ux -> -> # *U &U _CH1_remotekey `ui `ux _Match_remotekey ]
+[; ;1.C: 698: CH1_remotekey_num++;
+"698
+[e ++ _CH1_remotekey_num -> -> 1 `i `uc ]
+"699
 }
-[; ;1.C: 742: }else{
-[e $U 218  ]
-[e :U 217 ]
+[; ;1.C: 699: }else{
+[e $U 216  ]
+[e :U 215 ]
 {
-[; ;1.C: 743: CH3_remotekey[CH3_remotekey_Latest] = Match_remotekey;
-"743
-[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_Latest `ux -> -> # *U &U _CH3_remotekey `ui `ux _Match_remotekey ]
-"744
-}
-[e :U 218 ]
-"745
+[; ;1.C: 700: CH1_remotekey[CH1_remotekey_Latest] = Match_remotekey;
+"700
+[e = *U + &U _CH1_remotekey * -> _CH1_remotekey_Latest `ux -> -> # *U &U _CH1_remotekey `ui `ux _Match_remotekey ]
+"701
 }
 [e :U 216 ]
-[; ;1.C: 744: }
-[; ;1.C: 745: }
-[; ;1.C: 746: if(CH3_remotekey_num > 4) CH3_remotekey_num = 4;
-"746
-[e $ ! > -> _CH3_remotekey_num `i -> 4 `i 219  ]
-[e = _CH3_remotekey_num -> -> 4 `i `uc ]
-[e :U 219 ]
-[; ;1.C: 747: PRESSED &= ~0x40;
-"747
-[e =& _PRESSED -> ~ -> 64 `i `uc ]
-[; ;1.C: 748: CH3_EEPROM_Write();
-"748
-[e ( _CH3_EEPROM_Write ..  ]
-[; ;1.C: 749: PA5 = 1;
-"749
-[e = _PA5 -> -> 1 `i `b ]
-"750
+"702
 }
-[e :U 215 ]
-[; ;1.C: 750: }
-[; ;1.C: 751: KEY_Match_counter = 0;
-"751
-[e = _KEY_Match_counter -> -> 0 `i `uc ]
-[; ;1.C: 752: PC0 = 1;
-"752
-[e = _PC0 -> -> 1 `i `b ]
-"753
+[e :U 214 ]
+[; ;1.C: 701: }
+[; ;1.C: 702: }
+[; ;1.C: 703: if(CH1_remotekey_num > 4) CH1_remotekey_num = 4;
+"703
+[e $ ! > -> _CH1_remotekey_num `i -> 4 `i 217  ]
+[e = _CH1_remotekey_num -> -> 4 `i `uc ]
+[e :U 217 ]
+[; ;1.C: 704: PRESSED &= ~0x10;
+"704
+[e =& _PRESSED -> ~ -> 16 `i `uc ]
+[; ;1.C: 705: CH1_EEPROM_Write();
+"705
+[e ( _CH1_EEPROM_Write ..  ]
+[; ;1.C: 706: PA7 = 1;
+"706
+[e = _PA7 -> -> 1 `i `b ]
+"707
 }
-[e :U 204 ]
-[; ;1.C: 753: }
-[; ;1.C: 754: break;
-"754
-[e $U 192  ]
-"755
-}
-[; ;1.C: 755: }
-[e $U 192  ]
-"678
-[e :U 193 ]
-[e [\ _KEY_Match_counter , $ -> -> 0 `i `uc 194
- , $ -> -> 1 `i `uc 195
- , $ -> -> 2 `i `uc 199
- , $ -> -> 3 `i `uc 203
- 192 ]
-"755
-[e :U 192 ]
-"756
-}
-[e :U 191 ]
-[; ;1.C: 756: }
-[; ;1.C: 759: if( ((PRESSED&0x10) == 0) &&
-[; ;1.C: 760: ((PRESSED&0x20) == 0) &&
-[; ;1.C: 761: ((PRESSED&0x40) == 0)
-[; ;1.C: 762: ){
-"762
-[e $ ! && && == & -> _PRESSED `i -> 16 `i -> 0 `i == & -> _PRESSED `i -> 32 `i -> 0 `i == & -> _PRESSED `i -> 64 `i -> 0 `i 220  ]
+[e :U 213 ]
+[; ;1.C: 707: }
+[; ;1.C: 708: if((PRESSED&0x20) == 0x20){
+"708
+[e $ ! == & -> _PRESSED `i -> 32 `i -> 32 `i 218  ]
 {
-[; ;1.C: 763: if((PRESSED&0x0F) > 0){
-"763
-[e $ ! > & -> _PRESSED `i -> 15 `i -> 0 `i 221  ]
+[; ;1.C: 709: if( (Match_remotekey != CH2_remotekey[0]) &&
+[; ;1.C: 710: (Match_remotekey != CH2_remotekey[1]) &&
+[; ;1.C: 711: (Match_remotekey != CH2_remotekey[2]) &&
+[; ;1.C: 712: (Match_remotekey != CH2_remotekey[3])
+[; ;1.C: 713: ){
+"713
+[e $ ! && && && != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux != _Match_remotekey *U + &U _CH2_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH2_remotekey `ui `ux 219  ]
 {
-[; ;1.C: 764: switch(PRESSED&0x0F){
-"764
-[e $U 223  ]
+[; ;1.C: 714: if(CH2_remotekey_num < 4){
+"714
+[e $ ! < -> _CH2_remotekey_num `i -> 4 `i 220  ]
 {
-[; ;1.C: 765: case 0x01:
-"765
-[e :U 224 ]
-[; ;1.C: 766: PA7 = ~PA7;
-"766
-[e = _PA7 ! _PA7 ]
-[; ;1.C: 767: led1_debug();
-"767
-[e ( _led1_debug ..  ]
-[; ;1.C: 768: break;
-"768
-[e $U 222  ]
-[; ;1.C: 769: case 0x02:
-"769
-[e :U 225 ]
-[; ;1.C: 770: PA6 = ~PA6;
-"770
-[e = _PA6 ! _PA6 ]
-[; ;1.C: 771: led1_debug();
-"771
-[e ( _led1_debug ..  ]
-[; ;1.C: 772: break;
-"772
-[e $U 222  ]
-[; ;1.C: 773: case 0x04:
-"773
-[e :U 226 ]
-[; ;1.C: 774: PA5 = ~PA5;
-"774
-[e = _PA5 ! _PA5 ]
-[; ;1.C: 775: led1_debug();
-"775
-[e ( _led1_debug ..  ]
-[; ;1.C: 776: break;
-"776
-[e $U 222  ]
-"777
+[; ;1.C: 715: CH2_remotekey[CH2_remotekey_num] = Match_remotekey;
+"715
+[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_num `ux -> -> # *U &U _CH2_remotekey `ui `ux _Match_remotekey ]
+[; ;1.C: 716: CH2_remotekey_num++;
+"716
+[e ++ _CH2_remotekey_num -> -> 1 `i `uc ]
+"717
 }
-[; ;1.C: 777: }
-[e $U 222  ]
-"764
-[e :U 223 ]
-[e [\ & -> _PRESSED `i -> 15 `i , $ -> 1 `i 224
- , $ -> 2 `i 225
- , $ -> 4 `i 226
- 222 ]
-"777
-[e :U 222 ]
-"778
+[; ;1.C: 717: }else{
+[e $U 221  ]
+[e :U 220 ]
+{
+[; ;1.C: 718: CH2_remotekey[CH2_remotekey_Latest] = Match_remotekey;
+"718
+[e = *U + &U _CH2_remotekey * -> _CH2_remotekey_Latest `ux -> -> # *U &U _CH2_remotekey `ui `ux _Match_remotekey ]
+"719
 }
 [e :U 221 ]
-[; ;1.C: 778: }
-[; ;1.C: 779: PRESSED &= 0xF0;
-"779
-[e =& _PRESSED -> -> 240 `i `uc ]
-"780
+"720
 }
-[e :U 220 ]
-[; ;1.C: 780: }
-[; ;1.C: 782: }
-"782
-[e :UE 190 ]
-}
-"788
-[v _main `(i  1 ef ]
-{
-[; ;1.C: 788: main(){
-[e :U _main ]
-[f ]
-[; ;1.C: 789: OSC_INIT();
-"789
-[e ( _OSC_INIT ..  ]
-[; ;1.C: 790: TIMER0_INITIAL();
-"790
-[e ( _TIMER0_INITIAL ..  ]
-[; ;1.C: 791: TIMER2_INITIAL();
-"791
-[e ( _TIMER2_INITIAL ..  ]
-[; ;1.C: 792: INT_INITIAL();
-"792
-[e ( _INT_INITIAL ..  ]
-[; ;1.C: 793: EEPROM_Read();
-"793
-[e ( _EEPROM_Read ..  ]
-[; ;1.C: 794: WDT_INITIAL();
-"794
-[e ( _WDT_INITIAL ..  ]
-[; ;1.C: 795: PC0 = 1;
-"795
-[e = _PC0 -> -> 1 `i `b ]
-[; ;1.C: 796: PA7 = 1;
-"796
-[e = _PA7 -> -> 1 `i `b ]
-[; ;1.C: 797: PA6 = 1;
-"797
+[e :U 219 ]
+[; ;1.C: 719: }
+[; ;1.C: 720: }
+[; ;1.C: 721: if(CH2_remotekey_num > 4) CH2_remotekey_num = 4;
+"721
+[e $ ! > -> _CH2_remotekey_num `i -> 4 `i 222  ]
+[e = _CH2_remotekey_num -> -> 4 `i `uc ]
+[e :U 222 ]
+[; ;1.C: 722: PRESSED &= ~0x20;
+"722
+[e =& _PRESSED -> ~ -> 32 `i `uc ]
+[; ;1.C: 723: CH2_EEPROM_Write();
+"723
+[e ( _CH2_EEPROM_Write ..  ]
+[; ;1.C: 724: PA6 = 1;
+"724
 [e = _PA6 -> -> 1 `i `b ]
-[; ;1.C: 798: PA5 = 1;
-"798
-[e = _PA5 -> -> 1 `i `b ]
-[; ;1.C: 800: PA3 = 0;
-"800
-[e = _PA3 -> -> 0 `i `b ]
-[; ;1.C: 801: FLAGs &= ~0x08;
-"801
-[e =& _FLAGs -> ~ -> 8 `i `uc ]
-[; ;1.C: 802: EX_INT_FallingEdge();
-"802
-[e ( _EX_INT_FallingEdge ..  ]
-[; ;1.C: 803: INTE =1;
-"803
-[e = _INTE -> -> 1 `i `b ]
-[; ;1.C: 805: TMR2ON =1;
-"805
-[e = _TMR2ON -> -> 1 `i `b ]
-[; ;1.C: 807: PEIE = 1;
-"807
-[e = _PEIE -> -> 1 `i `b ]
-[; ;1.C: 808: GIE = 1;
-"808
-[e = _GIE -> -> 1 `i `b ]
-[; ;1.C: 809: while(1){
-"809
-[e :U 229 ]
+"725
+}
+[e :U 218 ]
+[; ;1.C: 725: }
+[; ;1.C: 726: if((PRESSED&0x40) == 0x40){
+"726
+[e $ ! == & -> _PRESSED `i -> 64 `i -> 64 `i 223  ]
 {
-[; ;1.C: 810: asm("clrwdt");
-"810
-[; clrwdt ;#
-"812
+[; ;1.C: 727: if( (Match_remotekey != CH3_remotekey[0]) &&
+[; ;1.C: 728: (Match_remotekey != CH3_remotekey[1]) &&
+[; ;1.C: 729: (Match_remotekey != CH3_remotekey[2]) &&
+[; ;1.C: 730: (Match_remotekey != CH3_remotekey[3])
+[; ;1.C: 731: ){
+"731
+[e $ ! && && && != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 0 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 1 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 2 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux != _Match_remotekey *U + &U _CH3_remotekey * -> -> -> 3 `i `ui `ux -> -> # *U &U _CH3_remotekey `ui `ux 224  ]
+{
+[; ;1.C: 732: if(CH3_remotekey_num < 4){
+"732
+[e $ ! < -> _CH3_remotekey_num `i -> 4 `i 225  ]
+{
+[; ;1.C: 733: CH3_remotekey[CH3_remotekey_num] = Match_remotekey;
+"733
+[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_num `ux -> -> # *U &U _CH3_remotekey `ui `ux _Match_remotekey ]
+[; ;1.C: 734: CH3_remotekey_num++;
+"734
+[e ++ _CH3_remotekey_num -> -> 1 `i `uc ]
+"735
+}
+[; ;1.C: 735: }else{
+[e $U 226  ]
+[e :U 225 ]
+{
+[; ;1.C: 736: CH3_remotekey[CH3_remotekey_Latest] = Match_remotekey;
+"736
+[e = *U + &U _CH3_remotekey * -> _CH3_remotekey_Latest `ux -> -> # *U &U _CH3_remotekey `ui `ux _Match_remotekey ]
+"737
+}
+[e :U 226 ]
+"738
+}
+[e :U 224 ]
+[; ;1.C: 737: }
+[; ;1.C: 738: }
+[; ;1.C: 739: if(CH3_remotekey_num > 4) CH3_remotekey_num = 4;
+"739
+[e $ ! > -> _CH3_remotekey_num `i -> 4 `i 227  ]
+[e = _CH3_remotekey_num -> -> 4 `i `uc ]
+[e :U 227 ]
+[; ;1.C: 740: PRESSED &= ~0x40;
+"740
+[e =& _PRESSED -> ~ -> 64 `i `uc ]
+[; ;1.C: 741: CH3_EEPROM_Write();
+"741
+[e ( _CH3_EEPROM_Write ..  ]
+[; ;1.C: 742: PA5 = 1;
+"742
+[e = _PA5 -> -> 1 `i `b ]
+"743
+}
+[e :U 223 ]
+[; ;1.C: 743: }
+[; ;1.C: 744: KEY_Match_counter = 0;
+"744
+[e = _KEY_Match_counter -> -> 0 `i `uc ]
+[; ;1.C: 745: PC0 = 1;
+"745
+[e = _PC0 -> -> 1 `i `b ]
+"746
+}
+[e :U 212 ]
+[; ;1.C: 746: }
+[; ;1.C: 747: break;
+"747
+[e $U 200  ]
+"748
+}
+[; ;1.C: 748: }
+[e $U 200  ]
+"671
+[e :U 201 ]
+[e [\ _KEY_Match_counter , $ -> -> 0 `i `uc 202
+ , $ -> -> 1 `i `uc 203
+ , $ -> -> 2 `i `uc 207
+ , $ -> -> 3 `i `uc 211
+ 200 ]
+"748
+[e :U 200 ]
+"749
+}
+[e :U 199 ]
+[; ;1.C: 749: }
+[; ;1.C: 752: if( ((PRESSED&0x10) == 0) &&
+[; ;1.C: 753: ((PRESSED&0x20) == 0) &&
+[; ;1.C: 754: ((PRESSED&0x40) == 0)
+[; ;1.C: 755: ){
+"755
+[e $ ! && && == & -> _PRESSED `i -> 16 `i -> 0 `i == & -> _PRESSED `i -> 32 `i -> 0 `i == & -> _PRESSED `i -> 64 `i -> 0 `i 228  ]
+{
+[; ;1.C: 756: if((PRESSED&0x0F) > 0){
+"756
+[e $ ! > & -> _PRESSED `i -> 15 `i -> 0 `i 229  ]
+{
+[; ;1.C: 757: switch(PRESSED&0x0F){
+"757
+[e $U 231  ]
+{
+[; ;1.C: 758: case 0x01:
+"758
+[e :U 232 ]
+[; ;1.C: 759: PA7 = ~PA7;
+"759
+[e = _PA7 ! _PA7 ]
+[; ;1.C: 760: led1_debug();
+"760
+[e ( _led1_debug ..  ]
+[; ;1.C: 761: break;
+"761
+[e $U 230  ]
+[; ;1.C: 762: case 0x02:
+"762
+[e :U 233 ]
+[; ;1.C: 763: PA6 = ~PA6;
+"763
+[e = _PA6 ! _PA6 ]
+[; ;1.C: 764: led1_debug();
+"764
+[e ( _led1_debug ..  ]
+[; ;1.C: 765: break;
+"765
+[e $U 230  ]
+[; ;1.C: 766: case 0x04:
+"766
+[e :U 234 ]
+[; ;1.C: 767: PA5 = ~PA5;
+"767
+[e = _PA5 ! _PA5 ]
+[; ;1.C: 768: led1_debug();
+"768
+[e ( _led1_debug ..  ]
+[; ;1.C: 769: break;
+"769
+[e $U 230  ]
+"770
+}
+[; ;1.C: 770: }
+[e $U 230  ]
+"757
+[e :U 231 ]
+[e [\ & -> _PRESSED `i -> 15 `i , $ -> 1 `i 232
+ , $ -> 2 `i 233
+ , $ -> 4 `i 234
+ 230 ]
+"770
+[e :U 230 ]
+"771
+}
+[e :U 229 ]
+[; ;1.C: 771: }
+[; ;1.C: 772: PRESSED &= 0xF0;
+"772
+[e =& _PRESSED -> -> 240 `i `uc ]
+"773
 }
 [e :U 228 ]
-"809
-[e $U 229  ]
-[e :U 230 ]
-[; ;1.C: 812: }
-[; ;1.C: 813: }
-"813
-[e :UE 227 ]
+[; ;1.C: 773: }
+[; ;1.C: 775: }
+"775
+[e :UE 198 ]
+}
+"781
+[v _main `(i  1 ef ]
+{
+[; ;1.C: 781: main(){
+[e :U _main ]
+[f ]
+[; ;1.C: 782: OSC_INIT();
+"782
+[e ( _OSC_INIT ..  ]
+[; ;1.C: 783: TIMER0_INITIAL();
+"783
+[e ( _TIMER0_INITIAL ..  ]
+[; ;1.C: 784: TIMER2_INITIAL();
+"784
+[e ( _TIMER2_INITIAL ..  ]
+[; ;1.C: 785: INT_INITIAL();
+"785
+[e ( _INT_INITIAL ..  ]
+[; ;1.C: 786: EEPROM_Read();
+"786
+[e ( _EEPROM_Read ..  ]
+[; ;1.C: 787: WDT_INITIAL();
+"787
+[e ( _WDT_INITIAL ..  ]
+[; ;1.C: 788: PC0 = 1;
+"788
+[e = _PC0 -> -> 1 `i `b ]
+[; ;1.C: 789: PA7 = 1;
+"789
+[e = _PA7 -> -> 1 `i `b ]
+[; ;1.C: 790: PA6 = 1;
+"790
+[e = _PA6 -> -> 1 `i `b ]
+[; ;1.C: 791: PA5 = 1;
+"791
+[e = _PA5 -> -> 1 `i `b ]
+[; ;1.C: 793: PA3 = 0;
+"793
+[e = _PA3 -> -> 0 `i `b ]
+[; ;1.C: 794: FLAGs &= ~0x08;
+"794
+[e =& _FLAGs -> ~ -> 8 `i `uc ]
+[; ;1.C: 795: EX_INT_FallingEdge();
+"795
+[e ( _EX_INT_FallingEdge ..  ]
+[; ;1.C: 796: INTE =1;
+"796
+[e = _INTE -> -> 1 `i `b ]
+[; ;1.C: 797: TMR2ON =1;
+"797
+[e = _TMR2ON -> -> 1 `i `b ]
+[; ;1.C: 799: PEIE = 1;
+"799
+[e = _PEIE -> -> 1 `i `b ]
+[; ;1.C: 800: GIE = 1;
+"800
+[e = _GIE -> -> 1 `i `b ]
+[; ;1.C: 801: while(1){
+"801
+[e :U 237 ]
+{
+[; ;1.C: 802: asm("clrwdt");
+"802
+[; clrwdt ;#
+"804
+}
+[e :U 236 ]
+"801
+[e $U 237  ]
+[e :U 238 ]
+[; ;1.C: 804: }
+[; ;1.C: 805: }
+"805
+[e :UE 235 ]
 }

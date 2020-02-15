@@ -12,7 +12,7 @@
 //Variable definition
 //===========================================================
 
-#define LED1_Debug_ON
+//#define LED1_Debug_ON
 
 #define 	unchar     	unsigned char 
 #define 	unint       	unsigned int
@@ -42,7 +42,7 @@
 #define TIMER0_ms	8
 #define TIMER2_us	53
 #define LONGPRESS_OVERTIME	15							//单位s 配对超时
-#define REMOTEKEY_SLICE_OVERTIME_ms	150			//单位ms 在time2中断中计数	//遥控字接收超时中断时间
+#define REMOTEKEY_SLICE_OVERTIME_ms	110			//单位ms 在time2中断中计数	//遥控字接收超时中断时间
 #define REMOTEKEY_SLICE_OVERTIME_us	(REMOTEKEY_SLICE_OVERTIME_ms*1000)	//单位us 在time2中断中计数	//遥控字接收超时中断时间
 
 #define MATCH_TIMES		3
@@ -86,10 +86,8 @@ unsigned char remotekey_slice = 0;//两相同遥控字之间的接收间隔，当小于REMOTEKEY_
 unsigned char match_slice = 0;//配对时使用，两相同遥控字之间的接收间隔，当小于REMOTEKEY_SLICE_OVERTIME时认为连续接收，超过认为中断。连续接收的遥控字只响应一次?													
 unsigned char remotekey_Receive_num = 0;//同一遥控字重复接收次数
 unsigned int Indata = 0;	//定时器2数Din为0的个数来计算低电平脉宽
-unsigned char Key_dealed_counter = 0;
 
 unsigned char num = 0;	//接收遥控码的第几位
-//unsigned char head_slice_counter = 0;	//头判断计数，当DIN==0时自加1，当连续数到7000/TIMER2_us时认为接收到头
 unsigned char ms16_counter = 0;//16ms计数
 unsigned char KEY_Match_counter = 0;//配对步骤计数
 unsigned char PRESSED = 0;//按键确认按下标识	bit0～bit4：KEY1～KEY5
@@ -185,7 +183,6 @@ void interrupt ISR(void){
 								for(buff=0;buff<CH1_remotekey_num;buff++){
 									if(Ctrl_remotekey == CH1_remotekey[buff]){
 										FLAGs |= BIT_key1_remotekey_dealed_flag;//接收到有效遥控字
-                                        Key_dealed_counter = 0;
 										led1_debug();
 										OUT1 = ~OUT1;
 										CH1_remotekey_Latest = buff;
@@ -196,7 +193,6 @@ void interrupt ISR(void){
 								for(buff=0;buff<CH2_remotekey_num;buff++){
 									if(Ctrl_remotekey == CH2_remotekey[buff]){
 										FLAGs |= BIT_key2_remotekey_dealed_flag;//接收到有效遥控字
-                                        Key_dealed_counter = 0;
 										led1_debug();
 										OUT2 = ~OUT2;
 										CH2_remotekey_Latest = buff;
@@ -207,7 +203,6 @@ void interrupt ISR(void){
 								 for(buff=0;buff<CH3_remotekey_num;buff++){
 									if(Ctrl_remotekey == CH3_remotekey[buff]){
 										FLAGs |= BIT_key3_remotekey_dealed_flag;//接收到有效遥控字
-                                        Key_dealed_counter = 0;
 										led1_debug();
 										OUT3 = ~OUT3;
 										CH3_remotekey_Latest = buff;
@@ -222,18 +217,19 @@ void interrupt ISR(void){
 						Ctrl_remotekey = 0;
 					}
 				}
-                if((FLAGs&BIT_Head_flag) == 0){	
-					if(buff > 7000){
-						FLAGs |= BIT_Head_flag;
-						num = 0;
-						remotekey = 0;
-						if(		((FLAGs&BIT_key1_remotekey_dealed_flag) == BIT_key1_remotekey_dealed_flag) ||
-								((FLAGs&BIT_key2_remotekey_dealed_flag) == BIT_key2_remotekey_dealed_flag) ||
-								((FLAGs&BIT_key3_remotekey_dealed_flag) == BIT_key3_remotekey_dealed_flag)
-						){
-							remotekey_slice = 0; 
-							FLAGs &= ~BIT_Head_flag;
-						}
+			}
+			if((FLAGs&BIT_Head_flag) == 0){	
+				if(buff > 7000){
+					FLAGs |= BIT_Head_flag;
+					num = 0;
+					remotekey = 0;
+					
+					if(		((FLAGs&BIT_key1_remotekey_dealed_flag) == BIT_key1_remotekey_dealed_flag) ||
+							((FLAGs&BIT_key2_remotekey_dealed_flag) == BIT_key2_remotekey_dealed_flag) ||
+							((FLAGs&BIT_key3_remotekey_dealed_flag) == BIT_key3_remotekey_dealed_flag)
+					){
+						remotekey_slice = 0; 
+						FLAGs &= ~BIT_Head_flag;
 					}
 				}
 			}
@@ -248,50 +244,52 @@ void interrupt ISR(void){
 	
         if((FLAGs&BIT_remotekey_detected_flag) == BIT_remotekey_detected_flag){
 			Indata++;
-		}
-        if(DIN == 1){
-            FLAGs |= BIT_remotekey_detected_flag;
-            remotekey_slice = 0;
-            Key_dealed_counter = 0;
-//            led1_debug();
-		}
-      		
-//		if((FLAGs&BIT_remotekey_detecting_flag) == 0){
-//			if(DIN == 1){
-//				HIndata++;
-//			}else{
-//               buff = HIndata*TIMER2_us; 
-//               HIndata = 0; 
-//			   if(	((buff>200)&&(buff<420))	||
-//					((buff>700)&&(buff<1200))
-//               ){
-//					FLAGs |= BIT_remotekey_detecting_flag;
-//				}else{
-//                    i = 0;
-//				}
-//			}
-//        }
-//        if((FLAGs&BIT_remotekey_detecting_flag) == BIT_remotekey_detecting_flag){
-//			if(DIN == 0){
-//				LIndata++;
-//			}else{
-//                buff = LIndata*TIMER2_us;               
-//                LIndata = 0;
-//				if(	((buff>200)&&(buff<450))	||
-//					((buff>700)&&(buff<1200))
-//				){
-//                    i++;                   
-//				}else{
-//					i = 0;
-//				}
-//				FLAGs &= ~BIT_remotekey_detecting_flag;
-//			}		
-//        }
-//        if(i>1){
+		}else{
+        
+//        if(DIN == 1){
 //            FLAGs |= BIT_remotekey_detected_flag;
-//            i = 0;
+//            remotekey_slice = 0;
 ////            led1_debug();
 //		}
+      		
+		
+			if((FLAGs&BIT_remotekey_detecting_flag) == 0){
+				if(DIN == 1){
+					HIndata++;
+				}else{
+				   buff = HIndata*TIMER2_us; 
+				   HIndata = 0; 
+				   if(	((buff>200)&&(buff<600))	||
+						((buff>700)&&(buff<1800))
+				   ){
+						FLAGs |= BIT_remotekey_detecting_flag;
+					}else{
+						i = 0;
+					}
+				}
+			}
+			if((FLAGs&BIT_remotekey_detecting_flag) == BIT_remotekey_detecting_flag){
+				if(DIN == 0){
+					LIndata++;
+				}else{
+					buff = LIndata*TIMER2_us;               
+					LIndata = 0;
+					if(	((buff>200)&&(buff<600))	||
+						((buff>700)&&(buff<1800))
+					){
+						i++;                   
+					}else{
+						i = 0;
+					}
+					FLAGs &= ~BIT_remotekey_detecting_flag;
+				}		
+			}
+			if(i>3){
+				FLAGs |= BIT_remotekey_detected_flag;
+				i = 0;
+	//            led1_debug();
+			}
+        }
 	}
     
 //定时器0的中断处理**********************
@@ -304,12 +302,8 @@ void interrupt ISR(void){
 				((FLAGs&BIT_key2_remotekey_dealed_flag) == BIT_key2_remotekey_dealed_flag) ||
 				((FLAGs&BIT_key3_remotekey_dealed_flag) == BIT_key3_remotekey_dealed_flag)
 		){
-			if(DIN == 0) remotekey_slice++;
-			if(DIN == 1) remotekey_slice = 0;
-			if(Key_dealed_counter<255) Key_dealed_counter++;
-			if(		(remotekey_slice>(REMOTEKEY_SLICE_OVERTIME_ms/TIMER0_ms))	||
-					(Key_dealed_counter > (1024/TIMER0_ms))
-			){
+			remotekey_slice++;
+			if(	remotekey_slice>(REMOTEKEY_SLICE_OVERTIME_ms/TIMER0_ms)){
 				remotekey_slice = 0;
 //				FLAGs &= ~BIT_Head_flag;
 				FLAGs &= ~BIT_remotekey_detected_flag;
@@ -318,7 +312,6 @@ void interrupt ISR(void){
 				FLAGs &= ~BIT_key3_remotekey_dealed_flag;		
 			}
 		}
-     
 		//配对时接收到一个完整码之后，在间隔内没有再接收到，则舍掉当前码，重新接受
 		if(		((PRESSED&BIT_KEY1_LONGPRESS_FLAG) == BIT_KEY1_LONGPRESS_FLAG)	||
 				((PRESSED&BIT_KEY2_LONGPRESS_FLAG) == BIT_KEY2_LONGPRESS_FLAG)	||
@@ -341,7 +334,7 @@ void interrupt ISR(void){
 				EX_INT_Enable;
 				TMR2_Enable;
 			}
-			if(EE_Buff == 3){
+			if(EE_Buff == 4){
 				SHDN = 1;	
 				TMR2_Disable;
 				EX_INT_Disable;
@@ -379,7 +372,7 @@ void interrupt ISR(void){
 						CH1_remotekey[CH1_remotekey_num-1] = 0xFFFFFFFF;
 						if(CH1_remotekey_num>0) CH1_remotekey_num--;
 						PRESSED &= ~BIT_KEY1_LONGPRESS_FLAG;  
-						OUT1 = 1;                 
+						OUT1 = 1;
 					}
 					if((PRESSED&BIT_KEY2_LONGPRESS_FLAG) == BIT_KEY2_LONGPRESS_FLAG){
 						CH2_remotekey[CH2_remotekey_Latest] = CH2_remotekey[CH2_remotekey_num-1];
@@ -801,7 +794,6 @@ main(){
 	FLAGs &= ~BIT_Head_flag;
 	EX_INT_FallingEdge();
 	EX_INT_Enable;
-//	head_slice_counter = 0;
 	TMR2_Enable;
 
 	PEIE    = 1;    				//使能外设中断
